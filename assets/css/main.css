@@ -1,0 +1,41 @@
+/* Marcas */
+body {
+    margin: 0px;
+    height: 1200PX;
+}
+
+
+/* Classes */
+
+
+.navbar {
+    background-color: red;
+    height: 4rem;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+}
+
+.navbar > picture {
+    float: left;
+}
+
+.navbar > ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    float: left;
+}
+
+.navbar > ul > li {
+    display: inline-block;
+    margin-top: 0.75rem;
+    margin-left: 1.25rem;
+    border: 1px solid black;
+}
+
+.navbar > ul > li > a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.8rem;
+}

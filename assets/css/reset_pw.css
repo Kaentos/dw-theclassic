@@ -1,0 +1,146 @@
+/* Marcas */
+body {
+    margin: 0px;
+}
+
+
+/* Classes */
+
+
+.navbar {
+    background-color: red;
+    height: 4rem;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+}
+
+.navbar > picture {
+    float: left;
+}
+
+.links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    float: left;
+}
+
+.links > li {
+    display: inline-block;
+    margin-top: 0.75rem;
+    margin-left: 1.25rem;
+    border: 1px solid black;
+}
+
+.links > li > a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.8rem;
+}
+
+.links > li > a:hover {
+    transition: 1.2s;
+    color: black;
+}
+
+.account-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+
+.account-links > li {
+    display: inline-block;
+    margin-top: 0.75rem;
+    margin-right: 1.25rem;
+    border: 1px solid black;
+}
+
+.account-links > li > a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.8rem;
+}
+
+.account-links > li > a:hover {
+    transition: 1.2s;
+    color: black;
+}
+
+.recover-zone {
+    min-height: 650px;
+}
+.recover-panel {
+    margin: 5rem auto auto auto;
+    width: 20%;
+    border: 1px solid black;
+}
+.recover-panel > h1 {
+    text-align: center;
+}
+.input-group {
+    padding: 0px 10% 0 10%;
+    margin-top: 25px;
+}
+.input-group > input {
+    width: 100%;
+    padding-left: 5px;
+    box-sizing: border-box;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing: border-box;
+}
+.input-group > label, input {
+    font-size: 1.5rem;
+}
+.input-btn {
+    width: 100%;
+    margin: 15px auto 10px auto;
+    text-align: center;
+}
+.input-btn > input {
+    width: 60%;
+    padding: 7px;
+    font-weight: bold;
+    background-color: green;
+    border: 0px solid black;
+    border-radius: 10px;
+}
+.recover-register {
+    border-top: 1px solid black;
+    text-align: center;
+    font-size: 1.2rem;    
+}
+
+footer {
+    width: 100%;
+    box-sizing: border-box;
+    background: silver;
+}
+
+.footer-content {
+    display: flex;
+    margin: auto;
+    width: 80%;
+}
+
+.footer-content > div {
+    width: 100%;
+}
+
+.footer-ul {
+    list-style: none;
+    padding: 0;
+}
+
+
+.footer-creators {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+.footer-creators > span {
+    margin-top: 50px;
+}

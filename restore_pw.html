@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MPL | Login</title>
+    <title>MPL | Restore Password</title>
     <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/reset_pw.css">
 </head>
 
 <body>
@@ -41,32 +42,28 @@
     </div>
     
 
-    <div class="login-zone">
-        <div class="login-panel">
+    <div class="recover-zone">
+        <div class="recover-panel">
             <h1>
-                Login
+                Reset your password
             </h1>
-            <form id="login-form">
+            <p>
+                To reset your password you will need to put your account email bellow and we will send you a reset link to your email!
+            </p>
+            <form id="recover-form">
                 <div class="input-group">
-                    <label for="u_email">Email:</label><br>
-                    <input type="email" name="u_mail" id="u_email" placeholder="Email">
+                    <label for="r_email">Email:</label><br>
+                    <input type="email" name="r_mail" id="r_email" placeholder="Email">
                 </div>
-                
-                <div class="input-group">
-                    <label for="password">Password:</label>
-                    <input type="password" name="u_password" id="u_password" placeholder="Password">
-                    <a href="restore_pw.html">Forgot password?</a>
-                </div>
-                
+                                
                 <div class="input-btn">
-                    <input class="input-btn" type="button" value="Login">
+                    <input class="input-btn" type="button" value="Reset password">
                 </div>
             </form>
-            <div class="login-register">
+            <div class="recover-register">
                 <p>
-                    Don't have an account? 
-                    <a href="register.html">
-                        Create one right now!
+                    <a href="login.html">
+                        Return to login page
                     </a>
                 </p>
             </div>

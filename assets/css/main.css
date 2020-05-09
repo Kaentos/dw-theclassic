@@ -108,7 +108,6 @@ body {
     border: 0px solid black;
     border-radius: 10px;
 }
-
 .login-register {
     border-top: 1px solid black;
     text-align: center;
@@ -130,6 +129,11 @@ footer {
 
 .footer-content > div {
     width: 100%;
+}
+
+.footer-ul {
+    list-style: none;
+    padding: 0;
 }
 
 

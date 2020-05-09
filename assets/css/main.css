@@ -70,7 +70,6 @@ body {
 }
 
 .login-zone {
-    border: 1px solid blue;
     min-height: 700px;
 }
 .login-panel {
@@ -117,14 +116,13 @@ body {
 footer {
     width: 100%;
     box-sizing: border-box;
-    border: 1px solid blue;
+    background: silver;
 }
 
 .footer-content {
     display: flex;
     margin: auto;
     width: 80%;
-    border: 1px solid black;
 }
 
 .footer-content > div {

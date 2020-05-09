@@ -1,14 +1,20 @@
+/* Marcas */
+body {
+    margin: 0px;
+}
+
+
 /* Classes */
 
-.recover-zone {
-    min-height: 650px;
+.register-zone {
+    min-height: 700px;
 }
-.recover-panel {
+.register-panel {
     margin: 5rem auto auto auto;
     width: 20%;
     border: 1px solid black;
 }
-.recover-panel > h1 {
+.register-panel > h1 {
     text-align: center;
 }
 .input-group {
@@ -31,14 +37,14 @@
     text-align: center;
 }
 .input-btn > input {
-    width: 60%;
+    width: 40%;
     padding: 7px;
     font-weight: bold;
     background-color: green;
     border: 0px solid black;
     border-radius: 10px;
 }
-.recover-register {
+.register-login {
     border-top: 1px solid black;
     text-align: center;
     font-size: 1.2rem;    

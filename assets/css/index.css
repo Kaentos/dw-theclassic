@@ -23,7 +23,8 @@
 }
 
 .destaques-panel h2 {
-    margin-left: 50px;
+    margin-left: 25px;
+    margin-bottom: 5px;
 }
 
 /*.destaques {
@@ -33,11 +34,14 @@
 .destaques {
     display: flex;
     overflow: hidden;
+    background-color: white;
+    padding-top: 20px;
 }
 
 .ms_ss_panel {
     width: 230px;
-    margin-left: 50px;
+    margin-left: 25px;
+    margin-right: 25px;
     border: 1px solid black;
     box-shadow: none;
     box-sizing: none;

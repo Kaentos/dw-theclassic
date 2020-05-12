@@ -35,7 +35,6 @@
     display: flex;
     overflow: hidden;
     background-color: white;
-    padding-top: 20px;
 }
 
 .ms_ss_panel {
@@ -46,9 +45,33 @@
     box-shadow: none;
     box-sizing: none;
     margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 .ms_ss_img {
     height: 350px;
     width: 230px;
+}
+
+.go-left {
+    cursor: pointer;
+    position: absolute;
+    padding: 25px;
+    left: 25%;
+    margin-top: 140px;
+    background-color: rgba(2, 2, 2, 0.9);
+    text-align: center;
+    font-size: 50px;
+    color: rgba(255, 255, 255, 0.5);
+}
+.go-right {
+    cursor: pointer;
+    position: absolute;
+    right: 25%;
+    padding: 25px;
+    margin-top: 140px;
+    background-color: rgba(2, 2, 2, 0.9);
+    text-align: center;
+    font-size: 50px;
+    color: rgba(255, 255, 255, 0.5);
 }

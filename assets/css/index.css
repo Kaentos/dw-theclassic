@@ -33,6 +33,7 @@
 }*/
 .destaques {
     display: flex;
+    position: relative;
     overflow: hidden;
     background-color: white;
 }
@@ -53,25 +54,21 @@
     width: 230px;
 }
 
-.go-left {
+.go-left, .go-right {
     cursor: pointer;
     position: absolute;
-    padding: 25px;
-    left: 25%;
-    margin-top: 140px;
+    padding: 10px;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    font-size: 50px;
     background-color: rgba(2, 2, 2, 0.9);
     text-align: center;
     font-size: 50px;
+    font-weight: bold;
     color: rgba(255, 255, 255, 0.5);
 }
+
 .go-right {
-    cursor: pointer;
-    position: absolute;
-    right: 25%;
-    padding: 25px;
-    margin-top: 140px;
-    background-color: rgba(2, 2, 2, 0.9);
-    text-align: center;
-    font-size: 50px;
-    color: rgba(255, 255, 255, 0.5);
+    right: 0;
 }

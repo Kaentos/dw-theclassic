@@ -6,6 +6,20 @@ body {
 
 /* Classes */
 
+.flex-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.flex-line {
+    display: flex;
+}
+
+.flex-spaced {
+    justify-content: space-between;
+}
+
 .navbar {
     width: 100%;
     display: flex;
@@ -15,26 +29,24 @@ body {
     border-bottom: 1px solid black;
 }
 
-.flex-col {
-    display: flex;
-    flex-direction: column;
+.navbar-img {
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
-.flex-spaced {
-    justify-content: space-between;
-}
-
-.navbar-link {
+.navbar-links {
     display: inline-block;
     margin-top: 12px;
-    margin-left: 10px;
+    margin-bottom: 12px;
+    margin-right: 10px;
     border: 1px solid black;
     text-decoration: none;
     color: black;
     font-size: 1.8rem;
 }
 
-.navbar-link2 {
+/*.navbar-links {
     display: inline-block;
     margin-top: 12px;
     margin-right: 10px;
@@ -42,7 +54,7 @@ body {
     text-decoration: none;
     color: black;
     font-size: 1.8rem;
-}
+}*/
 
 .login-zone {
     min-height: 700px;

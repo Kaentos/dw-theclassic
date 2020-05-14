@@ -6,68 +6,42 @@ body {
 
 /* Classes */
 
-
 .navbar {
-    background-color: red;
-    height: 4rem;
+    width: 100%;
+    display: flex;
     position: sticky;
-    position: -webkit-sticky;
-    top: 0;
     z-index: 1;
+    position: -webkit-sticky;
+    border-bottom: 1px solid black;
 }
 
-.navbar > picture {
-    float: left;
+.flex-col {
+    display: flex;
+    flex-direction: column;
 }
 
-.links {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    float: left;
+.flex-spaced {
+    justify-content: space-between;
 }
 
-.links > li {
+.navbar-link {
     display: inline-block;
-    margin-top: 0.75rem;
-    margin-left: 1.25rem;
+    margin-top: 12px;
+    margin-left: 10px;
     border: 1px solid black;
-}
-
-.links > li > a {
     text-decoration: none;
-    color: white;
+    color: black;
     font-size: 1.8rem;
 }
 
-.links > li > a:hover {
-    transition: 1.2s;
-    color: black;
-}
-
-.account-links {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    float: right;
-}
-
-.account-links > li {
+.navbar-link2 {
     display: inline-block;
-    margin-top: 0.75rem;
-    margin-right: 1.25rem;
+    margin-top: 12px;
+    margin-right: 10px;
     border: 1px solid black;
-}
-
-.account-links > li > a {
     text-decoration: none;
-    color: white;
-    font-size: 1.8rem;
-}
-
-.account-links > li > a:hover {
-    transition: 1.2s;
     color: black;
+    font-size: 1.8rem;
 }
 
 .login-zone {

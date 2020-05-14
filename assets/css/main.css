@@ -6,12 +6,6 @@ body {
 
 /* Classes */
 
-.flex-col {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-}
-
 .flex-line {
     display: flex;
 }

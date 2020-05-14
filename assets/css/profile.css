@@ -1,0 +1,45 @@
+.profileuserdetails {
+    margin-left: 10px;
+    width: 100%;
+}
+
+.profileuserdetail {
+    padding: 5px;
+}
+
+#profilefollowbtn {
+    font-size: 30px;
+}
+
+.profileminilist {
+    display: flex;
+    position: relative;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.pml-panel {
+    width: 230px;
+    border: 1px solid black;
+    box-shadow: none;
+    margin: 0px 5px;
+}
+
+.pml-img {
+    height: 350px;
+    width: 230px;
+}
+
+#profileusername {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#profilepicture {
+    max-width: 200px;
+}
+
+.field-seemore {
+    font-size: 20px;
+    color: black;
+}

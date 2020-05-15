@@ -37,6 +37,9 @@
     border-radius: 5px;
     border: 1px solid black;
 }
+.r-input-btn {
+    background-color: #ed3124 !important;
+}
 .lr-to-lr {
     border-top: 1px solid black;
     text-align: center;

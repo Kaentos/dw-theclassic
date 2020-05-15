@@ -1,0 +1,64 @@
+.login-zone {
+    padding-top: 50px;
+    min-height: 600px;
+}
+.login-panel {
+    margin: auto;
+    width: 25%;
+    border: 1px solid black;
+}
+.login-panel > h1 {
+    text-align: center;
+}
+.input-group {
+    margin: 20px 60px;
+}
+.input-group > input {
+    width: 100%;
+    padding-left: 5px;
+    box-sizing: border-box;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing: border-box;
+}
+.input-group > label, input {
+    font-size: 1.4rem;
+}
+.input-btn {
+    margin-bottom: 10px;
+    text-align: center;
+}
+.input-btn > input {
+    width: 40%;
+    padding: 7px;
+    font-weight: bold;
+    background-color: #128ca0;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+.login-register {
+    border-top: 1px solid black;
+    text-align: center;
+    font-size: 1.1rem;    
+}
+
+.go-back {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.go-back-btn {
+    cursor: pointer;
+    padding: 10px 20px;
+    color: black;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    font-weight: bold;
+    border: 1px solid black;
+    transition: 1.2s;
+}
+
+.go-back-btn:hover {
+    color: white;
+    background-color: black;
+}

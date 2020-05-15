@@ -1,0 +1,76 @@
+.welcome-zone {
+    text-align: center;
+}
+
+.welcome-img {
+    margin-top: 25PX;
+}
+
+.welcome-hr {
+    width: 50%;
+    border: 3px solid black;
+    border-radius: 5px;
+}
+
+.destaques-zone {
+    background-color: red;
+}
+
+.destaques-panel {
+    width: 54%;
+    border: 1px solid black;
+    margin: auto;
+}
+
+.destaques-panel h1 {
+    margin-left: 15px;
+    margin-bottom: 5px;
+}
+
+.destaques-carousel {
+    position: relative;
+}
+
+.destaques {
+    display: flex;
+    overflow: hidden;
+    background-color: white;
+}
+
+.ms_ss_panel {
+    width: 200px;
+    margin-left: 15px;
+    border: 1px solid black;
+    box-shadow: none;
+    box-sizing: none;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.ms_ss_panel:last-child {
+    margin-right: 15px;
+}
+
+.ms_ss_img {
+    height: 296px;
+    width: 200px;
+}
+
+.go-left, .go-right {
+    cursor: pointer;
+    position: absolute;
+    padding: 10px;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    font-size: 50px;
+    background-color: rgba(2, 2, 2, 0.9);
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.go-right {
+    right: 0;
+}

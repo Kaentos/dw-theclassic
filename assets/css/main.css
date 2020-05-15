@@ -49,30 +49,45 @@ nav {
     width: 50px;
 }
 
-.navbar-links {
+.navbar-links, .r-link, .l-link {
     display: inline-block;
     margin: 12px 10px 12px 0px;
     text-decoration: none;
     font-weight: bold;
     color: black;
     font-size: 1.4rem;
-    padding: 5px;
+    padding: 5px 10px;
     transition: 0.5s;
 }
 
-.l-link, .r-link {
-    background-color: yellow;
+.active {
+    background: silver;
+    border-radius: 5px;
+}
+
+.r-link {
+    background-color: #ed3124;
 }
 
 .l-link {
-    background-color: red;
+    background-color: #128ca0;
+}
+
+.r-link, .l-link {
+    color: white;
+    transition: 1.2s;
+    border-radius: 5px;
+    border: 1px solid white;
+}
+
+.r-link:hover, .l-link:hover {
+    color: black;
+    background-color: yellow;
+    border: 1px solid black;
 }
 
 .navbar-links:hover {
     background: silver;
-}
-
-.l-link, .r-link, .navbar-links:hover {
     border-radius: 5px;
 }
 
@@ -145,6 +160,7 @@ footer {
 }
 .footer-ul > li > a:hover {
     color: red;
+    text-decoration: underline;
 }
 
 footer .flex-line:first-child {

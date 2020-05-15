@@ -13,6 +13,11 @@
 .input-group {
     margin: 20px 60px;
 }
+
+.reset-pw-txt {
+    text-align: justify;
+}
+
 .input-group > input {
     width: 100%;
     padding-left: 5px;
@@ -29,7 +34,7 @@
 }
 .input-btn > input {
     cursor: pointer;
-    width: 40%;
+    min-width: 40%;
     padding: 7px;
     font-weight: bold;
     background-color: #128ca0;

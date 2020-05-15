@@ -10,6 +10,15 @@ body {
     display: flex;
 }
 
+.flex-center {
+    justify-content: center;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
 .flex-spaced {
     justify-content: space-between;
 }
@@ -104,15 +113,11 @@ body {
 }
 
 footer {
-    width: 100%;
-    box-sizing: border-box;
-    background: silver;
+    background-color: silver;
 }
 
 .footer-content {
-    display: flex;
-    margin: auto;
-    width: 80%;
+    min-width: 13%;
 }
 
 .footer-content > div {
@@ -122,15 +127,47 @@ footer {
 .footer-ul {
     list-style: none;
     padding: 0;
+    margin-top: 0;
+}
+.footer-ul > li > a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: black;
+    transition: 0.8s;
+}
+.footer-ul > li > a:hover {
+    color: red;
+}
+
+footer .flex-line:first-child {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.flex-col h2 {
+    margin-top: 0;
+    margin-bottom: 10;
+    font-size: 1.3rem;
 }
 
 
-.footer-creators {
-    background-color: black;
-    color: white;
+.footer-credits {
+    background-color: white;
+    color: black;
     text-align: center;
-    padding: 10px;
+    font-size: 16px;
 }
-.footer-creators > span {
-    margin-top: 50px;
+
+.footer-credits-txt {
+    font-weight: 500;
+    margin: 15px 10px 0px 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.footer-credits-txt a {
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
 }

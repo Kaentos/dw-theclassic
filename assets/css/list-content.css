@@ -7,11 +7,6 @@
     text-align: center;
     margin: auto;
 }
-
-.content-search-bar {
-    background-color: silver;
-}
-
 .content hr {
     border: 3px solid black
 }
@@ -44,6 +39,11 @@
     width: 100%;
     text-align: center;
     background-color: silver;
+}
+
+.search-form {
+    background-color: silver;
+    border-radius: 5px;
 }
 
 .search {

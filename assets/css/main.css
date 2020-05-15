@@ -178,20 +178,6 @@ footer .flex-line:first-child {
     padding: 5px;
 }
 
-.flex-line {
-    width: 100%;
-    display: flex;
-}
-
-.flex-col {
-    display: flex;
-    flex-direction: column;
-}
-
-.flex-spaced {
-    justify-content: space-between;
-}
-
 .field-header {
     margin: 30px 0px;
 }

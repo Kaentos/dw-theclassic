@@ -1,13 +1,13 @@
-.login-zone {
+.lr-zone {
     padding-top: 50px;
     min-height: 600px;
 }
-.login-panel {
+.lr-panel {
     margin: auto;
     width: 25%;
     border: 1px solid black;
 }
-.login-panel > h1 {
+.lr-panel > h1 {
     text-align: center;
 }
 .input-group {
@@ -28,6 +28,7 @@
     text-align: center;
 }
 .input-btn > input {
+    cursor: pointer;
     width: 40%;
     padding: 7px;
     font-weight: bold;
@@ -36,7 +37,7 @@
     border-radius: 5px;
     border: 1px solid black;
 }
-.login-register {
+.lr-to-lr {
     border-top: 1px solid black;
     text-align: center;
     font-size: 1.1rem;    

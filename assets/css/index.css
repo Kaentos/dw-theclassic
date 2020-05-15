@@ -3,22 +3,44 @@
 }
 
 .welcome-img {
-    margin-top: 25PX;
+    margin-top: 0px;
 }
 
 .welcome-hr {
-    width: 50%;
+    width: 25%;
     border: 3px solid black;
     border-radius: 5px;
 }
 
-.destaques-zone {
+.welcome-desc {
+    width: 25%;
+    margin: auto;
+    font-size: 18px;
+}
+
+.welcome-r-btn {
+    width: 50%;
+    padding: 10px 0px;
+    font-weight: bold;
     background-color: red;
+    border: none;
+    border-radius: 5px;
+    font-size: 25px;
+    color: white;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.welcome-r-btn:hover {
+    background-color: #128ca0;
+}
+
+.destaques-zone {
+    padding-bottom: 25px;
 }
 
 .destaques-panel {
-    width: 54%;
-    border: 1px solid black;
+    width: 55%;
     margin: auto;
 }
 
@@ -29,6 +51,7 @@
 
 .destaques-carousel {
     position: relative;
+    border: 2px solid black;
 }
 
 .destaques {
@@ -73,4 +96,26 @@
 
 .go-right {
     right: 0;
+}
+
+
+.movies-btn {
+    background-color: #128ca0;
+    margin-right: 25px;
+}
+
+.tvshows-btn {
+    background-color: #ed3124;
+}
+
+.movies-btn, .tvshows-btn {
+    width: 15%;
+    padding: 25px 0px;
+    margin-bottom: 25px;
+    text-align: center;
+    color: white;
+    font-size: 26px;
+    border-radius: 10px;
+    font-weight: bold;
+    border: 2px solid black
 }

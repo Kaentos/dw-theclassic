@@ -17,6 +17,7 @@
 }
 
 .content-content {
+    padding-top: 20px;
     background-color: gray;
     display: flex;
     flex-wrap: wrap;
@@ -31,7 +32,6 @@
     box-shadow: none;
     box-sizing: none;
     margin-bottom: 20px;
-    margin-top: 20px;
 }
 
 .ms_ss_img {
@@ -44,4 +44,19 @@
     width: 100%;
     text-align: center;
     background-color: silver;
+}
+
+.search {
+    margin: 10px;
+    font-size: 1.2rem;
+}
+.search > input {
+    font-size: 1.2rem;
+}
+.search > select {
+    font-size: 1.2rem;
+}
+
+.search-bar {
+    min-width: 500px;
 }

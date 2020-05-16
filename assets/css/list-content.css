@@ -40,8 +40,8 @@
 }
 
 .content-buttons button {
-    font-size: 1rem;
-    padding: 5px;
+    font-size: 1.5rem;
+    padding: 5px 40px;
     border: 1px solid black;
     border-radius: 5px;
     font-weight: bold;
@@ -51,7 +51,7 @@
 .content-back-btn {
     color: black;
     background-color: whitesmoke;
-    font-size: 1.1rem !important;
+    font-size: 1.5rem !important;
 }
 
 .content-p-btn {

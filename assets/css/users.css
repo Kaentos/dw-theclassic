@@ -24,6 +24,12 @@
 .user-details {
     margin-left: 5px;
     font-size: 1.2rem;
+    min-width: 0;
+}
+
+.user-details > span {
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .f_by_me {
@@ -47,8 +53,12 @@
 }
 
 .ms_ss_img {
+    min-width: 100px;
+    min-height: 100px;
     height: 100px;
     width: 100px;
+    max-height: 100px;
+    max-width: 100px;
 }
 
 .content-buttons {

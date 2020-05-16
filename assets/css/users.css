@@ -27,11 +27,15 @@
 }
 
 .f_by_me {
-    background-color: silver;
-    padding: 3px;
+    margin-top: 10px;
+}
+
+.f_by_me > span {
+    background-color: #128ca0;
+    color: white;
+    padding: 7px;
     border-radius: 5px;
     font-size: 1rem !important;
-    margin-top: 10px;
 }
 
 .ms_ss_panel {

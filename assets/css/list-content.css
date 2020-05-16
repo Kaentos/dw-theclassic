@@ -27,7 +27,6 @@
     margin-right: 25px;
     border: 1px solid black;
     box-shadow: none;
-    box-sizing: none;
     margin-bottom: 20px;
 }
 
@@ -91,4 +90,14 @@
     cursor: pointer;
     border-radius: 5px;
     border: 1px solid black;
+}
+
+.ms_ss_panel > div {
+    font-size: 1.1rem;
+    text-align: center;
+    font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 1px 5px;
 }

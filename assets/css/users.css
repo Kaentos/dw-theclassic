@@ -30,6 +30,7 @@
 .user-details > span {
     overflow: hidden;
     text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .f_by_me {

@@ -1,0 +1,104 @@
+.content {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.content-title {
+    text-align: center;
+    margin: auto;
+}
+.content hr {
+    border: 3px solid black
+}
+
+.content-content {
+    padding-top: 20px;
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.user-details {
+    margin-left: 5px;
+    font-size: 1.2rem;
+}
+
+.f_by_me {
+    background-color: silver;
+    padding: 3px;
+    border-radius: 5px;
+    font-size: 1rem !important;
+    margin-top: 10px;
+}
+
+.ms_ss_panel {
+    width: 331px;
+    margin: 0px 25px 20px 25px;
+    border: 1px solid black;
+    box-shadow: none;
+}
+
+.ms_ss_img {
+    height: 100px;
+    width: 100px;
+}
+
+.content-buttons {
+    padding: 10px 25px;
+    border: 1px solid black;
+}
+
+.content-buttons button {
+    font-size: 1rem;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.content-back-btn {
+    color: black;
+    background-color: whitesmoke;
+    font-size: 1.1rem !important;
+}
+
+.content-p-btn {
+    background-color: #128ca0;
+    color: white;
+}
+
+.content-n-btn {
+    background-color: #ed3124;
+    color: white;
+}
+
+
+
+.search-form {
+    background-color: silver;
+    border-radius: 5px;
+}
+
+.search {
+    margin: 10px;
+    font-size: 1.3rem;
+}
+.search > input {
+    font-size: 1.2rem;
+}
+.search > select {
+    font-size: 1.2rem;
+}
+
+.search-bar {
+    min-width: 500px;
+}
+
+.search-btn {
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid black;
+}

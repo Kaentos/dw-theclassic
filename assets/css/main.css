@@ -28,6 +28,10 @@ body {
     flex-direction: column;
 }
 
+.flex-start {
+    align-content: flex-start;
+}
+
 .flex-spaced {
     justify-content: space-between;
 }

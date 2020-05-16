@@ -18,6 +18,7 @@
     display: flex;
     flex-wrap: wrap;
     margin: auto;
+    min-height: 490px;
 }
 
 .user-details {
@@ -34,7 +35,8 @@
 }
 
 .ms_ss_panel {
-    width: 331px;
+    width: 328px;
+    max-height: 100px;
     margin: 0px 25px 20px 25px;
     border: 1px solid black;
     box-shadow: none;

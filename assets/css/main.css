@@ -1,6 +1,7 @@
 /* Marcas */
 body {
     margin: 0px;
+    scroll-behavior: smooth;
 }
 
 
@@ -87,7 +88,7 @@ nav {
 
 .r-link:hover, .l-link:hover {
     color: black;
-    background-color: yellow;
+    background-color: gold;
     border: 1px solid black;
 }
 

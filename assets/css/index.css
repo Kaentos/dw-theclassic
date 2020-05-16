@@ -82,22 +82,34 @@
 .go-left, .go-right {
     cursor: pointer;
     position: absolute;
-    padding: 10px;
+    padding: 0px 10px;
     top: 50%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     font-size: 50px;
-    background-color: rgba(2, 2, 2, 0.9);
+    background-color: rgba(0, 0, 0, 0.6);
     text-align: center;
     font-size: 50px;
     font-weight: bold;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.4);
+    transition: 1.2s;
+    
 }
 
+.go-left:hover, .go-right:hover {
+    background-color: rgba(0, 0, 0, 1);
+    color: rgba(255, 255, 255, 1);
+    box-shadow: none;
+}
 .go-right {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
     right: 0;
 }
-
+.go-left {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
 
 .movies-btn {
     background-color: #128ca0;

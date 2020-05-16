@@ -109,8 +109,9 @@
 }
 
 .movies-btn, .tvshows-btn {
-    width: 15%;
-    padding: 25px 0px;
+    cursor: pointer;
+    width: 10%;
+    padding: 10px 0px;
     margin-bottom: 25px;
     text-align: center;
     color: white;

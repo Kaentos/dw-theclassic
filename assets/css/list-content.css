@@ -1,6 +1,7 @@
 .content {
     width: 80%;
     margin: auto;
+    margin-bottom: 50px;
 }
 
 .content-title {
@@ -13,7 +14,7 @@
 
 .content-content {
     padding-top: 20px;
-    background-color: gray;
+    border: 1px solid black;
     display: flex;
     flex-wrap: wrap;
     margin: auto;
@@ -34,12 +35,36 @@
 }
 
 .content-buttons {
-    padding-top: 25px;
-    padding-bottom: 25px;
-    width: 100%;
-    text-align: center;
-    background-color: silver;
+    padding: 10px 25px;
+    border: 1px solid black;
 }
+
+.content-buttons button {
+    font-size: 1rem;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.content-back-btn {
+    color: black;
+    background-color: whitesmoke;
+    font-size: 1.1rem !important;
+}
+
+.content-p-btn {
+    background-color: #128ca0;
+    color: white;
+}
+
+.content-n-btn {
+    background-color: #ed3124;
+    color: white;
+}
+
+
 
 .search-form {
     background-color: silver;
@@ -48,7 +73,7 @@
 
 .search {
     margin: 10px;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
 .search > input {
     font-size: 1.2rem;
@@ -59,4 +84,10 @@
 
 .search-bar {
     min-width: 500px;
+}
+
+.search-btn {
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid black;
 }

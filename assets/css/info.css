@@ -1,0 +1,21 @@
+#info-picture {
+    max-width: 250px;
+}
+
+.info-details {
+    margin-left: 10px;
+    width: 100%;
+}
+
+.info-detail {
+    padding: 5px;
+}
+
+#info-title {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.flex-splithalf > .flex-col {
+    width: 50%;
+}

@@ -7,6 +7,9 @@
     <title>MPL | Register</title>
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/lr.css">
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/register.js"></script>
+    <script src="assets/js/lr.js"></script>
 </head>
 
 <body>
@@ -35,10 +38,13 @@
             <h1>
                 Sign up
             </h1>
-            <form id="lr-form">
+            <form onsubmit="return false" id="lr-form">
+                <div class="invalid-txt" id="invalid_txt">
+                    Invalid credentials!
+                </div>
                 <div class="input-group">
                     <label for="nu_username">Username:</label><br>
-                    <input type="text" name="nu_username" id="nu_username" placeholder="username">
+                    <input type="text" name="nu_username" id="nu_username" placeholder="Username">
                 </div>
                 <div class="input-group">
                     <label for="nu_email">Email:</label><br>
@@ -46,16 +52,17 @@
                 </div>
                 
                 <div class="input-group">
-                    <label for="password">Password:</label>
+                    <label for="nu_password">Password:</label>
                     <input type="password" name="nu_password" id="nu_password" placeholder="Password">
+                    <u>Must have 6 to 16 digits long and atleast have 1 number.</u>
                 </div>
                 <div class="input-group">
-                    <label for="password">Confirm Password:</label>
-                    <input type="password" name="nu_password" id="nu_password" placeholder="Password">
+                    <label for="nu_cpassword">Confirm Password:</label>
+                    <input type="password" name="nu_cpassword" id="nu_cpassword" placeholder="Confirm Password">
                 </div>
                 
                 <div class="input-btn">
-                    <input class="input-btn r-input-btn" type="button" value="Register">
+                    <input onclick="register()" class="input-btn r-input-btn" type="button" value="Register">
                 </div>
             </form>
             <div class="lr-to-lr">
@@ -67,11 +74,9 @@
             </div>
         </div>
         <div class="go-back">
-            <a href="/">
-                <button class="go-back-btn">
-                    Go back
-                </button>
-            </a>
+            <button id="back_btn" onclick="goBack()" class="go-back-btn">
+                Go back
+            </button>
         </div>
     </div>
 

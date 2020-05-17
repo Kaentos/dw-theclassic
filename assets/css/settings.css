@@ -1,0 +1,11 @@
+.settings-category {
+    align-items: center;
+}
+
+.settings-category > input {
+    margin: 0px 10px;
+}
+
+#changepw, #changepwcnf, #changepwc  {
+    margin-bottom: 5px;
+}

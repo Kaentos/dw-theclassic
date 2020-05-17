@@ -8,6 +8,7 @@
     <title>MPL | Login</title>
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/lr.css">
+    <script src="assets/js/login.js"></script>
 </head>
 
 <body>
@@ -35,20 +36,23 @@
             <h1>
                 Login
             </h1>
-            <form id="login-form">
+            <form onsubmit="return false" id="login-form">
+                <div class="invalid-txt" id="invalid_txt">
+                    Invalid credentials!
+                </div>
                 <div class="input-group">
                     <label for="u_email">Email:</label><br>
-                    <input type="email" name="u_mail" id="u_email" placeholder="Email">
+                    <input type="email" name="u_mail" id="u_email" placeholder="Email" required>
                 </div>
                 
                 <div class="input-group">
                     <label for="password">Password:</label>
-                    <input type="password" name="u_password" id="u_password" placeholder="Password">
+                    <input type="password" name="u_password" id="u_password" placeholder="Password" required>
                     <a href="restore_pw.html">Forgot password?</a>
                 </div>
                 
                 <div class="input-btn">
-                    <input class="input-btn" type="button" value="Login">
+                    <input onclick="login()" class="input-btn" type="submit" value="Login">
                 </div>
             </form>
             <div class="lr-to-lr">

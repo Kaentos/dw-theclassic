@@ -24,6 +24,8 @@
     box-sizing: border-box;
     -webkit-box-sizing:border-box;
     -moz-box-sizing: border-box;
+    border-radius: 2px;
+    border: 1px solid black;
 }
 .input-group > label, input {
     font-size: 1.4rem;
@@ -41,7 +43,13 @@
     color: white;
     border-radius: 5px;
     border: 1px solid black;
+    transition: 1.2s;
 }
+
+.input-btn > input:hover {
+    background-color: #1267a0;
+}
+
 .r-input-btn {
     background-color: #ed3124 !important;
 }
@@ -70,4 +78,18 @@
 .go-back-btn:hover {
     color: white;
     background-color: black;
+}
+
+.invalid-txt {
+    display: none;
+    margin-bottom: 10px;
+    margin-top: -10px;
+    background-color: #ffdce0;
+    color: #86181d;
+    border: 1px solid #86181d;
+    padding: 5px;
+    margin: 0px 60px;
+    border-radius: 2px;
+    font-size: 1.2rem;
+    text-align: center;
 }

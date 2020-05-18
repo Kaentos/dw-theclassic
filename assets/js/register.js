@@ -30,20 +30,19 @@ function register () {
 }
 
 function checkPasswords(){
-    let regex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{6,16}$/;
+    let regex = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])([a-zA-Z0-9]{6,16})$/;
     let pw1 = document.getElementById("nu_password");
     let pw2 = document.getElementById("nu_cpassword");
-    let cpw_error = document.getElementById("cpw_error");
-    console.log(pw1.value.length);
-    console.log("I'm running");
+    //let cpw_error = document.getElementById("cpw_error");
+    console.log("pw1: " + pw1.value + " pw2: " + pw2.value);
     if(pw1.value !== pw2.value) {
         console.log("not matching");
-        cpw_error.style.visibility = "block";
+        //cpw_error.style.visibility = "block";
         pw2.style.borderColor = "red";
     } else if (regex.test(pw1.value) && pw1.value.length >= 6 && pw1.value.length <= 16) {
         pw1.style.borderColor = "green";
         pw2.style.borderColor = "green";
-        cpw_error.style.visibility = "hidden";
+        //cpw_error.style.visibility = "hidden";
         console.log("match");
         return true;
     } else if (pw1.value.length === 0) {
@@ -54,8 +53,5 @@ function checkPasswords(){
 
 function checkUsername(username) {
     let regex = /^[a-zA-Z0-9_]{6,16}$/;
-    if (regex.test(username))
-        return true;
-    else
-        return false;
+    return regex.test(username);
 }

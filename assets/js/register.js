@@ -4,18 +4,14 @@ function register () {
     let nu_password = document.getElementById("nu_password");
 
     let username = nu_username.value.trim();
-    if (checkUsername(username) && !valid_usernames.includes(username)) {
-        console.log("Username: " + username);
-        document.getElementById("username-info").classList.remove("invalid");
-        document.getElementById("username-info").classList.add("valid");
-        nu_username.style.borderColor = "green";
-    } else {
+    if (!checkUsername()) {
         console.log("Invalid Username: " + username);
         document.getElementById("username-info").classList.remove("valid");
         document.getElementById("username-info").classList.add("invalid");
         showErrorTxt([nu_username]);
         return;
     }
+    console.log("Username: " + username);
     if (checkEmail(nu_email.value) && !valid_emails.includes(nu_email.value)) {
         console.log("Email: " + nu_email.value);
         nu_email.style.borderColor = "green";
@@ -56,7 +52,20 @@ function checkPasswords(){
     return false;
 }
 
-function checkUsername(username) {
+function checkUsername() {
     let regex = /^[a-zA-Z0-9_]{6,16}$/;
-    return regex.test(username);
+    let username = document.getElementById("nu_username");
+    let username_info = document.getElementById("username-info");
+    console.log(regex.test(username.value));
+
+    if (regex.test(username.value) && !valid_usernames.includes(username.value)) {
+        username_info.classList.remove("invalid");
+        username_info.classList.add("valid");
+        nu_username.style.borderColor = "green";
+        return true;
+    }
+    nu_username.style.borderColor = "red";
+    username_info.classList.remove("valid");
+    username_info.classList.add("invalid");
+    return false;
 }

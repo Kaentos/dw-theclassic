@@ -2,14 +2,17 @@ function register () {
     let nu_username = document.getElementById("nu_username");
     let nu_email = document.getElementById("nu_email");
     let nu_password = document.getElementById("nu_password");
-    let nu_cpassword = document.getElementById("nu_cpassword");
 
     let username = nu_username.value.trim();
     if (checkUsername(username) && !valid_usernames.includes(username)) {
         console.log("Username: " + username);
+        document.getElementById("username-info").classList.remove("invalid");
+        document.getElementById("username-info").classList.add("valid");
         nu_username.style.borderColor = "green";
     } else {
         console.log("Invalid Username: " + username);
+        document.getElementById("username-info").classList.remove("valid");
+        document.getElementById("username-info").classList.add("invalid");
         showErrorTxt([nu_username]);
         return;
     }
@@ -27,6 +30,7 @@ function register () {
         return;
 
     // efetuar registo (adicionar às vars)
+    console.log("Efetuar registo");
 }
 
 function checkPasswords(){
@@ -50,23 +54,6 @@ function checkPasswords(){
     pw_error.classList.remove("valid");
     pw_error.classList.add("invalid");
     return false;
-    /*
-    if (pw1.value !== pw2.value) {
-        pw2.style.borderColor = "red";
-    } else if (regex.test(pw1.value) && pw1.value.length >= 6 && pw1.value.length <= 16) {
-        pw1.style.borderColor = "green";
-        pw2.style.borderColor = "green";
-        pw_error.classList.remove("invalid");
-        pw_error.classList.add("valid");
-        return true;
-    } else if (pw1.value.length === 0) {
-        pw1.style.borderColor = "red";
-    } else if (regex.test(pw1)) {
-        pw1.style.borderColor = "green";
-    }
-    pw_error.classList.remove("valid");
-    pw_error.classList.add("invalid");
-    return false;*/
 }
 
 function checkUsername(username) {

@@ -34,16 +34,12 @@ function checkPasswords(){
     let pw1 = document.getElementById("nu_password");
     let pw2 = document.getElementById("nu_cpassword");
     //let cpw_error = document.getElementById("cpw_error");
-    console.log("pw1: " + pw1.value + " pw2: " + pw2.value);
     if(pw1.value !== pw2.value) {
-        console.log("not matching");
         //cpw_error.style.visibility = "block";
         pw2.style.borderColor = "red";
     } else if (regex.test(pw1.value) && pw1.value.length >= 6 && pw1.value.length <= 16) {
         pw1.style.borderColor = "green";
         pw2.style.borderColor = "green";
-        //cpw_error.style.visibility = "hidden";
-        console.log("match");
         return true;
     } else if (pw1.value.length === 0) {
         pw1.style.borderColor = "red";

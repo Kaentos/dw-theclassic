@@ -1,4 +1,9 @@
+var valid_usernames = ["admin_admin", "teste_teste"];
+var valid_emails = ["admin@mplist.com", "teste@gmail.com"];
+var valid_passwords = ["admin", "teste"];
 var invalid_txt = null;
+
+
 
 window.onload = function () {
     invalid_txt = document.getElementById("invalid_txt");

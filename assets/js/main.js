@@ -1,6 +1,3 @@
-const valid_emails = ["admin@mplist.com", "teste@gmail.com"];
-const valid_passwords = ["admin", "teste"];
-
 window.onload = function () {
     let back_btn = document.getElementById('back_btn');
     if (document.referrer === "") {

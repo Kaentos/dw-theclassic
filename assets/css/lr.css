@@ -1,6 +1,7 @@
 .lr-zone {
     padding-top: 50px;
     min-height: 600px;
+    padding-bottom: 50px;
 }
 .lr-panel {
     margin: auto;
@@ -92,4 +93,11 @@
     border-radius: 2px;
     font-size: 1.2rem;
     text-align: center;
+}
+.invalid-pw {
+    padding: 5px;
+    background-color: #ffdce0;
+    color: #86181d;
+    border: 1px solid #86181d;
+    visibility: hidden;
 }

@@ -46,6 +46,7 @@
                 <div class="input-group">
                     <label for="nu_username">Username:</label><br>
                     <input type="text" name="nu_username" id="nu_username" placeholder="Username">
+                    Unique, 6-16 characters, no special characters allowed underscore
                 </div>
                 <div class="input-group">
                     <label for="nu_email">Email:</label><br>
@@ -60,7 +61,7 @@
                 <div class="input-group">
                     <label for="nu_cpassword">Confirm Password:</label>
                     <input type="password" name="nu_cpassword" id="nu_cpassword" placeholder="Confirm Password" onkeyup="checkPasswords()">
-                    <span id="cpw_error">Passwords don't match</span>
+                    <div class="invalid-pw" id="cpw_error">Passwords don't match</div>
                 </div>
                 
                 <div class="input-btn">

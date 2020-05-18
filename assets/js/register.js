@@ -33,18 +33,40 @@ function checkPasswords(){
     let regex = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])([a-zA-Z0-9]{6,16})$/;
     let pw1 = document.getElementById("nu_password");
     let pw2 = document.getElementById("nu_cpassword");
-    //let cpw_error = document.getElementById("cpw_error");
-    if(pw1.value !== pw2.value) {
-        //cpw_error.style.visibility = "block";
+    let pw_error = document.getElementById("pw-info");
+    
+    if (!regex.test(pw1.value) || pw1.value.length === 0){
+        pw1.style.borderColor = "red";
+    } else if (pw1.value !== pw2.value) {
+        pw1.style.borderColor = "green";
+        pw2.style.borderColor = "red";
+    } else {
+        pw1.style.borderColor = "green";
+        pw2.style.borderColor = "green";
+        pw_error.classList.remove("invalid");
+        pw_error.classList.add("valid");
+        return true;
+    }
+    pw_error.classList.remove("valid");
+    pw_error.classList.add("invalid");
+    return false;
+    /*
+    if (pw1.value !== pw2.value) {
         pw2.style.borderColor = "red";
     } else if (regex.test(pw1.value) && pw1.value.length >= 6 && pw1.value.length <= 16) {
         pw1.style.borderColor = "green";
         pw2.style.borderColor = "green";
+        pw_error.classList.remove("invalid");
+        pw_error.classList.add("valid");
         return true;
     } else if (pw1.value.length === 0) {
         pw1.style.borderColor = "red";
+    } else if (regex.test(pw1)) {
+        pw1.style.borderColor = "green";
     }
-    return false;
+    pw_error.classList.remove("valid");
+    pw_error.classList.add("invalid");
+    return false;*/
 }
 
 function checkUsername(username) {

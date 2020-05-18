@@ -56,12 +56,13 @@
                 <div class="input-group">
                     <label for="nu_password">Password:</label>
                     <input type="password" name="nu_password" id="nu_password" placeholder="Password" onkeyup="checkPasswords()">
-                    <u>Must have 6 to 16 digits long and atleast have 1 number.</u>
+                    <div class="info-txt" id="pw-info">
+                        Length: 6-16, 1 uppercase, 1 lowercase, 1 digit, no special characters.
+                    </div>
                 </div>
                 <div class="input-group">
                     <label for="nu_cpassword">Confirm Password:</label>
                     <input type="password" name="nu_cpassword" id="nu_cpassword" placeholder="Confirm Password" onkeyup="checkPasswords()">
-                    <div class="invalid-pw" id="cpw_error">Passwords don't match</div>
                 </div>
                 
                 <div class="input-btn">

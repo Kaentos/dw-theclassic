@@ -94,10 +94,29 @@
     font-size: 1.2rem;
     text-align: center;
 }
-.invalid-pw {
+
+.info-txt {
     padding: 5px;
-    background-color: #ffdce0;
-    color: #86181d;
-    border: 1px solid #86181d;
+    border: 1px solid #002f85;
+    border-radius: 2px;
+    margin-top: 5px;
+    background-color: #a3c4ff;
+    color: #002f85;
+    font-weight: bold;
+}
+
+.vis-hidden {
     visibility: hidden;
+}
+
+.invalid {
+    background-color: #ffdce0 !important;
+    color: #86181d !important;
+    border-color: #86181d !important;
+}
+
+.valid {
+    background-color: #91cc99 !important;
+    color: #004009 !important;
+    border-color: #004009 !important;
 }

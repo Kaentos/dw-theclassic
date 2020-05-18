@@ -56,8 +56,7 @@ function checkUsername() {
     let regex = /^[a-zA-Z0-9_]{6,16}$/;
     let username = document.getElementById("nu_username");
     let username_info = document.getElementById("username-info");
-    console.log(regex.test(username.value));
-
+    
     if (regex.test(username.value) && !valid_usernames.includes(username.value)) {
         username_info.classList.remove("invalid");
         username_info.classList.add("valid");
@@ -68,4 +67,15 @@ function checkUsername() {
     username_info.classList.remove("valid");
     username_info.classList.add("invalid");
     return false;
+}
+
+function checkEmail() {
+    let email = document.getElementById("nu_email");
+    let regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if (regex.test(email.value) && !valid_emails.includes(email.value)) {
+        email.style.borderColor = "green";
+        return true;
+    } else {
+        email.style.borderColor = "red";
+    }
 }

@@ -16,7 +16,7 @@ function showErrorTxt(inputs) {
     invalid_txt.style.display = "block";
 }
 
-function checkEmail(email) {
+function checkEmail2(email) {
     let email_regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return email_regex.test(String(email));
 }

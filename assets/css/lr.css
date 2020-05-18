@@ -12,7 +12,7 @@
     text-align: center;
 }
 .input-group {
-    margin: 20px 60px;
+    margin: 10px 60px;
 }
 
 .reset-pw-txt {
@@ -32,6 +32,7 @@
     font-size: 1.4rem;
 }
 .input-btn {
+    margin-top: 15px;
     margin-bottom: 10px;
     text-align: center;
 }

@@ -9,11 +9,8 @@ window.onload = function () {
     invalid_txt = document.getElementById("invalid_txt");
 }
 
-function showErrorTxt(inputs) {
-    for (let i of inputs) {
-        i.style.borderColor = "red";
-    }
-    invalid_txt.style.display = "block";
+function borderRed(input) {
+    input.style.borderColor = "red";
 }
 
 function checkEmail2(email) {

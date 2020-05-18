@@ -1,32 +1,12 @@
 function register () {
-    let nu_username = document.getElementById("nu_username");
-    let nu_email = document.getElementById("nu_email");
-    let nu_password = document.getElementById("nu_password");
-
-    let username = nu_username.value.trim();
-    if (!checkUsername()) {
-        console.log("Invalid Username: " + username);
-        document.getElementById("username-info").classList.remove("valid");
-        document.getElementById("username-info").classList.add("invalid");
-        showErrorTxt([nu_username]);
-        return;
-    }
-    console.log("Username: " + username);
-    if (checkEmail(nu_email.value) && !valid_emails.includes(nu_email.value)) {
-        console.log("Email: " + nu_email.value);
-        nu_email.style.borderColor = "green";
-    } else {
-        console.log("Invalid Email: " + nu_email.value);
-        showErrorTxt([nu_email]);
-        return;
-    }
-    if (checkPasswords())
-        console.log("Password: " + nu_password.value);
-    else
+    if (!checkUsername() || !checkEmail() || !checkPasswords())
         return;
 
     // efetuar registo (adicionar às vars)
     console.log("Efetuar registo");
+    let username = document.getElementById("nu_username").value;
+    let email = document.getElementById("nu_email").value;
+    let password = document.getElementById("nu_password").value;
 }
 
 function checkPasswords(){
@@ -63,6 +43,7 @@ function checkUsername() {
         nu_username.style.borderColor = "green";
         return true;
     }
+    borderRed(username);
     nu_username.style.borderColor = "red";
     username_info.classList.remove("valid");
     username_info.classList.add("invalid");
@@ -76,6 +57,6 @@ function checkEmail() {
         email.style.borderColor = "green";
         return true;
     } else {
-        email.style.borderColor = "red";
+        borderRed(email);
     }
 }

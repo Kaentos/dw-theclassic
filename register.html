@@ -46,7 +46,10 @@
                 <div class="input-group">
                     <label for="nu_username">Username:</label><br>
                     <input type="text" name="nu_username" id="nu_username" placeholder="Username">
-                    Unique, 6-16 characters, no special characters allowed underscore
+                    <div class="info-txt" id="username-info">
+                        Unique, 6-16 characters, no special characters allowed underscore
+                    </div>
+                    
                 </div>
                 <div class="input-group">
                     <label for="nu_email">Email:</label><br>
@@ -57,7 +60,7 @@
                     <label for="nu_password">Password:</label>
                     <input type="password" name="nu_password" id="nu_password" placeholder="Password" onkeyup="checkPasswords()">
                     <div class="info-txt" id="pw-info">
-                        Length: 6-16, 1 uppercase, 1 lowercase, 1 digit, no special characters.
+                        Length: 6-16, 1 uppercase, 1 lowercase, 1 digit, no special characters, both passwords must match.
                     </div>
                 </div>
                 <div class="input-group">

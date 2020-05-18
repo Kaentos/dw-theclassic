@@ -97,11 +97,12 @@
 
 .info-txt {
     padding: 5px;
-    border: 1px solid #002f85;
+    border: 1px solid #182786;
+    /* rgb(255, 220, 224) */
     border-radius: 2px;
     margin-top: 5px;
-    background-color: #a3c4ff;
-    color: #002f85;
+    background-color: #dce0ff;
+    color: #182786;
     font-weight: bold;
 }
 
@@ -116,7 +117,7 @@
 }
 
 .valid {
-    background-color: #91cc99 !important;
-    color: #004009 !important;
-    border-color: #004009 !important;
+    background-color: #dcffe5 !important;
+    color: #18861f !important;
+    border-color: #18861f !important;
 }

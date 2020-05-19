@@ -26,7 +26,7 @@
     -webkit-box-sizing:border-box;
     -moz-box-sizing: border-box;
     border-radius: 2px;
-    border: 1px solid black;
+    border: 2px solid black;
 }
 .input-group > label, input {
     font-size: 1.4rem;
@@ -110,6 +110,10 @@
     visibility: hidden;
 }
 
+.display-none {
+    display: none;
+}
+
 .invalid {
     background-color: #ffdce0 !important;
     color: #86181d !important;
@@ -120,4 +124,8 @@
     background-color: #dcffe5 !important;
     color: #18861f !important;
     border-color: #18861f !important;
+}
+
+.text-center {
+    text-align: center;
 }

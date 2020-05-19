@@ -4,8 +4,8 @@ function register () {
 
     // efetuar registo (adicionar às vars)
     console.log("Efetuar registo");
-    let username = document.getElementById("nu_username").value;
-    let email = document.getElementById("nu_email").value;
+    let username = document.getElementById("nu_username").value.toLowerCase();
+    let email = document.getElementById("nu_email").value.toLowerCase();
     let password = document.getElementById("nu_password").value;
 }
 
@@ -33,30 +33,31 @@ function checkPasswords(){
 }
 
 function checkUsername() {
-    let regex = /^[a-zA-Z0-9_]{6,16}$/;
-    let username = document.getElementById("nu_username");
+    let regex = /^[a-z0-9_]{6,16}$/;
+    let username_input = document.getElementById("nu_username");
+    let username = username_input.value.toLowerCase();
     let username_info = document.getElementById("username-info");
     
-    if (regex.test(username.value) && !valid_usernames.includes(username.value)) {
+    if (regex.test(username) && !valid_usernames.includes(username)) {
         username_info.classList.remove("invalid");
         username_info.classList.add("valid");
-        nu_username.style.borderColor = "green";
+        username_input.style.borderColor = "green";
         return true;
     }
-    borderRed(username);
-    nu_username.style.borderColor = "red";
+    borderRed(username_input);
     username_info.classList.remove("valid");
     username_info.classList.add("invalid");
     return false;
 }
 
 function checkEmail() {
-    let email = document.getElementById("nu_email");
+    let email_input = document.getElementById("nu_email");
+    let email = email_input.value.toLowerCase();
     let regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    if (regex.test(email.value) && !valid_emails.includes(email.value)) {
-        email.style.borderColor = "green";
+    if (regex.test(email) && !valid_emails.includes(email)) {
+        email_input.style.borderColor = "green";
         return true;
-    } else {
-        borderRed(email);
     }
+    borderRed(email_input);
+    return false;
 }

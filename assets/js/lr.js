@@ -1,13 +1,6 @@
 var valid_usernames = ["admin_admin", "teste_teste", "bomdia"];
 var valid_emails = ["admin@mplist.com", "teste@gmail.com", "bomdia@gmail.com"];
 var valid_passwords = ["admin", "teste", "bomdia"];
-var invalid_txt = null;
-
-
-
-window.onload = function () {
-    invalid_txt = document.getElementById("invalid_txt");
-}
 
 function borderRed(input) {
     input.style.borderColor = "red";

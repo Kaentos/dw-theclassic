@@ -5,10 +5,10 @@ function login () {
     let email = email_input.value.toLowerCase();
     let pw_input = document.getElementById("l_password");
     let pw = pw_input.value;
-
-    if (regex.test(email) && valid_emails.includes(email)) {
-        let idx = valid_emails.indexOf(email);
-        if (valid_passwords[idx] === pw) {
+    let user_idx = users_info["email"].indexOf(email);
+    
+    if (regex.test(email) && user_idx !== -1) {
+        if (users_info["password"][user_idx] === pw) {
             document.getElementById("login-info").classList.add("display-none");
             email_input.style.borderColor = "green";
             pw_input.style.borderColor = "green";

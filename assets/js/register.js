@@ -38,7 +38,7 @@ function checkUsername() {
     let username = username_input.value.toLowerCase();
     let username_info = document.getElementById("username-info");
     
-    if (regex.test(username) && !valid_usernames.includes(username)) {
+    if (regex.test(username) && !users_info["username"].includes(username)) {
         username_info.classList.remove("invalid");
         username_info.classList.add("valid");
         username_input.style.borderColor = "green";
@@ -54,7 +54,7 @@ function checkEmail() {
     let email_input = document.getElementById("nu_email");
     let email = email_input.value.toLowerCase();
     let regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    if (regex.test(email) && !valid_emails.includes(email)) {
+    if (regex.test(email) && !users_info["email"].includes(email)) {
         email_input.style.borderColor = "green";
         return true;
     }

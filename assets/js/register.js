@@ -7,6 +7,15 @@ function register () {
     let username = document.getElementById("nu_username").value.toLowerCase();
     let email = document.getElementById("nu_email").value.toLowerCase();
     let password = document.getElementById("nu_password").value;
+    
+    let users_info = JSON.parse(localStorage.getItem("users_info"));
+    users_info["username"].push(username);
+    users_info["email"].push(email);
+    users_info["password"].push(password);
+    let login_info = [users_info["username"].length - 1, username, email, new Date().getTime()];
+    sessionStorage.setItem("login_info", login_info);
+    localStorage.setItem("users_info", JSON.stringify(users_info));
+    location.reload();
 }
 
 function checkPasswords(){

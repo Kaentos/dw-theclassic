@@ -24,8 +24,7 @@ function login () {
 }
 
 function set_login(id, keepLogin) {
-    console.log("User id: " + id + " Keep Login: " + keepLogin);
-    let login_info = [users_info["username"][id], users_info["email"][id], new Date().getTime()];
+    let login_info = [id, users_info["username"][id], users_info["email"][id], new Date().getTime()];
     if (keepLogin) {
         localStorage.setItem("login_info", login_info);
     } else {

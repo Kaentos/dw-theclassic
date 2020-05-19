@@ -129,3 +129,14 @@
 .text-center {
     text-align: center;
 }
+
+.kl_div {
+    font-size: 1.1rem;
+    margin: 0px 60px;
+}
+
+.kl_box {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}

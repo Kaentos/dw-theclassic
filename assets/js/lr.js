@@ -16,6 +16,13 @@ function resetUsers() {
     localStorage.removeItem("users_info");
 }
 
+if (sessionStorage.getItem("login_info")) {
+    console.log("Session, removing");
+    sessionStorage.removeItem("login_info");
+} else if (localStorage.getItem("login_info")) {
+    console.log("Perma, removing");
+    localStorage.removeItem("login_info");
+}
 
 // Functions
 function borderRed(input) {

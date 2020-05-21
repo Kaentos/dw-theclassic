@@ -25,9 +25,7 @@ function set_login(id, keepLogin) {
 }
 
 function getUserByEmail(email) {
-    let regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    
-    if (regex.test(email)) {
+    if (email_regex.test(email)) {
         for (let obj of users){
             if (email === obj.getEmail()) {
                 return obj;

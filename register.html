@@ -10,7 +10,7 @@
     <script src="assets/js/main.js"></script>
     <script src="assets/js/register.js"></script>
     <script src="assets/js/lr.js"></script>
-    
+
 </head>
 
 <body>
@@ -19,7 +19,7 @@
             <a class="navbar-img-a" href="/">
                 <picture>
                     <img class="navbar-img" src="assets/img/logo.png" alt="logo">
-                </picture>        
+                </picture>
             </a>
             <a class="navbar-links" href="/">Home</a>
             <a class="navbar-links" href="#">Movies</a>
@@ -32,48 +32,51 @@
             <a class="r-link active" href="register.html">Register</a>
         </div>
     </nav>
-    
+
 
     <div class="lr-zone">
         <div class="lr-panel">
             <h1 class="text-center">
                 Sign up
             </h1>
+            <form>
                 <div class="input-group">
                     <label for="nu_username">Username:</label><br>
                     <input type="text" name="nu_username" id="nu_username" placeholder="Username">
                     <div class="info-txt" id="username-info">
                         Unique, 6-16 characters, no special characters except underscore (_).
                     </div>
-                    
+
                 </div>
                 <div class="input-group">
                     <label for="nu_email">Email:</label><br>
                     <input type="email" name="nu_mail" id="nu_email" placeholder="Email">
                 </div>
-                
+
                 <div class="input-group">
                     <label for="nu_password">Password:</label>
                     <input type="password" name="nu_password" id="nu_password" placeholder="Password">
                     <div class="info-txt" id="pw-info">
-                        Length: 6-16, 1 uppercase, 1 lowercase, 1 digit, no special characters, both passwords must match.
+                        Length: 6-16, 1 uppercase, 1 lowercase, 1 digit, no special characters, both passwords must
+                        match.
                     </div>
                 </div>
                 <div class="input-group">
                     <label for="nu_cpassword">Confirm Password:</label>
                     <input type="password" name="nu_cpassword" id="nu_cpassword" placeholder="Confirm Password">
                 </div>
-                
+
                 <div class="input-btn">
                     <input id="register_btn" class="input-btn r-input-btn" type="button" value="Register">
                 </div>
-            <div class="lr-to-lr">
-                <p> Already have one? 
-                    <a href="login.html">
-                        Login now!
-                    </a>
-                </p>
-            </div>
+                <div class="lr-to-lr">
+                    <p> Already have one?
+                        <a href="login.html">
+                            Login now!
+                        </a>
+                    </p>
+                </div>
+            </form>
         </div>
         <div class="go-back">
             <button id="back_btn" onclick="goBack()" class="go-back-btn">
@@ -140,7 +143,7 @@
                     </li>
                 </ul>
             </div>
-        </div> 
+        </div>
         <div class="footer-credits flex-line flex-spaced">
             <div class="footer-credits-txt">
                 Website created by: Kaentos & Thekings2468
@@ -160,8 +163,8 @@
                 from
                 <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
             </div>
-            
-            
+
+
         </div>
     </footer>
 

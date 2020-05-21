@@ -7,10 +7,10 @@ function register () {
     let password = document.getElementById("nu_password").value;
     
     const new_user = Object.assign({}, user_obj);
-    new_user.setEmail(email);
-    new_user.setUsername(username);
-    new_user.setPassword(password);
-    new_user.setCreationDate();
+    setEmail(new_user, email);
+    setUsername(new_user, username);
+    setPassword(new_user, password);
+    setCreationDate(new_user);
     console.log(new_user);
     // sessionStorage.setItem("login_info", login_info);
     // localStorage.setItem("users_info", JSON.stringify(users_info));
@@ -47,7 +47,7 @@ function checkUsername() {
     let username_info = document.getElementById("username-info");
     if (regex.test(username)) {
         for (let obj of users){
-            if (username === obj.getUsername().toLowerCase()) {
+            if (username === getUsername(obj).toLowerCase()) {
                 borderRed(username_input);
                 username_info.classList.remove("valid");
                 username_info.classList.add("invalid");
@@ -70,7 +70,7 @@ function checkEmail() {
     let email = email_input.value.toLowerCase();
     if (email_regex.test(email)) {
         for (let obj of users){
-            if (email === obj.getEmail()) {
+            if (email === getEmail(obj)) {
                 borderRed(email_input);
                 return false;
             }

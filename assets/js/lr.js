@@ -2,54 +2,78 @@ const user_obj = {
     email: null,
     username: null,
     password: null,
-    creationDate: null,
-    setEmail: function(email) {
-        this.email = email;
-    },
-    setUsername: function(name) {
-        this.username = name;
-    },
-    setPassword: function(password) {
-        this.password = password;
-    },
-    setCreationDate: function() {
-        this.creationDate = new Date().getTime();
-    },
-    getEmail: function() {
-        return this.email;
-    },
-    getUsername: function() {
-        return this.username;
-    },
-    getPassword: function() {
-        return this.password;
-    },
-    getCreationDate: function() {
-        return this.creationDate;
+    creationDate: null
+}
+function setEmail(obj, email) {
+    if(arguments.length === 2 && typeof(obj) === "object" && typeof(email) === "string") {
+        obj.email = email;
+    } else {
+        console.log("More than 2 argument or arguments non object or non string");
     }
+}
+function setUsername(obj, username) {
+    if(arguments.length === 2 && typeof(obj) === "object" && typeof(username) === "string") {
+        obj.username = username;
+    } else {
+        console.log("More than 2 argument or arguments non object or non string");
+    }
+}
+function setPassword(obj, password) {
+    if(arguments.length === 2 && typeof(obj) === "object" && typeof(password) === "string") {
+        obj.password = password;
+        return;
+    } else {
+        console.log("More than 2 argument or arguments non object or non string");
+    }
+    
+}
+function setCreationDate(obj) {
+    if(arguments.length === 1 && typeof(obj) === "object") {
+        obj.creationDate = new Date().getTime();
+    } else {
+        console.log("More than 1 argument or argument non object");
+    }
+}
+function getEmail(obj) {
+    if (arguments.length === 1 && typeof(obj) === "object") {
+        return obj.email;
+    }
+    console.log("More than 1 argument or argument non object");
+}
+function getUsername(obj) {
+    if (arguments.length === 1 && typeof(obj) === "object") {
+        return obj.username;
+    }
+    console.log("More than 1 argument or argument non object");
+}
+function getPassword(obj) {
+    if (arguments.length === 1 && typeof(obj) === "object") {
+        return obj.password;
+    }
+    console.log("More than 1 argument or argument non object");
+}
+function getCreationDate(obj) {
+    if (arguments.length === 1 && typeof(obj) === "object") {
+        return obj.creationDate;
+    }
+    console.log("More than 1 argument or argument non object");
 }
 
 const user1 = Object.assign({}, user_obj);
-user1.setEmail("admin@mypopcornlist.com");
-user1.setUsername("Admin");
-user1.setPassword("admin");
-user1.setCreationDate;
+setEmail(user1, "admin@mypopcornlist.com");
+setUsername(user1, "Admin");
+setPassword(user1, "admin");
+setCreationDate;
 const user2 = Object.assign({}, user_obj);
-user2.setEmail("normal_user@hotmail.com");
-user2.setUsername("Normal_User");
-user2.setPassword("normal");
-user2.setCreationDate;
-var users = [user1, user2];
+setEmail(user2, "normal_user@hotmail.com");
+setUsername(user2, "Normal_User");
+setPassword(user2, "normal");
+setCreationDate;
+
 const email_regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 
-var users_info_json = {
-    "username" : ["admin_admin", "teste_teste", "bomdia"],
-    "email": ["admin@mplist.com", "teste@gmail.com", "bomdia@gmail.com"],
-    "password": ["admin", "teste", "bomdia"]
-}
-var users_info = null; // var that stores the local
-
+var users = [user1, user2];
 // If users_info_json already in localStorage gets the item from localStorege if not creates the item in localStorage
 if (localStorage.getItem("users_info") === null) {
     localStorage.setItem("users_info", JSON.stringify(users_info_json));

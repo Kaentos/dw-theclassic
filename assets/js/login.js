@@ -4,9 +4,10 @@ function login() {
     let keepLogin_input = document.getElementById("l_keepLogin");
 
     let user = getUserByEmail(email_input.value);
-    if (user && user.getPassword() === password_input.value) {
+    if (user && getPassword(user) === password_input.value) {
         document.getElementById("login-info").classList.add("display-none");
-        set_login(user_idx, keepLogin_input.checked);
+        console.log("Can login");
+        //set_login(user_idx, keepLogin_input.checked);
         return;
     }
     borderRed(email_input);
@@ -27,7 +28,7 @@ function set_login(id, keepLogin) {
 function getUserByEmail(email) {
     if (email_regex.test(email)) {
         for (let obj of users){
-            if (email === obj.getEmail()) {
+            if (email === getEmail(obj)) {
                 return obj;
             }
         }

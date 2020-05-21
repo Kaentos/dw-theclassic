@@ -19,3 +19,9 @@
 .flex-splithalf > .flex-col {
     width: 50%;
 }
+
+@media only screen and (max-width: 675px) {
+    .info-details {
+        margin: 0;
+    }
+}

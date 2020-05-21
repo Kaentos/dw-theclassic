@@ -39,6 +39,7 @@ user2.setEmail("normal_user@hotmail.com");
 user2.setUsername("Normal_User");
 user2.setPassword("normal");
 user2.setCreationDate;
+var users = [user1, user2];
 
 
 var users_info_json = {

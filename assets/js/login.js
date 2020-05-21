@@ -1,25 +1,16 @@
-function login () {
-    let regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
+function login() {
     let email_input = document.getElementById("l_email");
-    let email = email_input.value.toLowerCase();
-    let pw_input = document.getElementById("l_password");
-    let pw = pw_input.value;
+    let password_input = document.getElementById("l_password");
     let keepLogin_input = document.getElementById("l_keepLogin");
 
-    let user_idx = users_info["email"].indexOf(email);
-    if (regex.test(email) && user_idx !== -1) {
-        if (users_info["password"][user_idx] === pw) {
-            document.getElementById("login-info").classList.add("display-none");
-            email_input.style.borderColor = "green";
-            pw_input.style.borderColor = "green";
-            
-            set_login(user_idx, keepLogin_input.checked);
-            return;
-        }
+    let user = getUserByEmail(email_input.value);
+    if (user && user.getPassword() === password_input.value) {
+        document.getElementById("login-info").classList.add("display-none");
+        set_login(user_idx, keepLogin_input.checked);
+        return;
     }
     borderRed(email_input);
-    borderRed(pw_input);
+    borderRed(password_input);
     document.getElementById("login-info").classList.remove("display-none");
 }
 
@@ -31,4 +22,23 @@ function set_login(id, keepLogin) {
         sessionStorage.setItem("login_info", login_info);
     }
     location.reload()
+}
+
+function getUserByEmail(email) {
+    let regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    
+    if (regex.test(email)) {
+        for (let obj of users){
+            if (email === obj.getEmail()) {
+                return obj;
+            }
+        }
+    }
+
+    return false;
+}
+
+window.onload = function() {
+    setBackBtn();
+    document.getElementById("login_btn").addEventListener("click", login);
 }

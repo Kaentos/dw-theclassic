@@ -19,7 +19,7 @@
             <a class="navbar-img-a" href="/">
                 <picture>
                     <img class="navbar-img" src="assets/img/logo.png" alt="logo">
-                </picture>        
+                </picture>
             </a>
             <a class="navbar-links" href="/">Home</a>
             <a class="navbar-links" href="#">Movies</a>
@@ -35,44 +35,38 @@
 
     <div class="lr-zone">
         <div class="lr-panel">
-            <h1>
+            <h1 class="text-center">
                 Login
             </h1>
-            <form onsubmit="return false" id="login-form">
-                <div class="invalid-txt" id="invalid_txt">
+            <div class="input-group">
+                <label for="l_email">Email:</label><br>
+                <input type="email" name="l_email" id="l_email" placeholder="Email" required>
+            </div>
+
+            <div class="input-group">
+                <label for="l_password">Password:</label>
+                <input type="password" name="l_password" id="l_password" placeholder="Password" required>
+                <a class="reset-pw" href="restore_pw.html">Forgot password?</a>
+            </div>
+            <div class="input-group keep_login-txt">
+                <label>
+                    Keep login:
+                    <input class="keep_login_box" type="checkbox" name="l_keepLogin" id="l_keepLogin">
+                </label>
+            </div>
+
+            <div class="input-group">
+                <div class="display-none info-txt invalid text-center" id="login-info">
                     Invalid credentials!
                 </div>
-                <div class="input-group">
-                    <label for="l_email">Email:</label><br>
-                    <input type="email" name="l_email" id="l_email" placeholder="Email" required>
-                </div>
-                
-                <div class="input-group">
-                    <label for="l_password">Password:</label>
-                    <input type="password" name="l_password" id="l_password" placeholder="Password" required>
-                    <a href="restore_pw.html">Forgot password?</a>                    
-                </div>
+            </div>
 
-                <div class="kl_div">
-                    <label>
-                        Keep login:
-                        <input class="kl_box" type="checkbox" name="l_keepLogin" id="l_keepLogin"> 
-                    </label>
-                </div>
-
-                <div class="input-group">
-                    <div class="display-none info-txt invalid text-center" id="login-info">
-                        Invalid credentials!
-                    </div>
-                </div>
-                
-                <div class="input-btn">
-                    <input onclick="login()" class="input-btn" type="submit" value="Login">
-                </div>
-            </form>
+            <div class="input-btn">
+                <input onclick="login()" class="input-btn" type="submit" value="Login">
+            </div>
             <div class="lr-to-lr">
                 <p>
-                    Don't have an account? 
+                    Don't have an account?
                     <a href="register.html">
                         Create one right now!
                     </a>
@@ -144,7 +138,7 @@
                     </li>
                 </ul>
             </div>
-        </div> 
+        </div>
         <div class="footer-credits flex-line flex-spaced">
             <div class="footer-credits-txt">
                 Website created by: Kaentos & Thekings2468
@@ -164,8 +158,8 @@
                 from
                 <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
             </div>
-            
-            
+
+
         </div>
     </footer>
 

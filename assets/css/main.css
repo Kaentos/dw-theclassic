@@ -176,3 +176,14 @@ footer .flex-line:first-child {
     color: black;
     font-weight: bolder;
 }
+
+.vis-hidden {
+    visibility: hidden;
+}
+
+.display-none {
+    display: none;
+}
+.text-center {
+    text-align: center;
+}

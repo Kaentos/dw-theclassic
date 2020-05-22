@@ -4,123 +4,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/img/logo.png">
     <title>MPL | Login</title>
     <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/lr.css">
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/login.js"></script>
+    <script src="assets/js/lr.js"></script>
 </head>
 
 <body>
-    <!-- Navbar -->
-    <div class="navbar">
-        <a href="/" style="float: left; margin-left: 25px; margin-top: 5px;">
-            <picture>
-                <img src="assets/img/MPL.png" alt="logo" width="50px">
-            </picture>
-        </a>
-        <ul class="links">
-            <li>
-                <a href="#">Movies</a>
-            </li>
-            <li>
-                <a href="#">TV Shows</a>
-            </li>
-            <li>
-                <a href="#">Users</a>
-            </li>
-            <li>
-                <a href="#">Contact</a>
-            </li>
-        </ul>
-        <ul class="account-links">
-            <li>
-                <a href="login.html">Login</a>
-            </li>
-            <li>
-                <a href="register.html">Register</a>
-            </li>
-        </ul>
-    </div>
-    
+    <nav id="navbar"></nav>
 
-    <div class="login-zone">
-        <div class="login-panel">
-            <h1>
+    <div class="lr-zone">
+        <div class="lr-panel">
+            <h1 class="text-center">
                 Login
             </h1>
-            <form id="login-form">
+            <form onsubmit="return false">
                 <div class="input-group">
-                    <label for="u_email">Email:</label><br>
-                    <input type="email" name="u_mail" id="u_email" placeholder="Email">
+                    <label for="l_email">Email:</label><br>
+                    <input type="email" name="l_email" id="l_email" placeholder="Email" required>
                 </div>
-                
                 <div class="input-group">
-                    <label for="password">Password:</label>
-                    <input type="password" name="u_password" id="u_password" placeholder="Password">
-                    <a href="restore_pw.html">Forgot password?</a>
+                    <label for="l_password">Password:</label>
+                    <input type="password" name="l_password" id="l_password" placeholder="Password" required>
+                    <a class="reset-pw" href="restore_pw.html">Forgot password?</a>
                 </div>
-                
+                <div class="input-group keep_login-txt">
+                    <label>
+                        Keep login:
+                        <input class="keep_login_box" type="checkbox" name="l_keepLogin" id="l_keepLogin">
+                    </label>
+                </div>
+                <div class="input-group">
+                    <div class="display-none info-txt invalid text-center" id="login-info">
+                        Invalid credentials!
+                    </div>
+                </div>
                 <div class="input-btn">
-                    <input class="input-btn" type="button" value="Login">
+                    <input class="input-btn" id="login_btn" type="submit" value="Login">
                 </div>
             </form>
-            <div class="login-register">
+            <div class="lr-to-lr">
                 <p>
-                    Don't have an account? 
+                    Don't have an account?
                     <a href="register.html">
                         Create one right now!
                     </a>
                 </p>
             </div>
         </div>
+        <div class="go-back">
+            <button id="back_btn" onclick="goBack()" class="go-back-btn">
+                Go back
+            </button>
+        </div>
     </div>
 
-    <footer class="footer">
-        <div class="footer-content">
-            <div>
-                <h3>My Popcorn List</h3>
-                <picture>
-                    <img src="" alt="website logo">
-                </picture>
-            </div>
-            <div>
-                <h3>Pages</h3>
-                <ul class="footer-ul">
-                    <li>
-                        <a href="#">Movies</a>
-                    </li>
-                    <li>
-                        <a href="#">Series</a>
-                    </li>
-                    <li>
-                        <a href="#">Users</a>
-                    </li>
-                    <li>
-                        <a href="#">Login</a>
-                    </li>
-                    <li>
-                        <a href="#">Register</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <div>
-                <h3>Social media</h3>
-                <ul class="footer-ul">
-                    <li>
-                        <a href="#">Twitter</a>
-                    </li>
-                    <li>
-                        <a href="#">Reddit</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-creators">
-            <span>
-                Created by Kaentos & Thekings2468
-            </span>
-        </div>
+    <footer id="footer">
+        
     </footer>
 
 </body>

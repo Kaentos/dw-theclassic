@@ -18,20 +18,48 @@
     display: flex;
     flex-wrap: wrap;
     margin: auto;
-    min-height: 500px;
+    min-height: 490px;
+}
+
+.user-details {
+    margin-left: 5px;
+    font-size: 1.2rem;
+    min-width: 0;
+}
+
+.user-details > span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.f_by_me {
+    margin-top: 10px;
+}
+
+.f_by_me > span {
+    background-color: #128ca0;
+    color: white;
+    padding: 7px;
+    border-radius: 5px;
+    font-size: 1rem !important;
 }
 
 .ms_ss_panel {
-    width: 201px;
-    margin-left: 25px;
-    margin-right: 25px;
+    width: 328px;
+    max-height: 100px;
+    margin: 0px 25px 20px 25px;
     border: 1px solid black;
     box-shadow: none;
-    margin-bottom: 20px;
 }
 
 .ms_ss_img {
-    height: 300px;
+    min-width: 100px;
+    min-height: 100px;
+    height: 100px;
+    width: 100px;
+    max-height: 100px;
+    max-width: 100px;
 }
 
 .content-buttons {
@@ -40,8 +68,8 @@
 }
 
 .content-buttons button {
-    font-size: 1.5rem;
-    padding: 5px 40px;
+    font-size: 1rem;
+    padding: 5px;
     border: 1px solid black;
     border-radius: 5px;
     font-weight: bold;
@@ -51,7 +79,7 @@
 .content-back-btn {
     color: black;
     background-color: whitesmoke;
-    font-size: 1.5rem !important;
+    font-size: 1.1rem !important;
 }
 
 .content-p-btn {
@@ -90,14 +118,4 @@
     cursor: pointer;
     border-radius: 5px;
     border: 1px solid black;
-}
-
-.ms_ss_panel > div {
-    font-size: 1.1rem;
-    text-align: center;
-    font-weight: bold;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    margin: 1px 5px;
 }

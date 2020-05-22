@@ -3,7 +3,6 @@ body {
     margin: 0px;
 }
 
-
 /* Classes */
 
 .flex-line {
@@ -28,6 +27,10 @@ body {
     flex-direction: column;
 }
 
+.flex-start {
+    align-content: flex-start;
+}
+
 .flex-spaced {
     justify-content: space-between;
 }
@@ -49,76 +52,59 @@ nav {
     width: 50px;
 }
 
-.navbar-links {
+.navbar-userLogo {
+    border: 1px solid black;
+    box-shadow: none;
+    border-radius: 2px;
+}
+
+.logout-link {
+    background-color: #128ca0;
+    color: white !important;
+    border-radius: 2px;
+}
+
+.navbar-links, .r-link, .l-link {
     display: inline-block;
     margin: 12px 10px 12px 0px;
     text-decoration: none;
     font-weight: bold;
     color: black;
     font-size: 1.4rem;
-    padding: 5px;
+    padding: 5px 10px;
     transition: 0.5s;
 }
 
-.l-link, .r-link {
-    background-color: yellow;
+.active {
+    background: silver !important;
+    color: black !important;
+    border-radius: 5px;
+}
+
+.r-link {
+    background-color: #ed3124;
 }
 
 .l-link {
-    background-color: red;
+    background-color: #128ca0;
+}
+
+.r-link, .l-link {
+    color: white;
+    transition: 1.2s;
+    border-radius: 5px;
+    border: 1px solid white;
+}
+
+.r-link:hover, .l-link:hover {
+    color: black;
+    background-color: gold;
+    border: 1px solid black;
 }
 
 .navbar-links:hover {
     background: silver;
-    animation: fill 1s forwards;
-}
-
-.l-link, .r-link, .navbar-links:hover {
     border-radius: 5px;
-}
-
-.login-zone {
-    min-height: 700px;
-}
-.login-panel {
-    margin: 5rem auto auto auto;
-    width: 20%;
-    border: 1px solid black;
-}
-.login-panel > h1 {
-    text-align: center;
-}
-.input-group {
-    padding: 0px 10% 0 10%;
-    margin-top: 25px;
-}
-.input-group > input {
-    width: 100%;
-    padding-left: 5px;
-    box-sizing: border-box;
-    -webkit-box-sizing:border-box;
-    -moz-box-sizing: border-box;
-}
-.input-group > label, input {
-    font-size: 1.5rem;
-}
-.input-btn {
-    width: 100%;
-    margin: 15px auto 10px auto;
-    text-align: center;
-}
-.input-btn > input {
-    width: 40%;
-    padding: 7px;
-    font-weight: bold;
-    background-color: green;
-    border: 0px solid black;
-    border-radius: 10px;
-}
-.login-register {
-    border-top: 1px solid black;
-    text-align: center;
-    font-size: 1.2rem;    
 }
 
 footer {
@@ -146,6 +132,7 @@ footer {
 }
 .footer-ul > li > a:hover {
     color: red;
+    text-decoration: underline;
 }
 
 footer .flex-line:first-child {
@@ -255,6 +242,17 @@ footer .flex-line:first-child {
     nav.active .navbar-linksdiv{
         justify-content: center;
         align-items: center;
-
     }
+}
+
+.vis-hidden {
+    visibility: hidden;
+}
+
+.display-none {
+    display: none;
+}
+
+.text-center {
+    text-align: center;
 }

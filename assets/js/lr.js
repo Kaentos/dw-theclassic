@@ -63,35 +63,28 @@ const user1 = Object.assign({}, user_obj);
 setEmail(user1, "admin@mypopcornlist.com");
 setUsername(user1, "Admin");
 setPassword(user1, "admin");
-setCreationDate;
+setCreationDate(user1);
 const user2 = Object.assign({}, user_obj);
 setEmail(user2, "normal_user@hotmail.com");
 setUsername(user2, "Normal_User");
 setPassword(user2, "normal");
-setCreationDate;
+setCreationDate(user2);
 
 const email_regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-
-var users = [user1, user2];
-// If users_info_json already in localStorage gets the item from localStorege if not creates the item in localStorage
 if (localStorage.getItem("users_info") === null) {
-    localStorage.setItem("users_info", JSON.stringify(users_info_json));
+    var users_info = [user1, user2];
+    localStorage.setItem("users_info", JSON.stringify(users_info));
+} else {
+    var users_info = JSON.parse(localStorage.getItem("users_info"));
 }
-users_info = JSON.parse(localStorage.getItem("users_info"));
+console.log("Current users: ");
+console.log(users_info);
 
-// Debug functions
-function resetUsers() {
-    localStorage.removeItem("users_info");
-}
-
-if (sessionStorage.getItem("login_info")) {
-    console.log("Session, removing");
-    sessionStorage.removeItem("login_info");
-} else if (localStorage.getItem("login_info")) {
-    console.log("Perma, removing");
-    localStorage.removeItem("login_info");
-}
+console.log(JSON.parse(localStorage.getItem("login_info")));
+console.log(JSON.parse(sessionStorage.getItem("login_info")));
+localStorage.removeItem("login_info");
+sessionStorage.removeItem("login_info");
 
 // Functions
 function borderRed(input) {

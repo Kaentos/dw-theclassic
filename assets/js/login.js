@@ -7,7 +7,7 @@ function login() {
     if (user && getPassword(user) === password_input.value) {
         document.getElementById("login-info").classList.add("display-none");
         console.log("Can login");
-        //set_login(user_idx, keepLogin_input.checked);
+        set_login(user, keepLogin_input.checked);
         return;
     }
     borderRed(email_input);
@@ -15,19 +15,22 @@ function login() {
     document.getElementById("login-info").classList.remove("display-none");
 }
 
-function set_login(id, keepLogin) {
-    let login_info = [id, users_info["username"][id], users_info["email"][id], new Date().getTime()];
+function set_login(user_obj, keepLogin) {
+    let login_info = {
+        user: user_obj,
+        loginDate: new Date().getTime()
+    };
     if (keepLogin) {
-        localStorage.setItem("login_info", login_info);
+        localStorage.setItem("login_info", JSON.stringify(login_info));
     } else {
-        sessionStorage.setItem("login_info", login_info);
+        sessionStorage.setItem("login_info", JSON.stringify(login_info));
     }
     location.reload()
 }
 
 function getUserByEmail(email) {
     if (email_regex.test(email)) {
-        for (let obj of users){
+        for (let obj of users_info){
             if (email === getEmail(obj)) {
                 return obj;
             }

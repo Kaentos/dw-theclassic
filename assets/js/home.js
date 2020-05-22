@@ -4,7 +4,6 @@ window.onload = function () {
     setNavbar();
     document.getElementById("home_ref").classList.add("active");
     setMobileNavbar();
-
     setFooter();
 
     if (localStorage.getItem("login_info") !== null || sessionStorage.getItem("login_info") !== null) {

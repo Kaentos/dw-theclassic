@@ -4,21 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MPL | Username - User Profile</title>
+    <title>MPL | Homepage</title>
     <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/profile.css">
-    <script src="assets/js/mobile-nav.js"></script>
+    <link rel="stylesheet" href="assets/css/settings.css">
 </head>
 
 <body>
-    <!-- Navbar -->
-    <nav class="flex-line flex-spaced" id="navbar">
-        <a href="#" id="opennav"><img src="assets/img/bars.png" alt="Open Navigation Menu"></a>
-        <div class="flex-line navbar-linksdiv">
+    <nav class="flex-line flex-spaced">
+        <div class="flex-line">
             <a class="navbar-img-a" href="/">
                 <picture>
                     <img class="navbar-img" src="assets/img/logo.png" alt="logo">
-                </picture>
+                </picture>        
             </a>
             <a class="navbar-links" href="/">Home</a>
             <a class="navbar-links" href="#">Movies</a>
@@ -26,87 +23,58 @@
             <a class="navbar-links" href="#">Users</a>
             <a class="navbar-links" href="#">Contact</a>
         </div>
-        <div class="flex-line navbar-linksdiv">
+        <div class="flex-line">
             <a class="navbar-links l-link" href="login.html">Login</a>
             <a class="navbar-links r-link" href="register.html">Register</a>
         </div>
     </nav>
 
     <div class="ccontainer">
+        <div class="flex-line field-header">
+            <div class="field-title">Account details</div>
+        </div>
         <div class="flex-line">
             <div class="flex-col">
-                <img id="profilepicture" src="assets/img/THEK_MAL.jpg" alt="Profile Picture">
-            </div>
-            <div class="flex-col profileuserdetails">
-                <div class="flex-line flex-spaced">
-                    <div class="profileuserdetail" id="profileusername">Username</div>
-                    <div><button id="profilefollowbtn">Follow</button></div>
+                <div>
+                    Email: example@mpl.jimbo
                 </div>
-                <div class="profileuserdetail" id="profilefollowers">Followers: X</div>
-                <div class="profileuserdetail" id="profilefavseries">Favorites: X Movies / X Shows</div>
-                <div class="profileuserdetail" id="profilewatchingseries">Watching X Movies e X Shows</div>
-                <div class="profileuserdetail"><a href="#" id="profilelistlink"><button>List</button></a></div>
+                <div>
+                    Username: Jimbo123
+                </div>
             </div>
         </div>
-        <hr>
-        <div class="flex-line flex-spaced field-header">
-            <div class="field-title">Favorites</div>
-            <div class="field-seemore"><a href="">View more</a></div>
+        <div class="flex-line field-header">
+            <div class="field-title">Change Email</div>
         </div>
-        <div id="pmlfavs" class="profileminilist">
-            <div class="pml-panel">
-                <picture>
-                    <img class="pml-img" src="assets/img/endgame.jpg">
-                </picture>
-                Endgame
-            </div>
-            <div class="pml-panel">
-                <picture>
-                    <img class="pml-img" src="assets/img/endgame.jpg">
-                </picture>
-                Endgame
-            </div>
-            <div class="pml-panel">
-                <picture>
-                    <img class="pml-img" src="assets/img/endgame.jpg">
-                </picture>
-                Endgame
-            </div>
-            <div class="pml-panel">
-                <picture>
-                    <img class="pml-img" src="assets/img/endgame.jpg">
-                </picture>
-                Endgame
-            </div>
+        <div class="flex-line settings-category">
+            <label for="changeemail">Change Email: </label>
+            <input type="email" name="changeemail" id="changeemail">
+            <button id="changeemailbtn">Change</button>
         </div>
-        <div class="flex-line flex-spaced field-header">
-            <div class="field-title">Currently watching</div>
-            <div class="field-seemore"><a href="">View more</a></div>
+        <div class="flex-line field-header">
+            <div class="field-title">Change Username</div>
         </div>
-        <div id="pmlfavs" class="profileminilist">
-            <div class="pml-panel">
-                <picture>
-                    <img class="pml-img" src="assets/img/endgame.jpg">
-                </picture>
-                Endgame
+        <div class="flex-line settings-category">
+            <label for="changeusrn">Change Username: </label>
+            <input type="text" name="changeusrn" id="changeusrn">
+            <button id="changeusrnbtn">Change</button>
+        </div>
+        <div class="flex-line field-header">
+            <div class="field-title">Change Password</div>
+        </div>
+        <div class="flex-col">
+            <div class="flex-line settings-category">
+                <label for="changepw">Change Password: </label>
+                <input type="password" name="changepw" id="changepw">
             </div>
-            <div class="pml-panel">
-                <picture>
-                    <img class="pml-img" src="assets/img/endgame.jpg">
-                </picture>
-                Endgame
+            <div class="flex-line settings-category">
+                <label for="changepwcnf">Confirm Password: </label>
+                <input type="password" name="changepwcnf" id="changepwcnf">
             </div>
-            <div class="pml-panel">
-                <picture>
-                    <img class="pml-img" src="assets/img/endgame.jpg">
-                </picture>
-                Endgame
-            </div>
-            <div class="pml-panel">
-                <picture>
-                    <img class="pml-img" src="assets/img/endgame.jpg">
-                </picture>
-                Endgame
+            <div class="flex-line settings-category">
+                <label for="changepwc">Current Password: </label>
+                <input type="password" name="changepwc" id="changepwc">
+                <button id="changepwbtn">Change</button>
             </div>
         </div>
     </div>
@@ -169,7 +137,7 @@
                     </li>
                 </ul>
             </div>
-        </div>
+        </div> 
         <div class="footer-credits flex-line flex-spaced">
             <div class="footer-credits-txt">
                 Website created by: Kaentos & Thekings2468
@@ -189,10 +157,9 @@
                 from
                 <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
             </div>
-
-
+            
+            
         </div>
     </footer>
 </body>
-
 </html>

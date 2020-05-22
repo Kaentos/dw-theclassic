@@ -4,17 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MPL | Username - User Profile</title>
+    <title>MPL | XXX - Show Information</title>
     <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/profile.css">
-    <script src="assets/js/mobile-nav.js"></script>
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/info.css">
 </head>
 
 <body>
-    <!-- Navbar -->
-    <nav class="flex-line flex-spaced" id="navbar">
-        <a href="#" id="opennav"><img src="assets/img/bars.png" alt="Open Navigation Menu"></a>
-        <div class="flex-line navbar-linksdiv">
+    <nav class="flex-line flex-spaced">
+        <div class="flex-line">
             <a class="navbar-img-a" href="/">
                 <picture>
                     <img class="navbar-img" src="assets/img/logo.png" alt="logo">
@@ -26,7 +24,7 @@
             <a class="navbar-links" href="#">Users</a>
             <a class="navbar-links" href="#">Contact</a>
         </div>
-        <div class="flex-line navbar-linksdiv">
+        <div class="flex-line">
             <a class="navbar-links l-link" href="login.html">Login</a>
             <a class="navbar-links r-link" href="register.html">Register</a>
         </div>
@@ -35,80 +33,38 @@
     <div class="ccontainer">
         <div class="flex-line">
             <div class="flex-col">
-                <img id="profilepicture" src="assets/img/THEK_MAL.jpg" alt="Profile Picture">
+                <img id="info-picture" src="assets/img/westworld.jpg" alt="Show Poster">
             </div>
-            <div class="flex-col profileuserdetails">
-                <div class="flex-line flex-spaced">
-                    <div class="profileuserdetail" id="profileusername">Username</div>
-                    <div><button id="profilefollowbtn">Follow</button></div>
+            <div class="flex-col info-details">
+                <div class="flex-line">
+                    <div class="info-detail" id="info-title">Show Name</div>
                 </div>
-                <div class="profileuserdetail" id="profilefollowers">Followers: X</div>
-                <div class="profileuserdetail" id="profilefavseries">Favorites: X Movies / X Shows</div>
-                <div class="profileuserdetail" id="profilewatchingseries">Watching X Movies e X Shows</div>
-                <div class="profileuserdetail"><a href="#" id="profilelistlink"><button>List</button></a></div>
+                <div class="flex-line flex-splithalf">
+                    <div class="flex-col">
+                        <div class="info-detail" id="info-rating">Score Rating: XX/10</div>
+                        <div class="info-detail" id="info-genres">Genres: </div>
+                        <div class="info-detail" id="info-premiere">Premiere Date: dd/mm/yyyy</div>
+                        <div class="info-detail" id="info-country">Origin Country: XXXXXXXX</div>
+                        <div class="info-detail" id="info-producers">Producers: </div>
+                    </div>
+                    <div class="flex-col">
+                        <div class="info-detail" id="info-yourrating">Your rating: XX/10</div>
+                        <div class="info-detail" id="info-agerating">Age rating: XX(+)</div>
+                        <div class="info-detail" id="info-duration">Duration: XXX minutes</div>
+                        <div class="info-detail" id="info-language">Language: English</div>
+                    </div>
+                </div>
+                <div class="flex-line flex-splithalf">
+                    <div class="flex-col">
+                        <div class="info-detail" id="info-seasons">Temporadas: XXX</div>
+                    </div>
+                    <div class="flex-col">
+                        <div class="info-detail" id="info-episodes">Episodios: XXX</div>
+                    </div>
+                </div>
             </div>
         </div>
         <hr>
-        <div class="flex-line flex-spaced field-header">
-            <div class="field-title">Favorites</div>
-            <div class="field-seemore"><a href="">View more</a></div>
-        </div>
-        <div id="pmlfavs" class="profileminilist">
-            <div class="pml-panel">
-                <picture>
-                    <img class="pml-img" src="assets/img/endgame.jpg">
-                </picture>
-                Endgame
-            </div>
-            <div class="pml-panel">
-                <picture>
-                    <img class="pml-img" src="assets/img/endgame.jpg">
-                </picture>
-                Endgame
-            </div>
-            <div class="pml-panel">
-                <picture>
-                    <img class="pml-img" src="assets/img/endgame.jpg">
-                </picture>
-                Endgame
-            </div>
-            <div class="pml-panel">
-                <picture>
-                    <img class="pml-img" src="assets/img/endgame.jpg">
-                </picture>
-                Endgame
-            </div>
-        </div>
-        <div class="flex-line flex-spaced field-header">
-            <div class="field-title">Currently watching</div>
-            <div class="field-seemore"><a href="">View more</a></div>
-        </div>
-        <div id="pmlfavs" class="profileminilist">
-            <div class="pml-panel">
-                <picture>
-                    <img class="pml-img" src="assets/img/endgame.jpg">
-                </picture>
-                Endgame
-            </div>
-            <div class="pml-panel">
-                <picture>
-                    <img class="pml-img" src="assets/img/endgame.jpg">
-                </picture>
-                Endgame
-            </div>
-            <div class="pml-panel">
-                <picture>
-                    <img class="pml-img" src="assets/img/endgame.jpg">
-                </picture>
-                Endgame
-            </div>
-            <div class="pml-panel">
-                <picture>
-                    <img class="pml-img" src="assets/img/endgame.jpg">
-                </picture>
-                Endgame
-            </div>
-        </div>
     </div>
 
     <footer>
@@ -193,6 +149,7 @@
 
         </div>
     </footer>
+
 </body>
 
 </html>

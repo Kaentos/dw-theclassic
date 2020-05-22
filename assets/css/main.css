@@ -54,6 +54,18 @@ nav {
     width: 50px;
 }
 
+.navbar-userLogo {
+    border: 1px solid black;
+    box-shadow: none;
+    border-radius: 2px;
+}
+
+.logout-link {
+    background-color: #128ca0;
+    color: white !important;
+    border-radius: 2px;
+}
+
 .navbar-links, .r-link, .l-link {
     display: inline-block;
     margin: 12px 10px 12px 0px;

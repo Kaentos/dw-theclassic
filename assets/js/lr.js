@@ -2,7 +2,15 @@ const user_obj = {
     email: null,
     username: null,
     password: null,
-    creationDate: null
+    creationDate: null,
+    fav_movies: [],
+    toWatch_movies: [],
+    seen_movies: [],
+    fav_series: [],
+    toWatch_series: [],
+    seen_series: [],
+    follows: [],
+    followers: []
 }
 function setEmail(obj, email) {
     if(arguments.length === 2 && typeof(obj) === "object" && typeof(email) === "string") {

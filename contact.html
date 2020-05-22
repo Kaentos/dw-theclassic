@@ -5,9 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="assets/img/logo.png">
-    <title>MPL | Reset Password</title>
     <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/lr.css">
+    
+    <title>MPL | Contact us!</title>
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/contact.css">
+    
 </head>
 
 <body>
@@ -19,52 +22,69 @@
                 </picture>        
             </a>
             <a class="navbar-links" href="/">Home</a>
-            <a class="navbar-links" href="#">Movies</a>
-            <a class="navbar-links" href="#">TV Shows</a>
-            <a class="navbar-links" href="#">Users</a>
-            <a class="navbar-links" href="#">Contact</a>
+            <a class="navbar-links" href="/list-content.html">Movies</a>
+            <a class="navbar-links" href="/list-content.html">TV Shows</a>
+            <a class="navbar-links" href="/users.html">Users</a>
+            <a class="navbar-links active" href="/contact.html">Contact</a>
         </div>
         <div class="flex-line">
             <a class="l-link" href="login.html">Login</a>
             <a class="r-link" href="register.html">Register</a>
         </div>
     </nav>
-    
 
-    <div class="lr-zone">
-        <div class="lr-panel">
+
+    <div class="container">
+        <div class="c-title">
             <h1>
-                Reset your password
+                Contact us!
             </h1>
-            <p class="input-group reset-pw-txt">
-                To reset your password you will need to put your account email bellow and we will send you a reset link to your email!
-            </p>
-            <form id="recover-form">
-                <div class="input-group">
-                    <label for="r_email">Email:</label><br>
-                    <input type="email" name="r_mail" id="r_email" placeholder="Email">
-                </div>
-                                
-                <div class="input-btn">
-                    <input class="input-btn" type="button" value="Reset password">
-                </div>
-            </form>
-            <div class="lr-to-lr">
-                <p>
-                    <a href="login.html">
-                        Return to login page
-                    </a>
-                </p>
-            </div>
         </div>
-        <div class="go-back">
-            <a href="/">
-                <button class="go-back-btn">
-                    Home
-                </button>
-            </a>
+        <div class="c-content">
+            <h2>
+                Contact us via:
+            </h2>
+            <hr>
+            <div class="our-info">
+                <p>
+                    Email: support@mplist.com
+                </p>
+                <p>
+                    Phone number: +351 823 231 821
+                </p>
+                
+            </div>
+            <h2>
+                Send us a message:
+            </h2>
+            <hr>
+            <form action="mailto:support@mplist.com" class="our-info">
+                <div class="input-group">
+                    <label>
+                        Your email: *
+                    </label>
+                    <br>
+                    <input type="email" name="u_email" id="u_email" placeholder="Your email"> 
+                </div>   
+                <div class="input-group">
+                    <label>
+                        Your name: *
+                    </label>
+                    <br>
+                    <input type="email" name="u_name" id="u_name" placeholder="Your name"> 
+                </div>   
+                <div class="input-group">
+                    <label>
+                        Message:
+                    </label>
+                    <br>
+                    <textarea name="u_msg" id="u_msg" placeholder="Write you message here!"></textarea>
+                </div>
+                <input class="submit-btn" type="submit" value="Send message">     
+            </form>
         </div>
     </div>
+
 
     <footer>
         <div class="flex-line flex-center">
@@ -117,7 +137,7 @@
                         <a href="https://www.imdb.com" target="_blank">IMDB</a>
                     </li>
                     <li>
-                        <a href="#">Posters</a>
+                        <a href="https://www.themoviedb.org/" target="_blank">Posters</a>
                     </li>
                     <li>
                         <a href="#">Icons</a>

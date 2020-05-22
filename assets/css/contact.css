@@ -1,0 +1,67 @@
+.container {
+    min-height: 600px;
+    margin-bottom: 50px;
+}
+
+.c-title {
+    text-align: center;
+}
+
+.c-content {
+    width: 60%;
+    margin: auto;
+    box-shadow: none;
+}
+.c-content > hr {
+    width: 60%;
+    margin-left: 0px;
+    border: 3px solid black;
+    border-radius: 5px;
+    margin: 0 0 20px;
+}
+.c-content > h2 {
+    margin: 0;
+}
+
+.our-info {
+    padding-left: 50px;
+    font-size: 1.3rem;
+    padding-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+.input-group p {
+    margin: 0px;
+}
+
+.input-group input {
+    width: 50%;
+    margin-top: 0px;
+    padding: 5px;
+    font-size: 1.2rem;
+}
+.input-group textarea {
+    min-width: 50%;
+    max-width: 94%;
+    min-height: 100px;
+    font-size: 1.5rem;
+    padding: 5px;
+}
+
+.submit-btn {
+    cursor: pointer;
+    padding: 5px 20px;
+    font-size: 1.3rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #128ca0;
+    color: white;
+    transition: 1.2s;
+}
+
+.submit-btn:hover {
+    background-color: silver;
+    color: black;
+}

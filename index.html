@@ -4,31 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MPL | Homepage</title>
+    <link rel="shortcut icon" href="assets/img/logo.png">
     <link rel="stylesheet" href="assets/css/main.css">
+    
+    <title>MPL | Homepage</title>
     <link rel="stylesheet" href="assets/css/index.css">
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/home.js"></script>
 </head>
 
 <body>
-    <nav class="flex-line flex-spaced">
-        <div class="flex-line">
-            <a class="navbar-img-a" href="/">
-                <picture>
-                    <img class="navbar-img" src="assets/img/logo.png" alt="logo">
-                </picture>        
-            </a>
-            <a class="navbar-links" href="/">Home</a>
-            <a class="navbar-links" href="#">Movies</a>
-            <a class="navbar-links" href="#">TV Shows</a>
-            <a class="navbar-links" href="#">Users</a>
-            <a class="navbar-links" href="#">Contact</a>
-        </div>
-        <div class="flex-line">
-            <a class="navbar-links l-link" href="login.html">Login</a>
-            <a class="navbar-links r-link" href="register.html">Register</a>
-        </div>
-    </nav>
-
+    <nav id="navbar"></nav>
 
     <div class="welcome-zone">
         <div class="welcome-img">
@@ -39,11 +25,16 @@
                 Welcome to My Popcorn List
             </h1>
         </div>
-        <hr class="welcome-hr" />
         <div class="welcome-desc">
             <p>
-                um texto
+                Do you wish to share your favourites movies and TV shows and track what you watch? Now you can do it!
             </p>
+            <a href="register.html">
+                <button class="welcome-r-btn">
+                    Register now!
+                </button>
+            </a>
+            
         </div>
         <hr class="welcome-hr" />
     </div>
@@ -52,136 +43,57 @@
         <div class="destaques-panel">
             <!-- https://stackoverflow.com/questions/56392199/make-a-button-to-scroll-horizontally-in-div -->
             <h1>
-                Destaques
+                Featured
             </h1>
             <div class="destaques-carousel">
-                <div class="go-left">
+                <div id="featured-prev" class="go-left">
                     &lt
                 </div>
-                <div class="go-right">
+                <div id="featured-next" class="go-right">
                     &gt
                 </div>
-                <div id="destaques-teste" class="destaques">
+                <div id="featured" class="destaques">
                     <div class="ms_ss_panel">
-                        <picture>
-                            <img class="ms_ss_img" src="assets/img/endgame.jpg">
-                        </picture>
+                        <img class="ms_ss_img" src="assets/img/endgame.jpg">
                         Endgame 2019
                     </div>
                     <div class="ms_ss_panel">
-                        <picture>
-                            <img class="ms_ss_img" src="assets/img/endgame.jpg">
-                        </picture>
+                        <img class="ms_ss_img" src="assets/img/endgame.jpg">
                         Endgame 2019
                     </div>
                     <div class="ms_ss_panel">
-                        <picture>
-                            <img class="ms_ss_img" src="assets/img/endgame.jpg">
-                        </picture>
+                        <img class="ms_ss_img" src="assets/img/endgame.jpg">
                         Endgame 2019
                     </div>
                     <div class="ms_ss_panel">
-                        <picture>
-                            <img class="ms_ss_img" src="assets/img/endgame.jpg">
-                        </picture>
+                        <img class="ms_ss_img" src="assets/img/endgame.jpg">
                         Endgame 2019
                     </div>
                     <div class="ms_ss_panel">
-                        <picture>
-                            <img class="ms_ss_img" src="assets/img/endgame.jpg">
-                        </picture>
+                        <img class="ms_ss_img" src="assets/img/endgame.jpg">
                         Endgame 2019
                     </div>
+                    <div class="ms_ss_panel">
+                        <img class="ms_ss_img" src="assets/img/endgame.jpg">
+                        Endgame 2019
+                    </div>
+                    <div></div>
                 </div>
             </div>
             
         </div>
     </div>
 
-
-    <footer>
-        <div class="flex-line flex-center">
-            <div class="flex-col footer-content">
-                <h2>
-                    My Popcorn List
-                </h2>
-                <picture>
-                    <img src="assets/img/logo.png" alt="" width="100px">
-                </picture>
-            </div>
-            <div class="flex-col footer-content">
-                <h2>Site links</h2>
-                <ul class="footer-ul">
-                    <li>
-                        <a href="#">Movies</a>
-                    </li>
-                    <li>
-                        <a href="#">Series</a>
-                    </li>
-                    <li>
-                        <a href="#">Users</a>
-                    </li>
-                    <li>
-                        <a href="/login.html">Login</a>
-                    </li>
-                    <li>
-                        <a href="/register.html">Register</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="flex-col footer-content">
-                <h2>Follow us!</h2>
-                <ul class="footer-ul">
-                    <li>
-                        <a href="#">Twitter</a>
-                    </li>
-                    <li>
-                        <a href="#">Reddit</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="flex-col footer-content">
-                <h2>Related websites</h2>
-                <ul class="footer-ul">
-                    <li>
-                        <a href="#">IMBD</a>
-                    </li>
-                    <li>
-                        <a href="#">Posters</a>
-                    </li>
-                    <li>
-                        <a href="#">Icons</a>
-                    </li>
-                </ul>
-            </div>
-        </div> 
-        <div class="footer-credits flex-line flex-spaced">
-            <div class="footer-credits-txt">
-                Website created by: Kaentos & Thekings2468
-            </div>
-            <div class="footer-credits-txt">
-                <a href="/">
-                    <picture>
-                        <img src="assets/img/GitHub/GitHub-Mark-32px.png" alt="logo" width="24px">
-                    </picture>
-                </a>
-            </div>
-            <div class="footer-credits-txt">
-                Icons made by
-                <a href="https://www.flaticon.com/authors/freepik" title="Freepik">
-                    Freepik
-                </a>
-                from
-                <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
-            </div>
-            
-            
+    <div class="flex-line flex-center">
+        <div class="movies-btn">
+            Movies
         </div>
-    </footer>
+        <div class="tvshows-btn">
+            TV Shows
+        </div>
+    </div>
 
+    <footer id="footer"></footer>
 </body>
 
 </html>

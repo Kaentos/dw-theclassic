@@ -3,22 +3,44 @@
 }
 
 .welcome-img {
-    margin-top: 25PX;
+    margin-top: 0px;
 }
 
 .welcome-hr {
-    width: 50%;
+    width: 25%;
     border: 3px solid black;
     border-radius: 5px;
 }
 
-.destaques-zone {
+.welcome-desc {
+    width: 25%;
+    margin: auto;
+    font-size: 18px;
+}
+
+.welcome-r-btn {
+    width: 50%;
+    padding: 10px 0px;
+    font-weight: bold;
     background-color: red;
+    border: none;
+    border-radius: 5px;
+    font-size: 25px;
+    color: white;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.welcome-r-btn:hover {
+    background-color: #128ca0;
+}
+
+.destaques-zone {
+    padding-bottom: 25px;
 }
 
 .destaques-panel {
-    width: 54%;
-    border: 1px solid black;
+    width: 55%;
     margin: auto;
 }
 
@@ -29,6 +51,7 @@
 
 .destaques-carousel {
     position: relative;
+    border: 2px solid black;
 }
 
 .destaques {
@@ -39,16 +62,9 @@
 
 .ms_ss_panel {
     width: 200px;
-    margin-left: 15px;
+    margin: 20px 0px 20px 15px;
     border: 1px solid black;
     box-shadow: none;
-    box-sizing: none;
-    margin-bottom: 20px;
-    margin-top: 20px;
-}
-
-.ms_ss_panel:last-child {
-    margin-right: 15px;
 }
 
 .ms_ss_img {
@@ -59,18 +75,57 @@
 .go-left, .go-right {
     cursor: pointer;
     position: absolute;
-    padding: 10px;
+    padding: 0px 10px;
     top: 50%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     font-size: 50px;
-    background-color: rgba(2, 2, 2, 0.9);
+    background-color: rgba(0, 0, 0, 0.6);
     text-align: center;
     font-size: 50px;
     font-weight: bold;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.4);
+    transition: 1.2s;
+    
 }
 
+.go-left:hover, .go-right:hover {
+    background-color: rgba(0, 0, 0, 1);
+    color: rgba(255, 255, 255, 1);
+    box-shadow: none;
+}
 .go-right {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
     right: 0;
+}
+.go-left {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.movies-btn {
+    background-color: #128ca0;
+    margin-right: 25px;
+}
+
+.tvshows-btn {
+    background-color: #ed3124;
+}
+
+.movies-btn, .tvshows-btn {
+    cursor: pointer;
+    width: 10%;
+    padding: 10px 0px;
+    margin-bottom: 25px;
+    text-align: center;
+    color: white;
+    font-size: 26px;
+    border-radius: 10px;
+    font-weight: bold;
+    border: 2px solid black
+}
+
+#featured div:last-child {
+    padding-right: 15px;
 }

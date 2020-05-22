@@ -20,7 +20,8 @@ function setNavbar() {
     navbar.classList.add("flex-line");
     navbar.classList.add("flex-spaced");
     navbar.innerHTML = `
-        <div class="flex-line">
+        <div class="flex-line navbar-linksdiv">
+            <a href="#" id="opennav"><img src="assets/img/bars.png" alt="Open Navigation Menu"></a>
             <a class="navbar-img-a" href="/">
                 <picture>
                     <img class="navbar-img" src="assets/img/logo.png" alt="logo">
@@ -29,10 +30,10 @@ function setNavbar() {
             <a id="home_ref" class="navbar-links" href="/">Home</a>
             <a id="movies_ref" class="navbar-links" href="#">Movies</a>
             <a id="series_ref" class="navbar-links" href="#">TV Shows</a>
-            <a id="users_ref" class="navbar-links" href="#">Users</a>
-            <a id="contact_ref" class="navbar-links" href="#">Contact</a>
+            <a id="users_ref" class="navbar-links" href="users.html">Users</a>
+            <a id="contact_ref" class="navbar-links" href="contact.html">Contact</a>
         </div>
-        <div id="navbar-content" class="flex-line"></div>
+        <div id="navbar-content" class="flex-line navbar-linksdiv"></div>
     </nav>`;
     if (localStorage.getItem("login_info") !== null || sessionStorage.getItem("login_info") !== null) {
         document.getElementById("navbar-content").innerHTML = `
@@ -47,9 +48,21 @@ function setNavbar() {
         return;
     }
     document.getElementById("navbar-content").innerHTML = `
-        <a id="login_ref" class="l-link" href="login.html">Login</a>
-        <a id="register_ref" class="r-link" href="register.html">Register</a>
+        <a id="login_ref" class="navbar-links l-link" href="login.html">Login</a>
+        <a id="register_ref" class="navbar-links r-link" href="register.html">Register</a>
     `;
+}
+
+function setMobileNavbar(){
+    document.getElementById("opennav").onclick = function() {
+        let navbar = document.getElementById("navbar");
+        if (navbar.classList.contains("active")) {
+            navbar.classList.remove("active");
+        } else {
+            navbar.classList.add("active");
+        }
+        return false;
+    }
 }
 
 function setFooter() {

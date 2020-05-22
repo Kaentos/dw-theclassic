@@ -208,7 +208,7 @@ footer .flex-line:first-child {
     padding: 9px 0px;
 }
 
-@media only screen and (max-width: 675px) {
+@media only screen and (max-width: 810px) {
     .flex-line {
         flex-direction: column;
         align-items: center;

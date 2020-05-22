@@ -41,6 +41,8 @@ function getUserByEmail(email) {
 }
 
 window.onload = function() {
+    setNavbar();
+    document.getElementById("login_ref").classList.add("active");
     setBackBtn();
     document.getElementById("login_btn").addEventListener("click", login);
 }

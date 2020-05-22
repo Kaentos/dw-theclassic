@@ -99,7 +99,7 @@ function setFooter() {
                         <a href="https://www.imdb.com" target="_blank">IMDB</a>
                     </li>
                     <li>
-                        <a href="#">Posters</a>
+                        <a href="https://www.themoviedb.org/" target="_blank">Posters</a>
                     </li>
                     <li>
                         <a href="#">Icons</a>

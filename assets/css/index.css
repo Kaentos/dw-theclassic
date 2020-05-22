@@ -62,16 +62,9 @@
 
 .ms_ss_panel {
     width: 200px;
-    margin-left: 15px;
+    margin: 20px 0px 20px 15px;
     border: 1px solid black;
     box-shadow: none;
-    box-sizing: none;
-    margin-bottom: 20px;
-    margin-top: 20px;
-}
-
-.ms_ss_panel:last-child {
-    margin-right: 15px;
 }
 
 .ms_ss_img {
@@ -131,4 +124,8 @@
     border-radius: 10px;
     font-weight: bold;
     border: 2px solid black
+}
+
+#featured div:last-child {
+    padding-right: 15px;
 }

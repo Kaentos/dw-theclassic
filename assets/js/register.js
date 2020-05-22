@@ -87,6 +87,10 @@ function checkEmail() {
 }
 
 window.onload = function() {
+    setNavbar();
+    document.getElementById("register_ref").classList.add("active");
+    setFooter();
+
     setBackBtn();
     document.getElementById("register_btn").addEventListener("click", register);
     document.getElementById("nu_username").addEventListener("keyup", this.checkUsername);

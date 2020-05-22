@@ -76,30 +76,31 @@ nav {
 }
 
 .active {
-    background: silver !important;
-    color: black !important;
+    background: black !important;
+    color: white !important;
     border-radius: 5px;
 }
 
 .r-link {
     background-color: #ed3124;
 }
+.r-link:hover {
+    background-color: #8a1c15 !important;
+}
 
 .l-link {
     background-color: #128ca0;
 }
 
-.r-link, .l-link {
-    color: white;
-    transition: 1.2s;
-    border-radius: 5px;
-    border: 1px solid white;
+.l-link:hover {
+    background-color: #1267a0 !important;
 }
 
-.r-link:hover, .l-link:hover {
-    color: black;
-    background-color: gold;
-    border: 1px solid black;
+.r-link, .l-link {
+    color: white;
+    transition: 0.5s;
+    border-radius: 5px;
+    border: 1px solid white;
 }
 
 .navbar-links:hover {

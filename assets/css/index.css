@@ -51,9 +51,7 @@
 }
 
 .carousel-panel h1 {
-    padding-top: 15px;
-    margin-left: 15px;
-    margin-bottom: 0px;
+    margin: 5px 0px 0px 15px;
 }
 
 .carousel-carousel {
@@ -146,7 +144,7 @@
     font-size: 26px;
     border-radius: 5px;
     font-weight: bold;
-    margin: 0px 10px;
+    margin: 10px 10px;
     transition: 0.5s;
     text-decoration: none;
 }

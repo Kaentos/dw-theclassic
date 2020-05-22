@@ -42,7 +42,7 @@ function getUserByEmail(email) {
 
 window.onload = function() {
     setNavbar();
-    //document.getElementById("login_ref").classList.add("active");
+    document.getElementById("login_ref").classList.add("active");
     setFooter();
     setBackBtn();
     document.getElementById("login_btn").addEventListener("click", login);

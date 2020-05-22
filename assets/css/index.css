@@ -41,26 +41,28 @@
     border-radius: 5px;
 }
 
-.destaques-zone {
+.carousel-zone {
     padding-bottom: 25px;
 }
 
-.destaques-panel {
+.carousel-panel {
     max-width: 1107px;
     margin: auto;
 }
 
-.destaques-panel h1 {
+.carousel-panel h1 {
+    padding-top: 15px;
     margin-left: 15px;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
 }
 
-.destaques-carousel {
+.carousel-carousel {
     position: relative;
-    border: 2px solid black;
+    border: 1px solid black;
+    border-radius: 3px;
 }
 
-.destaques {
+.carousel {
     display: flex;
     overflow: hidden;
     background-color: white;
@@ -139,16 +141,16 @@
     cursor: pointer;
     min-width: 217px;
     padding: 10px 0px;
-    margin-bottom: 25px;
     text-align: center;
     color: white;
     font-size: 26px;
     border-radius: 5px;
     font-weight: bold;
-    margin: 0px 10px 25px 10px;
+    margin: 0px 10px;
     transition: 0.5s;
+    text-decoration: none;
 }
 
-#featured > div:last-child {
+.carousel > div:last-child {
     padding-right: 15px;
 }

@@ -31,109 +31,121 @@ function setNavbar() {
             <a id="series_ref" class="navbar-links" href="#">TV Shows</a>
             <a id="users_ref" class="navbar-links" href="#">Users</a>
             <a id="contact_ref" class="navbar-links" href="#">Contact</a>
-        </div>`;
-    let nonlogged = `
-        <div class="flex-line">
-            <a id="login_ref" class="l-link" href="login.html">Login</a>
-            <a id="register_ref" class="r-link" href="register.html">Register</a>
         </div>
+        <div id="navbar-content" class="flex-line"></div>
     </nav>`;
-    let logged = `
-        <div class="flex-line">
+    if (localStorage.getItem("login_info") !== null || sessionStorage.getItem("login_info") !== null) {
+        document.getElementById("navbar-content").innerHTML = `
             <a id="list_ref" class="navbar-link" href="#">My List</a>
             <a id="settings_ref" class="navbar-link" href="#">Settings</a>
             <a id="logout-btn" class="navbar-link" href="#">Logout</a>
-        </div>
-    </nav>`;
-    if (localStorage.getItem("login_info") !== null || sessionStorage.getItem("login_info") !== null) {
-        navbar += logged;
-        document.body.prepend(navbar);
+        `;
         return;
     }
-    navbar.innerHTML += nonlogged;
-    document.body.prepend(navbar);
+    document.getElementById("navbar-content").innerHTML = `
+        <a id="login_ref" class="l-link" href="login.html">Login</a>
+        <a id="register_ref" class="r-link" href="register.html">Register</a>
+    `;
 }
 
 function setFooter() {
     let footer = document.getElementById("footer");
     footer.innerHTML = `
-    <div class="flex-line flex-center">
-        <div class="flex-col footer-content">
-            <h2>
-                My Popcorn List
-            </h2>
-            <picture>
-                <img src="assets/img/logo.png" alt="" width="100px">
-            </picture>
-        </div>
-        <div class="flex-col footer-content">
-            <h2>Site links</h2>
-            <ul class="footer-ul">
-                <li>
-                    <a href="#">Movies</a>
-                </li>
-                <li>
-                    <a href="#">Series</a>
-                </li>
-                <li>
-                    <a href="#">Users</a>
-                </li>
-                <li>
-                    <a href="/login.html">Login</a>
-                </li>
-                <li>
-                    <a href="/register.html">Register</a>
-                </li>
-                <li>
-                    <a href="#">Contact</a>
-                </li>
-            </ul>
-        </div>
-        <div class="flex-col footer-content">
-            <h2>Follow us!</h2>
-            <ul class="footer-ul">
-                <li>
-                    <a href="https://www.twitter.com" target="_blank">Twitter</a>
-                </li>
-                <li>
-                    <a href="https://www.reddit.com/r/all" target="_blank">Reddit</a>
-                </li>
-            </ul>
-        </div>
-        <div class="flex-col footer-content">
-            <h2>Related websites</h2>
-            <ul class="footer-ul">
-                <li>
-                    <a href="https://www.imdb.com" target="_blank">IMDB</a>
-                </li>
-                <li>
-                    <a href="#">Posters</a>
-                </li>
-                <li>
-                    <a href="#">Icons</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="footer-credits flex-line flex-spaced">
-        <div class="footer-credits-txt">
-            Website created by: Kaentos & Thekings2468
-        </div>
-        <div class="footer-credits-txt">
-            <a href="/">
+        <div class="flex-line flex-center">
+            <div class="flex-col footer-content">
+                <h2>
+                    My Popcorn List
+                </h2>
                 <picture>
-                    <img src="assets/img/GitHub/GitHub-Mark-32px.png" alt="logo" width="24px">
+                    <img src="assets/img/logo.png" alt="" width="100px">
                 </picture>
-            </a>
+            </div>
+            <div class="flex-col footer-content">
+                <h2>Site links</h2>
+                <ul id="footer-links" class="footer-ul">
+                    <li>
+                        <a href="#">Movies</a>
+                    </li>
+                    <li>
+                        <a href="#">Series</a>
+                    </li>
+                    <li>
+                        <a href="#">Users</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="flex-col footer-content">
+                <h2>Follow us!</h2>
+                <ul class="footer-ul">
+                    <li>
+                        <a href="https://www.twitter.com" target="_blank">Twitter</a>
+                    </li>
+                    <li>
+                        <a href="https://www.reddit.com/r/all" target="_blank">Reddit</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="flex-col footer-content">
+                <h2>Related websites</h2>
+                <ul class="footer-ul">
+                    <li>
+                        <a href="https://www.imdb.com" target="_blank">IMDB</a>
+                    </li>
+                    <li>
+                        <a href="#">Posters</a>
+                    </li>
+                    <li>
+                        <a href="#">Icons</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="footer-credits-txt">
-            Icons made by
-            <a href="https://www.flaticon.com/authors/freepik" title="Freepik">
-                Freepik
-            </a>
-            from
-            <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+        <div class="footer-credits flex-line flex-spaced">
+            <div class="footer-credits-txt">
+                Website created by: Kaentos & Thekings2468
+            </div>
+            <div class="footer-credits-txt">
+                <a href="/">
+                    <picture>
+                        <img src="assets/img/GitHub/GitHub-Mark-32px.png" alt="logo" width="24px">
+                    </picture>
+                </a>
+            </div>
+            <div class="footer-credits-txt">
+                Icons made by
+                <a href="https://www.flaticon.com/authors/freepik" title="Freepik">
+                    Freepik
+                </a>
+                from
+                <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+            </div>
         </div>
-    </div>
+    `;
+
+    if (localStorage.getItem("login_info") !== null || sessionStorage.getItem("login_info") !== null) {
+        document.getElementById("footer-links").innerHTML += `
+            <li>
+                <a href="#">Profile</a>
+            </li>
+            <li>
+                <a href="#">My List</a>
+            </li>
+            <li>
+                <a href="#">Settings</a>
+            </li>
+        `;
+        return;
+    }
+
+    document.getElementById("footer-links").innerHTML += `
+        <li>
+            <a href="/login.html">Login</a>
+        </li>
+        <li>
+            <a href="/register.html">Register</a>
+        </li>
     `;
 }

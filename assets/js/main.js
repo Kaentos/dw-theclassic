@@ -36,9 +36,9 @@ function setNavbar() {
     </nav>`;
     if (localStorage.getItem("login_info") !== null || sessionStorage.getItem("login_info") !== null) {
         document.getElementById("navbar-content").innerHTML = `
-            <a id="list_ref" class="navbar-link" href="#">My List</a>
-            <a id="settings_ref" class="navbar-link" href="#">Settings</a>
-            <a id="logout-btn" class="navbar-link" href="#">Logout</a>
+            <a id="list_ref" class="navbar-links" href="#">My List</a>
+            <a id="settings_ref" class="navbar-links" href="#">Settings</a>
+            <a id="logout-btn" class="navbar-links" href="#">Logout</a>
         `;
         return;
     }

@@ -84,7 +84,7 @@ console.log(users_info);
 console.log(JSON.parse(localStorage.getItem("login_info")));
 console.log(JSON.parse(sessionStorage.getItem("login_info")));
 localStorage.removeItem("login_info");
-sessionStorage.removeItem("login_info");
+//sessionStorage.removeItem("login_info");
 
 // Functions
 function borderRed(input) {

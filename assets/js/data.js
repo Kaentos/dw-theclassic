@@ -44,7 +44,7 @@ movies = {
         score: 9,
         genres: ["Adventure", "Drama", "Sci-Fi", "Thriller"],
         premiere: 1415232000,
-        producers: "Christopher Nolan",
+        producers: ["Christopher Nolan"],
         age: "12+",
         duration: "2h 49min",
         lang: "English"

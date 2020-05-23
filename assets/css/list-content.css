@@ -1,5 +1,5 @@
 .content {
-    width: 80%;
+    width: 1117px;
     margin: auto;
     margin-bottom: 50px;
 }
@@ -23,7 +23,7 @@
 
 .ms_ss_panel {
     width: 201px;
-    margin: 0px 25px 20px 25px;
+    margin: 0px 10px 20px 10px;
     border: 1px solid black;
     box-shadow: none;
 }

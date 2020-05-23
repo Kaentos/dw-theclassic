@@ -19,6 +19,7 @@
     flex-wrap: wrap;
     margin: auto;
     min-height: 490px;
+    align-content: flex-start;
 }
 
 .user-details {
@@ -121,4 +122,11 @@
     border: 1px solid black;
     margin: 10px 0px;
     padding: 5px;
+}
+
+@media only screen and (max-width: 1292px){
+    .content-content {
+        justify-content: center;
+        align-content: flex-start;
+    }
 }

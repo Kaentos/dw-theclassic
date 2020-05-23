@@ -86,8 +86,10 @@ if (localStorage.getItem("users_info") === null) {
     var users_info = JSON.parse(localStorage.getItem("users_info"));
 }
 
-if (localStorage.getItem("login_info") !== null || sessionStorage.getItem("login_info") !== null) {
-    location.href="/";
+function ifLoggedGoIndex() {
+    if (localStorage.getItem("login_info") !== null || sessionStorage.getItem("login_info") !== null) {
+        location.href="/";
+    }
 }
 
 console.log("Current users: ");

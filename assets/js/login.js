@@ -41,6 +41,8 @@ function getUserByEmail(email) {
 }
 
 window.onload = function() {
+    ifLoggedGoIndex();
+
     setNavbar();
     document.getElementById("login_ref").classList.add("active");
     setFooter();

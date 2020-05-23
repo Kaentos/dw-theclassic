@@ -8,27 +8,13 @@
     <title>MPL | Users</title>
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/users.css">
+    <script src="assets/js/list-users.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/lr.js"></script>
 </head>
 
 <body>
-    <nav class="flex-line flex-spaced">
-        <div class="flex-line">
-            <a class="navbar-img-a" href="/">
-                <picture>
-                    <img class="navbar-img" src="assets/img/logo.png" alt="logo">
-                </picture>        
-            </a>
-            <a class="navbar-links" href="/">Home</a>
-            <a class="navbar-links" href="#">Movies</a>
-            <a class="navbar-links" href="#">TV Shows</a>
-            <a class="navbar-links active" href="#">Users</a>
-            <a class="navbar-links" href="#">Contact</a>
-        </div>
-        <div class="flex-line">
-            <a class="l-link" href="login.html">Login</a>
-            <a class="r-link" href="register.html">Register</a>
-        </div>
-    </nav>
+    <nav id="navbar"></nav>
 
     <div class="content">
         <div class="content-title">
@@ -45,166 +31,24 @@
             </div>
         </div>
         <hr>
-        <div class="content-content">
-            <div class="flex-line ms_ss_panel">
-                <img class="ms_ss_img" src="assets/img/Users/1.jpg">
-                <div class="user-details flex-col">
-                    <div class="username">
-                        Usernamesadsakldnaskndsakl
-                    </div>
-                    <div>
-                        Followers:
-                        <span id="u_tf">5</span>
-                    </div>
-                    <div class="f_by_me">
-                        <span>Following</span>
-                    </div>
-                </div>
-            </div>
-            <div class="flex-line ms_ss_panel">
-                <img class="ms_ss_img" src="assets/img/Users/1.jpg">
-                <div class="user-details flex-col">
-                    <div class="username">
-                        Usernamesadsakldnas kndsakl
-                    </div>
-                    <div>
-                        Followers:
-                        <span id="u_tf">5</span>
-                    </div>
-                    <div class="f_by_me">
-                        <span>Following</span>
-                    </div>
-                </div>
-            </div>
-            <div class="flex-line ms_ss_panel">
-                <img class="ms_ss_img" src="assets/img/Users/1.jpg">
-                <div class="user-details flex-col">
-                    <div class="username">
-                        Usernamesadsakldnas kndsakl
-                    </div>
-                    <div>
-                        Followers:
-                        <span id="u_tf">5</span>
-                    </div>
-                    <div class="f_by_me">
-                        <span>Following</span>
-                    </div>
-                </div>
-            </div>
-            <div class="flex-line ms_ss_panel">
-                <img class="ms_ss_img" src="assets/img/Users/1.jpg">
-                <div class="user-details flex-col">
-                    <div class="username">
-                        Usernamesadsakldnas kndsakl
-                    </div>
-                    <div>
-                        Followers:
-                        <span id="u_tf">5</span>
-                    </div>
-                    <div class="f_by_me">
-                        <span>Following</span>
-                    </div>
-                </div>
-            </div>
+        <div id="user_list" class="content-content">
+            
         </div>
 
         <div class="content-buttons flex-line flex-spaced">
             <button class="content-p-btn">
                 &lt;&lt;
             </button>
-            <a href="/">
-                <button class="content-back-btn">
-                    Go back
-                </button>
-            </a>
+            <button id="back_btn" class="content-back-btn">
+                Go back
+            </button>
             <button class="content-n-btn">
                 &gt;&gt;
             </button>
         </div>
     </div>
 
-    <footer>
-        <div class="flex-line flex-center">
-            <div class="flex-col footer-content">
-                <h2>
-                    My Popcorn List
-                </h2>
-                <picture>
-                    <img src="assets/img/logo.png" alt="" width="100px">
-                </picture>
-            </div>
-            <div class="flex-col footer-content">
-                <h2>Site links</h2>
-                <ul class="footer-ul">
-                    <li>
-                        <a href="#">Movies</a>
-                    </li>
-                    <li>
-                        <a href="#">Series</a>
-                    </li>
-                    <li>
-                        <a href="#">Users</a>
-                    </li>
-                    <li>
-                        <a href="/login.html">Login</a>
-                    </li>
-                    <li>
-                        <a href="/register.html">Register</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="flex-col footer-content">
-                <h2>Follow us!</h2>
-                <ul class="footer-ul">
-                    <li>
-                        <a href="https://www.twitter.com" target="_blank">Twitter</a>
-                    </li>
-                    <li>
-                        <a href="https://www.reddit.com/r/all" target="_blank">Reddit</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="flex-col footer-content">
-                <h2>Related websites</h2>
-                <ul class="footer-ul">
-                    <li>
-                        <a href="https://www.imdb.com" target="_blank">IMDB</a>
-                    </li>
-                    <li>
-                        <a href="#">Posters</a>
-                    </li>
-                    <li>
-                        <a href="#">Icons</a>
-                    </li>
-                </ul>
-            </div>
-        </div> 
-        <div class="footer-credits flex-line flex-spaced">
-            <div class="footer-credits-txt">
-                Website created by: Kaentos & Thekings2468
-            </div>
-            <div class="footer-credits-txt">
-                <a href="/">
-                    <picture>
-                        <img src="assets/img/GitHub/GitHub-Mark-32px.png" alt="logo" width="24px">
-                    </picture>
-                </a>
-            </div>
-            <div class="footer-credits-txt">
-                Icons made by
-                <a href="https://www.flaticon.com/authors/freepik" title="Freepik">
-                    Freepik
-                </a>
-                from
-                <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
-            </div>
-            
-            
-        </div>
-    </footer>
+    <footer id="footer"></footer>
 </body>
 
 </html>

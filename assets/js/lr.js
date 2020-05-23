@@ -66,6 +66,12 @@ function getCreationDate(obj) {
     }
     console.log("More than 1 argument or argument non object");
 }
+function getTotalFollowers(obj) {
+    if (arguments.length === 1 && typeof(obj) === "object") {
+        return obj.followers.length;
+    }
+    console.log("More than 1 argument or argument non object"); 
+}
 
 const email_regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 

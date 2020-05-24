@@ -2,28 +2,32 @@ window.onload = function() {
     setNavbar();
     setFooter();
 
-    let user_list = document.getElementById("user-list");
-
     let url = new URL(window.location.href);
+    let user = getUserObj();
     let user_id = url.searchParams.get("id");
-    if (user_id === null) {
-        window.location.href = "/";
-    } else {
+
+    if (user_id !== null) {
         user_id = Number(user_id);
-    }
-    
-    if (user_id !== NaN && user_id > -1 && user_id <= users_info.length) {
-        showThisUser(users_info[user_id]);
+        if (user_id !== NaN && user_id > -1 && user_id <= users_info.length) {
+            if (user && getUsername(users_info[user_id]) !== getUsername(user)){
+                document.getElementById("username-follow-zone").innerHTML += '<button class="follow-btn" id="follow-btn">Follow</button>';
+            }
+            showThisUser(users_info[user_id]);
+        } else {
+            window.location.href = "/";
+        }
+    } else if(user) {
+        showThisUser(user);
     } else {
-        showThisUser(getUserObj());
+        window.location.href = "/";
     }
+
+    let user_list = document.getElementById("user-list"); // meter lista
 }
 
 function showThisUser(user) {
-    if (!user) {
-        window.location.href = "/";
-    }
-    console.log("im running");
+    console.log("CARALHO2");
+    console.log(user);
     document.getElementById("username").innerHTML = getUsername(user);
     document.getElementById("total_followers").innerHTML = getFollowers(user).length;
     document.getElementById("total_fav_movies").innerHTML = getFavMovies(user).length;

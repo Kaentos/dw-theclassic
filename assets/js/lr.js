@@ -66,32 +66,50 @@ function getCreationDate(obj) {
     }
     console.log("More than 1 argument or argument non object");
 }
-
-const user1 = Object.assign({}, user_obj);
-setEmail(user1, "admin@mypopcornlist.com");
-setUsername(user1, "Admin");
-setPassword(user1, "admin");
-setCreationDate(user1);
-const user2 = Object.assign({}, user_obj);
-setEmail(user2, "normal_user@hotmail.com");
-setUsername(user2, "Normal_User");
-setPassword(user2, "normal");
-setCreationDate(user2);
+function getTotalFollowers(obj) {
+    if (arguments.length === 1 && typeof(obj) === "object") {
+        return obj.followers.length;
+    }
+    console.log("More than 1 argument or argument non object"); 
+}
+function getFollows(obj){
+    if (arguments.length === 1 && typeof(obj) === "object") {
+        return obj.follows;
+    }
+    console.log("More than 1 argument or argument non object");
+}
 
 const email_regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 if (localStorage.getItem("users_info") === null) {
+    const user1 = Object.assign({}, user_obj);
+    setEmail(user1, "admin@mypopcornlist.com");
+    setUsername(user1, "Admin");
+    setPassword(user1, "admin");
+    setCreationDate(user1);
+    const user2 = Object.assign({}, user_obj);
+    setEmail(user2, "normal_user@hotmail.com");
+    setUsername(user2, "Normal_User");
+    setPassword(user2, "normal");
+    setCreationDate(user2);
     var users_info = [user1, user2];
     localStorage.setItem("users_info", JSON.stringify(users_info));
 } else {
     var users_info = JSON.parse(localStorage.getItem("users_info"));
 }
+
+function ifLoggedGoIndex() {
+    if (localStorage.getItem("login_info") !== null || sessionStorage.getItem("login_info") !== null) {
+        location.href="/";
+    }
+}
+
 console.log("Current users: ");
 console.log(users_info);
 
 console.log(JSON.parse(localStorage.getItem("login_info")));
 console.log(JSON.parse(sessionStorage.getItem("login_info")));
-localStorage.removeItem("login_info");
+//localStorage.removeItem("login_info");
 //sessionStorage.removeItem("login_info");
 
 // Functions

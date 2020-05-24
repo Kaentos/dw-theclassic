@@ -87,6 +87,8 @@ function checkEmail() {
 }
 
 window.onload = function() {
+    ifLoggedGoIndex();
+    
     setNavbar();
     document.getElementById("register_ref").classList.add("active");
     setFooter();

@@ -1,5 +1,5 @@
 .content {
-    width: 80%;
+    width: 1117px;
     margin: auto;
     margin-bottom: 50px;
 }
@@ -23,15 +23,23 @@
 
 .ms_ss_panel {
     width: 201px;
-    margin-left: 25px;
-    margin-right: 25px;
+    margin: 0px 10px 20px 10px;
     border: 1px solid black;
     box-shadow: none;
-    margin-bottom: 20px;
 }
 
 .ms_ss_img {
     height: 300px;
+}
+
+.ms_ss_panel > div {
+    font-size: 1.1rem;
+    text-align: center;
+    font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 1px 5px;
 }
 
 .content-buttons {
@@ -90,14 +98,4 @@
     cursor: pointer;
     border-radius: 5px;
     border: 1px solid black;
-}
-
-.ms_ss_panel > div {
-    font-size: 1.1rem;
-    text-align: center;
-    font-weight: bold;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    margin: 1px 5px;
 }

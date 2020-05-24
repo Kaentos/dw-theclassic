@@ -1,5 +1,5 @@
 .content {
-    width: 80%;
+    max-width: 1290px;
     margin: auto;
     margin-bottom: 50px;
 }
@@ -19,18 +19,21 @@
     flex-wrap: wrap;
     margin: auto;
     min-height: 490px;
+    align-content: flex-start;
 }
 
 .user-details {
+    margin-top: 5px;
     margin-left: 5px;
-    font-size: 1.2rem;
-    min-width: 0;
+    font-size: 1.3rem;
+    max-width: 200px;
 }
 
-.user-details > span {
+.username {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    max-width: 190px;
 }
 
 .f_by_me {
@@ -46,9 +49,11 @@
 }
 
 .ms_ss_panel {
-    width: 328px;
+    color: black;
+    text-decoration: none;
+    width: 300px;
     max-height: 100px;
-    margin: 0px 25px 20px 25px;
+    margin: 0px 10px 20px 10px;
     border: 1px solid black;
     box-shadow: none;
 }
@@ -99,23 +104,46 @@
     border-radius: 5px;
 }
 
-.search {
-    margin: 10px;
+.search-input {
     font-size: 1.3rem;
 }
-.search > input {
-    font-size: 1.2rem;
-}
-.search > select {
+.search-input > input {
     font-size: 1.2rem;
 }
 
 .search-bar {
-    min-width: 500px;
+    min-width: 300px;
+    max-width: 500px;
+    padding: 5px;
+    margin: 10px;
 }
 
 .search-btn {
     cursor: pointer;
     border-radius: 5px;
     border: 1px solid black;
+    margin: 10px 0px;
+    padding: 5px;
+}
+
+.search-followers {
+    margin: 13px 10px;
+    font-size: 1.3rem;
+}
+
+.follow_check {
+    height: 20px;
+    width: 20px;
+    vertical-align: middle;
+}
+.needToFollow {
+    margin: 0px 10px;
+    font-size: 1.3rem;
+}
+
+@media only screen and (max-width: 1292px){
+    .content-content {
+        justify-content: center;
+        align-content: flex-start;
+    }
 }

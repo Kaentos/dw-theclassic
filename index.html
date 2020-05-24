@@ -9,6 +9,7 @@
     
     <title>MPL | Homepage</title>
     <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/fonts/Roboto/Roboto-Regular.ttf">
     <script src="assets/js/main.js"></script>
     <script src="assets/js/home.js"></script>
 </head>
@@ -16,15 +17,11 @@
 <body>
     <nav id="navbar"></nav>
 
-    <div class="welcome-zone">
-        <div class="welcome-img">
-            <picture>
-                <img src="assets/img/logo.png" alt="logo" width="200px">
-            </picture>
-            <h1>
-                Welcome to My Popcorn List
-            </h1>
-        </div>
+    <div id="welcome-zone" class="welcome-zone">
+        <img src="assets/img/logo.png" alt="My Popcorn List Logo" title="My Popcorn List Logo">
+        <h1>
+            Welcome to My Popcorn List
+        </h1>
         <div class="welcome-desc">
             <p>
                 Do you wish to share your favourites movies and TV shows and track what you watch? Now you can do it!
@@ -36,46 +33,86 @@
             </a>
             
         </div>
-        <hr class="welcome-hr" />
+        <hr/>
     </div>
 
-    <div class="destaques-zone">
-        <div class="destaques-panel">
-            <!-- https://stackoverflow.com/questions/56392199/make-a-button-to-scroll-horizontally-in-div -->
+    
+
+    <div class="carousel-zone">
+        <div class="carousel-panel">
             <h1>
                 Featured
             </h1>
-            <div class="destaques-carousel">
+            <div class="carousel-carousel">
                 <div id="featured-prev" class="go-left">
                     &lt
                 </div>
                 <div id="featured-next" class="go-right">
                     &gt
                 </div>
-                <div id="featured" class="destaques">
-                    <div class="ms_ss_panel">
+                <div id="featured" class="carousel">
+                    <div class="flex-col ms_ss_panel text-center">
                         <img class="ms_ss_img" src="assets/img/endgame.jpg">
-                        Endgame 2019
+                        <div>
+                            Avengers 4: Endgame
+                        </div>
+                        <div>
+                            2019
+                        </div>
                     </div>
-                    <div class="ms_ss_panel">
-                        <img class="ms_ss_img" src="assets/img/endgame.jpg">
-                        Endgame 2019
+                    <div class="flex-col ms_ss_panel text-center">
+                        <img class="ms_ss_img" src="assets/img/westworld.jpg">
+                        <div>
+                            Westworld
+                        </div>
+                        <div>
+                            2016
+                        </div>
                     </div>
-                    <div class="ms_ss_panel">
+                    <div class="flex-col ms_ss_panel text-center">
                         <img class="ms_ss_img" src="assets/img/endgame.jpg">
-                        Endgame 2019
+                        <div>
+                            Avengers 4: Endgame
+                        </div>
+                        <div>
+                            2019
+                        </div>
                     </div>
-                    <div class="ms_ss_panel">
-                        <img class="ms_ss_img" src="assets/img/endgame.jpg">
-                        Endgame 2019
+                    <div class="flex-col ms_ss_panel text-center">
+                        <img class="ms_ss_img" src="assets/img/westworld.jpg">
+                        <div>
+                            Westworld
+                        </div>
+                        <div>
+                            2016
+                        </div>
                     </div>
-                    <div class="ms_ss_panel">
+                    <div class="flex-col ms_ss_panel text-center">
                         <img class="ms_ss_img" src="assets/img/endgame.jpg">
-                        Endgame 2019
+                        <div>
+                            Avengers 4: Endgame
+                        </div>
+                        <div>
+                            2019
+                        </div>
                     </div>
-                    <div class="ms_ss_panel">
+                    <div class="flex-col ms_ss_panel text-center">
+                        <img class="ms_ss_img" src="assets/img/westworld.jpg">
+                        <div>
+                            Westworld
+                        </div>
+                        <div>
+                            2016
+                        </div>
+                    </div>
+                    <div class="flex-col ms_ss_panel text-center">
                         <img class="ms_ss_img" src="assets/img/endgame.jpg">
-                        Endgame 2019
+                        <div>
+                            Avengers 4: Endgame
+                        </div>
+                        <div>
+                            2019
+                        </div>
                     </div>
                     <div></div>
                 </div>
@@ -85,11 +122,124 @@
     </div>
 
     <div class="flex-line flex-center">
-        <div class="movies-btn">
+        <a class="movies-btn" href="#">
             Movies
-        </div>
-        <div class="tvshows-btn">
+        </a>
+        <a class="tvshows-btn" href="#">
             TV Shows
+        </a>
+    </div>
+
+    <div class="carousel-zone">
+        <div class="carousel-panel">
+            <h1>
+                Last movies
+            </h1>
+            <div class="carousel-carousel">
+                <div id="last_movies-prev" class="go-left">
+                    &lt
+                </div>
+                <div id="last_movies-next" class="go-right">
+                    &gt
+                </div>
+                <div id="last_movies" class="carousel">
+                    <div class="flex-col ms_ss_panel text-center">
+                        <img class="ms_ss_img" src="assets/img/endgame.jpg">
+                        <div>
+                            Avengers 4: Endgame
+                        </div>
+                        <div>
+                            2019
+                        </div>
+                    </div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="carousel-zone">
+        <div class="carousel-panel">
+            <h1>
+                Last TV Shows
+            </h1>
+            <div class="carousel-carousel">
+                <div id="last_series-prev" class="go-left">
+                    &lt
+                </div>
+                <div id="last_series-next" class="go-right">
+                    &gt
+                </div>
+                <div id="last_series" class="carousel">
+                    <div class="flex-col ms_ss_panel text-center">
+                        <img class="ms_ss_img" src="assets/img/endgame.jpg">
+                        <div>
+                            Avengers 4: Endgame
+                        </div>
+                        <div>
+                            2019
+                        </div>
+                    </div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="carousel-zone">
+        <div class="carousel-panel">
+            <h1>
+                Top rated movies
+            </h1>
+            <div class="carousel-carousel">
+                <div id="top_movies-prev" class="go-left">
+                    &lt
+                </div>
+                <div id="top_movies-next" class="go-right">
+                    &gt
+                </div>
+                <div id="top_movies" class="carousel">
+                    <div class="flex-col ms_ss_panel text-center">
+                        <img class="ms_ss_img" src="assets/img/endgame.jpg">
+                        <div>
+                            Avengers 4: Endgame
+                        </div>
+                        <div>
+                            2019
+                        </div>
+                    </div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="carousel-zone">
+        <div class="carousel-panel">
+            <h1>
+                Top rated TV Shows
+            </h1>
+            <div class="carousel-carousel">
+                <div id="top_series-prev" class="go-left">
+                    &lt
+                </div>
+                <div id="top_series-next" class="go-right">
+                    &gt
+                </div>
+                <div id="top_series" class="carousel">
+                    <div class="flex-col ms_ss_panel text-center">
+                        <img class="ms_ss_img" src="assets/img/endgame.jpg">
+                        <div>
+                            Avengers 4: Endgame
+                        </div>
+                        <div>
+                            2019
+                        </div>
+                    </div>
+
+                    <div></div>
+                </div>
+            </div>
         </div>
     </div>
 

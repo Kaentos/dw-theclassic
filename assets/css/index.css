@@ -1,33 +1,33 @@
 .welcome-zone {
     text-align: center;
+    margin: auto;
 }
 
-.welcome-img {
+.welcome-zone img {
     margin-top: 0px;
+    width: 200px;
 }
 
-.welcome-hr {
-    width: 25%;
-    border: 3px solid black;
-    border-radius: 5px;
+.welcome-zone h1 {
+    margin: 10px;
 }
 
 .welcome-desc {
-    width: 25%;
-    margin: auto;
-    font-size: 18px;
+    font-size: 1.3rem;
+    max-width: 700px;
+    margin: 20px auto;
 }
 
 .welcome-r-btn {
-    width: 50%;
+    min-width: 200px;
     padding: 10px 0px;
     font-weight: bold;
-    background-color: red;
+    background-color: #ed3124;
     border: none;
     border-radius: 5px;
-    font-size: 25px;
+    font-size: 1.4rem;
     color: white;
-    transition: 1s;
+    transition: 0.5s;
     cursor: pointer;
 }
 
@@ -35,41 +35,57 @@
     background-color: #128ca0;
 }
 
-.destaques-zone {
+.welcome-zone hr {
+    max-width: 500px;
+    border: 3px solid black;
+    border-radius: 5px;
+}
+
+.carousel-zone {
     padding-bottom: 25px;
 }
 
-.destaques-panel {
-    width: 55%;
+.carousel-panel {
+    max-width: 1107px;
     margin: auto;
 }
 
-.destaques-panel h1 {
-    margin-left: 15px;
-    margin-bottom: 5px;
+.carousel-panel h1 {
+    margin: 5px 0px 0px 15px;
 }
 
-.destaques-carousel {
+.carousel-carousel {
     position: relative;
-    border: 2px solid black;
+    border: 1px solid black;
+    border-radius: 3px;
 }
 
-.destaques {
+.carousel {
     display: flex;
     overflow: hidden;
     background-color: white;
 }
 
 .ms_ss_panel {
-    width: 200px;
+    width: 201px;
     margin: 20px 0px 20px 15px;
     border: 1px solid black;
+    border-radius: 2px;
     box-shadow: none;
 }
 
+.ms_ss_panel > div {
+    font-size: 1.1rem;
+    text-align: center;
+    font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 1px 5px;
+}
+
 .ms_ss_img {
-    height: 296px;
-    width: 200px;
+    height: 300px;
 }
 
 .go-left, .go-right {
@@ -85,7 +101,7 @@
     font-size: 50px;
     font-weight: bold;
     color: rgba(255, 255, 255, 0.4);
-    transition: 1.2s;
+    transition: 0.2s;
     
 }
 
@@ -106,26 +122,33 @@
 
 .movies-btn {
     background-color: #128ca0;
-    margin-right: 25px;
+}
+.movies-btn:hover {
+    background-color: #1254a0;
 }
 
 .tvshows-btn {
     background-color: #ed3124;
 }
 
+.tvshows-btn:hover {
+    background-color: #a01212;
+}
+
 .movies-btn, .tvshows-btn {
     cursor: pointer;
-    width: 10%;
+    min-width: 217px;
     padding: 10px 0px;
-    margin-bottom: 25px;
     text-align: center;
     color: white;
     font-size: 26px;
-    border-radius: 10px;
+    border-radius: 5px;
     font-weight: bold;
-    border: 2px solid black
+    margin: 10px 10px;
+    transition: 0.5s;
+    text-decoration: none;
 }
 
-#featured div:last-child {
+.carousel > div:last-child {
     padding-right: 15px;
 }

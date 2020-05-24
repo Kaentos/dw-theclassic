@@ -28,7 +28,7 @@ function showAllUsers() {
     for (let i in users_info) {
         let user = users_info[i];
         user_list.innerHTML += `
-            <a href=profile.html?id= ${i} class="flex-line ms_ss_panel">
+            <a href="profile.html?id=${i}" class="flex-line ms_ss_panel">
                 <img class="ms_ss_img" src="assets/img/Users/1.jpg">
                 <div class="user-details flex-col">
                     <div class='username'>
@@ -53,7 +53,7 @@ function showFollowedUsers() {
         for (let i in followed_users) {
             let user = users_info[i];
             user_list.innerHTML += `
-                <a href=profile.html?id= ${i} class="flex-line ms_ss_panel">
+                <a href="profile.html?id=${i}" class="flex-line ms_ss_panel">
                     <img class="ms_ss_img" src="assets/img/Users/1.jpg">
                     <div class="user-details flex-col">
                         <div class='username'>

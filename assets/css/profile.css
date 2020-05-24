@@ -1,6 +1,117 @@
-.profileuserdetails {
+.ccontainer {
+    margin: auto;
+    max-width: 1115px;
+    box-sizing: border-box;
+    padding: 5px 5px 50px 5px;
+}
+.ccontainer > hr {
+    border: 3px solid black;
+    border-radius: 5px;
+}
+
+.ms_ss_panel {
+    width: 201px;
+    margin: 0px 0px 20px 15px;
+    border: 1px solid black;
+    border-radius: 2px;
+    box-shadow: none;
+}
+
+.ms_ss_panel > div {
+    font-size: 1.1rem;
+    text-align: center;
+    font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 1px 5px;
+}
+
+.ms_ss_img {
+    height: 300px;
+}
+
+
+.field-header {
+    margin: 0px 15px;
+    color: black;
+}
+
+.field-title {
+    font-size: 25px;
+}
+
+.list-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.list-title > div {
+    padding: 5px 0px;
+    font-size: 1.6rem;
+}
+.list-title > a {
+    border: 1px solid black;
+    box-shadow: none;
+    color: white;
+    text-decoration: none;
+    transition: 0.5s;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: red;
+    font-size: 1.4rem;
+    
+}
+.list-title > a:hover {
+    background-color: silver;
+    color: black;
+}
+
+.user-info {
+    margin: 15px;
+}
+
+.username {
+    font-size: 2rem;
+    font-weight: bold;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     margin-left: 10px;
+}
+
+.follow-btn {
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 2px;
+    border: 1px solid black;
+    background-color: red;
+    color: white;
+}
+
+.list-btn {
+    margin-top: 10px;
+    border: 1px solid black;
+    margin-left: 10px;
+    font-weight: bold;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-size: 1.3rem;
+    border-radius: 2px;
+    background-color: red;
+    max-width: 75px;
+}
+
+.user-details {
     width: 100%;
+}
+
+.detail {
+    margin-left: 10px;
+    margin-top: 5px;
+    font-size: 1.3rem;
 }
 
 .profileuserdetail {
@@ -30,18 +141,16 @@
     width: 230px;
 }
 
-#profileusername {
-    font-size: 25px;
-    font-weight: bold;
+.user-img {
+    max-width: 250px;
+    max-height: 250px;
 }
 
-#profilepicture {
-    max-width: 200px;
-}
-
-.field-seemore {
-    font-size: 20px;
-    color: black;
+@media only screen and (max-width: 810px) {
+    .list-btn {
+        margin: 10px auto 0px auto;
+        width: 100px;
+    }
 }
 
 @media only screen and (max-width: 675px) {

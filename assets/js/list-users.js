@@ -36,7 +36,7 @@ function showAllUsers() {
                     </div>
                     <div>
                         Followers:
-                        <span id="u_tf">${getTotalFollowers(user)}</span>
+                        <span id="u_tf">${getFollowers(user).length}</span>
                     </div>
                 </div>
             </a>

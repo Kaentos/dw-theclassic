@@ -28,7 +28,6 @@ function showThisUser(user) {
     document.getElementById("total_followers").innerHTML = getFollowers(user).length;
     document.getElementById("total_fav_movies").innerHTML = getFavMovies(user).length;
     document.getElementById("total_fav_series").innerHTML = getFavSeries(user).length;
-    document.getElementById("total_watching_movies").innerHTML = getWatchingMovies(user).length;
     document.getElementById("total_watching_series").innerHTML = getWatchingSeries(user).length;
     document.getElementById("total_toSee_movies").innerHTML = getToWatchMovies(user).length;
     document.getElementById("total_toSee_series").innerHTML = getToWatchSeries(user).length;

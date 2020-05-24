@@ -4,7 +4,6 @@ const user_obj = {
     password: null,
     creationDate: null,
     fav_movies: [],
-    watching_movies: [],
     toWatch_movies: [],
     seen_movies: [],
     fav_series: [],
@@ -89,12 +88,6 @@ function getFavMovies(obj) {
 function getFavSeries(obj) {
     if (arguments.length === 1 && typeof(obj) === "object") {
         return obj.fav_series;
-    }
-    console.log("More than 1 argument or argument non object");
-}
-function getWatchingMovies(obj) {
-    if (arguments.length === 1 && typeof(obj) === "object") {
-        return obj.watching_movies;
     }
     console.log("More than 1 argument or argument non object");
 }

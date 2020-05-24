@@ -1,3 +1,14 @@
+function getUserObj() {
+    if (localStorage.getItem("login_info") !== null) {
+        return JSON.parse(localStorage.getItem("login_info"));
+    } else if(sessionStorage.getItem("login_info") !== null) {
+        return JSON.parse(sessionStorage.getItem("login_info"));
+    } else {
+        return false;
+    }
+}
+
+
 function setBackBtn() {
     let back_btn = document.getElementById('back_btn');
     if (document.referrer === "") {

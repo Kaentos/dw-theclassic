@@ -1,35 +1,72 @@
+var logged_user = false;
 window.onload = function() {
     setNavbar();
     document.getElementById("users_ref").classList.add("active");
     setFooter();
     setBackBtn();
 
-    let user_list = document.getElementById("user_list");
-    let isLogged = false;
-    if (localStorage.getItem("login_info") !== null || sessionStorage.getItem("login_info") !== null) {
-        isLogged = true;
+    let search = document.getElementById("search");
+    logged_user = getUserObj();
+    if (logged_user) {
+        search.innerHTML += `
+            <div class="search-followers" class="flex-line">
+                <label>
+                    Users that I follow:
+                    <input id="only_followers" class="follow_check" type="checkbox" name="" id="">
+                </label>
+            </div>
+        `;
+        document.getElementById("only_followers").addEventListener("click", showFollowedUsers);
     }
+    
+    showAllUsers();
+}
 
+function showAllUsers() {
+    let user_list = document.getElementById("user_list");
+    user_list.innerHTML = "";
     for (let i in users_info) {
         let user = users_info[i];
         user_list.innerHTML += `
-            <a href=profile.html?id=` + i + ` class="flex-line ms_ss_panel">
+            <a href=profile.html?id= ${i} class="flex-line ms_ss_panel">
                 <img class="ms_ss_img" src="assets/img/Users/1.jpg">
                 <div class="user-details flex-col">
-                    <div class='username'>`
-                        + getUsername(user) +
-                    `</div>
+                    <div class='username'>
+                        ${getUsername(user)}
+                    </div>
                     <div>
                         Followers:
-                        <span id="u_tf">` + getTotalFollowers(user) + `</span>
-                    </div>` + (isLogged ?
-                    `<div class="f_by_me">
-                        <span>Following</span>
-                    </div>` : "") + `
+                        <span id="u_tf">${getTotalFollowers(user)}</span>
+                    </div>
                 </div>
             </a>
         `
     }
+}
 
-    
+function showFollowedUsers() {
+    let show_followers = document.getElementById("only_followers").checked;
+    let user_list = document.getElementById("user_list");
+    user_list.innerHTML = "";
+    if (show_followers) {
+        for (let i in getFollows(logged_user)) {
+            let user = users_info[i];
+            user_list.innerHTML += `
+                <a href=profile.html?id= ${i} class="flex-line ms_ss_panel">
+                    <img class="ms_ss_img" src="assets/img/Users/1.jpg">
+                    <div class="user-details flex-col">
+                        <div class='username'>
+                            ${getUsername(user)}
+                        </div>
+                        <div>
+                            Followers:
+                            <span id="u_tf">${getTotalFollowers(user)}</span>
+                        </div>
+                    </div>
+                </a>
+            `;
+        }
+    } else {
+        showAllUsers();
+    }
 }

@@ -126,6 +126,17 @@
     padding: 5px;
 }
 
+.search-followers {
+    margin: 13px 10px;
+    font-size: 1.3rem;
+}
+
+.follow_check {
+    height: 20px;
+    width: 20px;
+    vertical-align: middle;
+}
+
 @media only screen and (max-width: 1292px){
     .content-content {
         justify-content: center;

@@ -47,9 +47,11 @@ function showAllUsers() {
 function showFollowedUsers() {
     let show_followers = document.getElementById("only_followers").checked;
     let user_list = document.getElementById("user_list");
+    let followed_users = getFollows(logged_user);
+    console.log(followed_users);
     user_list.innerHTML = "";
-    if (show_followers) {
-        for (let i in getFollows(logged_user)) {
+    if (show_followers && followed_users.length > 0) {
+        for (let i in followed_users) {
             let user = users_info[i];
             user_list.innerHTML += `
                 <a href=profile.html?id= ${i} class="flex-line ms_ss_panel">
@@ -66,6 +68,8 @@ function showFollowedUsers() {
                 </a>
             `;
         }
+    } else if (show_followers && followed_users.length === 0) {
+        user_list.innerHTML = "<div class='needToFollow'>You don't follow anyone... maybe follow some users?</div>";
     } else {
         showAllUsers();
     }

@@ -1,8 +1,8 @@
 function getUserObj() {
     if (localStorage.getItem("login_info") !== null) {
-        return JSON.parse(localStorage.getItem("login_info"));
+        return JSON.parse(localStorage.getItem("login_info")).user;
     } else if(sessionStorage.getItem("login_info") !== null) {
-        return JSON.parse(sessionStorage.getItem("login_info"));
+        return JSON.parse(sessionStorage.getItem("login_info")).user;
     } else {
         return false;
     }

@@ -48,7 +48,6 @@ function showFollowedUsers() {
     let show_followers = document.getElementById("only_followers").checked;
     let user_list = document.getElementById("user_list");
     let followed_users = getFollows(logged_user);
-    console.log(followed_users);
     user_list.innerHTML = "";
     if (show_followers && followed_users.length > 0) {
         for (let i in followed_users) {

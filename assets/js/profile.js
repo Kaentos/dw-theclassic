@@ -1,5 +1,6 @@
 window.onload = function() {
     setNavbar();
+    setMobileNavbar();
     setFooter();
 
     let url = new URL(window.location.href);
@@ -26,8 +27,6 @@ window.onload = function() {
 }
 
 function showThisUser(user) {
-    console.log("CARALHO2");
-    console.log(user);
     document.getElementById("username").innerHTML = getUsername(user);
     document.getElementById("total_followers").innerHTML = getFollowers(user).length;
     document.getElementById("total_fav_movies").innerHTML = getFavMovies(user).length;

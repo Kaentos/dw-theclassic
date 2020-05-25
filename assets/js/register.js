@@ -90,6 +90,7 @@ window.onload = function() {
     ifLoggedGoIndex();
     
     setNavbar();
+    setMobileNavbar();
     document.getElementById("register_ref").classList.add("active");
     setFooter();
 

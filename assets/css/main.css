@@ -224,6 +224,7 @@ footer .flex-line:first-child {
         width: 100%;
         text-align: center;
         align-items: center;
+        margin: 12px 0px;
     }
 
     nav.active .navbar-linksdiv{

@@ -17,6 +17,6 @@ function renderMovie() {
     document.getElementById("info-agerating").innerHTML = `Age rating: ${movie.age}`;
     document.getElementById("info-duration").innerHTML = `Duration: ${movie.duration}`;
     document.getElementById("info-language").innerHTML = `Language: ${movie.lang}`;
-    document.getElementById("yt-embed").src = `https://www.youtube.com/embed/${show.trailer}`;
+    document.getElementById("yt-embed").src = `https://www.youtube.com/embed/${movie.trailer}`;
 
 }

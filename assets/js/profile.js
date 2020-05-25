@@ -7,7 +7,7 @@ window.onload = function() {
     let user = getUserObj();
     let user_id = url.searchParams.get("id");
 
-    if (user_id !== null) {
+    if (user_id !== null && user_id.length > 0) {
         user_id = Number(user_id);
         if (user_id !== NaN && user_id > -1 && user_id <= users_info.length) {
             if (user && getUsername(users_info[user_id]) !== getUsername(user)){
@@ -28,6 +28,7 @@ window.onload = function() {
 
 function showThisUser(user) {
     document.getElementById("username").innerHTML = getUsername(user);
+    document.getElementById("pageTitle").innerHTML += getUsername(user);
     document.getElementById("total_followers").innerHTML = getFollowers(user).length;
     document.getElementById("total_fav_movies").innerHTML = getFavMovies(user).length;
     document.getElementById("total_fav_series").innerHTML = getFavSeries(user).length;

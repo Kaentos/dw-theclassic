@@ -7,7 +7,11 @@ window.onload = function (){
 function renderMovie() {
     let id = new URLSearchParams(window.location.search).get("id");
     let movie = getMovieById(parseInt(id));
-    document.getElementById("info-picture").src = `assets/img/movies/${id}.jpg`
+    if (show == undefined) {
+        window.location.href = "/";
+        return;
+    }
+    document.getElementById("info-picture").src = `assets/img/movies/${id}.jpg`;
     document.getElementById("info-title").innerHTML = movie.name;
     document.getElementById("info-rating").innerHTML = `Score Rating: ${movie.score}`;
     document.getElementById("info-genres").innerHTML = `Genres: ${movie.genres.join(", ")}`;

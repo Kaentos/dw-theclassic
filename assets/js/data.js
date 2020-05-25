@@ -1,4 +1,4 @@
-movies = {
+const movies = {
     1: {
         name: "Endgame",
         score: 8,
@@ -56,7 +56,7 @@ movies = {
     }
 }
 
-shows = {
+const shows = {
     1: {
         name: "Game of Thrones",
         score: 7,

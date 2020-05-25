@@ -9,8 +9,10 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/list-content.css">
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/data.js"></script>
     <script src="assets/js/user-list.js"></script>
     <script src="assets/js/lr.js"></script>
+    
 </head>
 
 <body>
@@ -26,17 +28,17 @@
         <div class="search-form flex-line flex-spaced">
             <div class="search flex-line">
                 <div class="search-input">
-                    <input class="search-bar" type="search" name="txt_pesquisa" id="txt_pesquisa" placeholder="Search Movies/Series...">
+                    <input id="search-name" class="search-bar" type="search" name="txt_pesquisa" id="txt_pesquisa" placeholder="Search name...">
                 </div>
                 <div class="search-input">
-                    <input class="search-btn" type="button" value="Search">
+                    <input id="search-btn" class="search-btn" type="button" value="Search">
                 </div>
                 
             </div>
             <div class="flex-line search-selects">
                 <div class="search">
                     <b>Genre:</b>
-                    <select id="Genre">
+                    <select id="search-genre">
                         <option value="all" selected>All</option>
                         <option value="g1">Genre 1</option>
                         <option value="g2">Genre 2</option>
@@ -44,110 +46,25 @@
                 </div>
                 <div class="search">
                     <b>Type:</b>
-                    <select id="order_type">
-                        <option value="all" selected>All</option>
-                        <option value="new">Newest</option>
-                        <option value="old">Oldest</option>
-                        <option value="top_rated">Top rated</option>
-                        <option value="top_rated">Lowest rated</option>
-                        <options value="most_viewed">Most viewed</options>
-                        <option value="most_fav">Most favourites</option>
+                    <select id="search-type">
+                        <option value="movies" selected>Movies</option>
+                        <option value="shows">TV Shows</option>
+                    </select>
+                </div>
+                <div class="search">
+                    <b>List of:</b>
+                    <select id="search-listOf">
+                        <option value="fav" selected>Favourites</option>
+                        <option value="watching">Watching</option>
+                        <option value="toWatch">To Watch</option>
+                        <option value="watched">Watched</option>
                     </select>
                 </div>
             </div>
         </div>
         <hr>
-        <div class="content-content flex-start">
-            <div class="flex-col ms_ss_panel">
-                <img class="ms_ss_img" src="assets/img/movies/1.jpg">
-                <div>
-                    Avengers 4: Endgame
-                </div>
-                <div>
-                    2019
-                </div>
-            </div>
-            <div class="flex-col ms_ss_panel">
-                <img class="ms_ss_img" src="assets/img/movies/1.jpg">
-                <div>
-                    Avengers 4: Endgame
-                </div>
-                <div>
-                    2019
-                </div>
-            </div>
-            <div class="flex-col ms_ss_panel">
-                <img class="ms_ss_img" src="assets/img/movies/1.jpg">
-                <div>
-                    Avengers 4: Endgame
-                </div>
-                <div>
-                    2019
-                </div>
-            </div>
-            <div class="flex-col ms_ss_panel">
-                <img class="ms_ss_img" src="assets/img/movies/1.jpg">
-                <div>
-                    Avengers 4: Endgame
-                </div>
-                <div>
-                    2019
-                </div>
-            </div>
-            <div class="flex-col ms_ss_panel">
-                <img class="ms_ss_img" src="assets/img/movies/1.jpg">
-                <div>
-                    Avengers 4: Endgame
-                </div>
-                <div>
-                    2019
-                </div>
-            </div>
-            <div class="flex-col ms_ss_panel">
-                <img class="ms_ss_img" src="assets/img/movies/1.jpg">
-                <div>
-                    Avengers 4: Endgame
-                </div>
-                <div>
-                    2019
-                </div>
-            </div>
-            <div class="flex-col ms_ss_panel">
-                <img class="ms_ss_img" src="assets/img/movies/1.jpg">
-                <div>
-                    Avengers 4: Endgame
-                </div>
-                <div>
-                    2019
-                </div>
-            </div>
-            <div class="flex-col ms_ss_panel">
-                <img class="ms_ss_img" src="assets/img/movies/1.jpg">
-                <div>
-                    Avengers 4: Endgame
-                </div>
-                <div>
-                    2019
-                </div>
-            </div>
-            <div class="flex-col ms_ss_panel">
-                <img class="ms_ss_img" src="assets/img/movies/1.jpg">
-                <div>
-                    Avengers 4: Endgame
-                </div>
-                <div>
-                    2019
-                </div>
-            </div>
-            <div class="flex-col ms_ss_panel">
-                <img class="ms_ss_img" src="assets/img/movies/1.jpg">
-                <div>
-                    Avengers 4: Endgame
-                </div>
-                <div>
-                    2019
-                </div>
-            </div>
+        <div id="content-zone" class="content-content flex-start">
+            
         </div>
         <div class="content-buttons flex-line flex-spaced">
             <button class="content-p-btn">

@@ -1,4 +1,5 @@
 const user_obj = {
+    id: null,
     email: null,
     username: null,
     password: null,
@@ -122,6 +123,10 @@ function getSeenSeries(obj) {
     console.log("More than 1 argument or argument non object");
 }
 
+function getUserObjWithID(id) {
+    return users_info[id];
+}
+
 const email_regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 if (localStorage.getItem("users_info") === null) {
@@ -130,6 +135,8 @@ if (localStorage.getItem("users_info") === null) {
     setUsername(user1, "Admin");
     setPassword(user1, "admin");
     setCreationDate(user1);
+    user1.fav_movies = [1,2];
+    user1.fav_series = [5,6];
     const user2 = Object.assign({}, user_obj);
     setEmail(user2, "normal_user@hotmail.com");
     setUsername(user2, "Normal_User");

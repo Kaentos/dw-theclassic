@@ -1,5 +1,5 @@
 .content {
-    width: 1117px;
+    max-width: 1117px;
     margin: auto;
     margin-bottom: 50px;
 }
@@ -81,21 +81,47 @@
 
 .search {
     margin: 10px;
-    font-size: 1.3rem;
 }
 .search > input {
     font-size: 1.2rem;
 }
 .search > select {
     font-size: 1.2rem;
+    padding: 5px;
 }
 
 .search-bar {
-    min-width: 500px;
+    min-width: 300px;
+    max-width: 500px;
+    padding: 5px;
 }
 
 .search-btn {
     cursor: pointer;
     border-radius: 5px;
     border: 1px solid black;
+    padding: 5px 10px;
+    margin-left: 10px;
+    font-weight: bold;
+    
+}
+
+.search-input {
+    font-size: 1.3rem;
+}
+.search-input > input {
+    font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 1117px){
+    .content-content {
+        justify-content: center;
+        align-content: flex-start;
+    }
+}
+
+@media only screen and (max-width: 810px) {
+    .search-btn {
+        margin-top: 10px;
+    }
 }

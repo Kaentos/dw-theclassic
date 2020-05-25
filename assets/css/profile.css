@@ -89,19 +89,28 @@
     color: white;
 }
 
-.list-btn {
+.back-btn, .list-btn {
+    cursor: pointer;
     margin-top: 10px;
     border: 1px solid black;
     margin-left: 10px;
     font-weight: bold;
-    padding: 5px;
-    text-align: center;
+    padding: 7px;
     text-decoration: none;
-    color: white;
     font-size: 1.3rem;
     border-radius: 2px;
+    min-width: 100px;
+}
+
+.back-btn {
+    color: black;
+    background-color: silver;
+}
+
+.list-btn {
+    color: white;
     background-color: red;
-    max-width: 75px;
+    min-width: 100px;
 }
 
 .user-details {
@@ -114,14 +123,6 @@
     font-size: 1.3rem;
 }
 
-.profileuserdetail {
-    padding: 5px;
-}
-
-#profilefollowbtn {
-    font-size: 30px;
-}
-
 .profileminilist {
     display: flex;
     position: relative;
@@ -129,28 +130,9 @@
     flex-wrap: wrap;
 }
 
-.pml-panel {
-    width: 230px;
-    border: 1px solid black;
-    box-shadow: none;
-    margin: 0px 5px;
-}
-
-.pml-img {
-    height: 350px;
-    width: 230px;
-}
-
 .user-img {
     max-width: 250px;
     max-height: 250px;
-}
-
-@media only screen and (max-width: 810px) {
-    .list-btn {
-        margin: 10px auto 0px auto;
-        width: 100px;
-    }
 }
 
 @media only screen and (max-width: 675px) {

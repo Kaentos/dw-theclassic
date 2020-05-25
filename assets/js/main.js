@@ -12,10 +12,10 @@ function getUserObj() {
 function setBackBtn() {
     let back_btn = document.getElementById('back_btn');
     if (document.referrer === "") {
-        back_btn.setAttribute( "onClick", "goHome()" );
+        back_btn.addEventListener("click", goHome);
         back_btn.innerText = "Home";
     } else {
-        back_btn.setAttribute( "onClick", "goBack()" );
+        back_btn.addEventListener("click", goBack);
     }
 }
 

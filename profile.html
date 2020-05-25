@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/profile.css">
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/data.js"></script>
     <script src="assets/js/lr.js"></script>
     <script src="assets/js/profile.js"></script>
 </head>
@@ -28,7 +29,7 @@
                     <span id="total_followers">X</span>
                 </div>
                 <div class="detail">
-                    <b>Favorites: </b>
+                    <b>Favourites: </b>
                     <span id="total_fav_movies">X</span> Movies / 
                     <span id="total_fav_series">X</span> Shows
                 </div>
@@ -57,161 +58,26 @@
             </div>
         </div>
         <hr>
+        
         <div class="list-title flex-line flex-spaced field-header">
-            <div>Favorites</div>
-            <a href="#">View more</a>
+            <div>Favourites</div>
+            <a id="moreFav" href="">View more</a>
         </div>
-        <div id="pmlfavs" class="profileminilist">
-            <div class="flex-col ms_ss_panel text-center">
-                <img class="ms_ss_img" src="assets/img/endgame.jpg">
-                <div>
-                    Avengers 4: Endgame
-                </div>
-                <div>
-                    2019
-                </div>
-            </div>
-            <div class="flex-col ms_ss_panel text-center">
-                <img class="ms_ss_img" src="assets/img/endgame.jpg">
-                <div>
-                    Avengers 4: Endgame
-                </div>
-                <div>
-                    2019
-                </div>
-            </div>
-            <div class="flex-col ms_ss_panel text-center">
-                <img class="ms_ss_img" src="assets/img/endgame.jpg">
-                <div>
-                    Avengers 4: Endgame
-                </div>
-                <div>
-                    2019
-                </div>
-            </div>
-            <div class="flex-col ms_ss_panel text-center">
-                <img class="ms_ss_img" src="assets/img/endgame.jpg">
-                <div>
-                    Avengers 4: Endgame
-                </div>
-                <div>
-                    2019
-                </div>
-            </div>
-            <div class="flex-col ms_ss_panel text-center">
-                <img class="ms_ss_img" src="assets/img/endgame.jpg">
-                <div>
-                    Avengers 4: Endgame
-                </div>
-                <div>
-                    2019
-                </div>
-            </div>
-        </div>
+        <div id="fav" class="profileminilist"></div>
         <hr>
+
         <div class="list-title flex-line flex-spaced field-header">
             <div>Currently Watching</div>
-            <a href="#">View more</a>
+            <a id="moreWatching" href="#">View more</a>
         </div>
-        <div id="pmlfavs" class="profileminilist">
-            <div class="flex-col ms_ss_panel text-center">
-                <img class="ms_ss_img" src="assets/img/endgame.jpg">
-                <div>
-                    Avengers 4: Endgame
-                </div>
-                <div>
-                    2019
-                </div>
-            </div>
-            <div class="flex-col ms_ss_panel text-center">
-                <img class="ms_ss_img" src="assets/img/endgame.jpg">
-                <div>
-                    Avengers 4: Endgame
-                </div>
-                <div>
-                    2019
-                </div>
-            </div>
-            <div class="flex-col ms_ss_panel text-center">
-                <img class="ms_ss_img" src="assets/img/endgame.jpg">
-                <div>
-                    Avengers 4: Endgame
-                </div>
-                <div>
-                    2019
-                </div>
-            </div>
-            <div class="flex-col ms_ss_panel text-center">
-                <img class="ms_ss_img" src="assets/img/endgame.jpg">
-                <div>
-                    Avengers 4: Endgame
-                </div>
-                <div>
-                    2019
-                </div>
-            </div>
-            <div class="flex-col ms_ss_panel text-center">
-                <img class="ms_ss_img" src="assets/img/endgame.jpg">
-                <div>
-                    Avengers 4: Endgame
-                </div>
-                <div>
-                    2019
-                </div>
-            </div>
-        </div>
+        <div id="watching" class="profileminilist"></div>
         <hr>
+
         <div class="list-title flex-line flex-spaced field-header">
             <div>To watch</div>
-            <a href="#">View more</a>
+            <a id="moreToWatch" href="#">View more</a>
         </div>
-        <div id="pmlfavs" class="profileminilist">
-            <div class="flex-col ms_ss_panel text-center">
-                <img class="ms_ss_img" src="assets/img/endgame.jpg">
-                <div>
-                    Avengers 4: Endgame
-                </div>
-                <div>
-                    2019
-                </div>
-            </div>
-            <div class="flex-col ms_ss_panel text-center">
-                <img class="ms_ss_img" src="assets/img/endgame.jpg">
-                <div>
-                    Avengers 4: Endgame
-                </div>
-                <div>
-                    2019
-                </div>
-            </div>
-            <div class="flex-col ms_ss_panel text-center">
-                <img class="ms_ss_img" src="assets/img/endgame.jpg">
-                <div>
-                    Avengers 4: Endgame
-                </div>
-                <div>
-                    2019
-                </div>
-            </div>
-            <div class="flex-col ms_ss_panel text-center">
-                <img class="ms_ss_img" src="assets/img/endgame.jpg">
-                <div>
-                    Avengers 4: Endgame
-                </div>
-                <div>
-                    2019
-                </div>
-            </div>
-            <div class="flex-col ms_ss_panel text-center">
-                <img class="ms_ss_img" src="assets/img/endgame.jpg">
-                <div>
-                    Avengers 4: Endgame
-                </div>
-                <div>
-                    2019
-                </div>
-            </div>
-        </div>
+        <div id="toWatch" class="profileminilist"></div>
         <hr>
     </div>
 

@@ -51,7 +51,7 @@ function setNavbar() {
             <a class="navbar-img-a" href="#">
                 <img class="navbar-img navbar-userLogo" src="assets/img/Users/2.jpg" alt="logo">
             </a>
-            <a id="list_ref" class="navbar-links" href="#">Profile</a>
+            <a id="list_ref" class="navbar-links" href="profile.html">Profile</a>
             <a id="list_ref" class="navbar-links" href="#">My List</a>
             <a id="settings_ref" class="navbar-links" href="#">Settings</a>
             <a id="logout-btn" class="navbar-links logout-link" href="#">Logout</a>

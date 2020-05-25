@@ -4,195 +4,213 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MPL | Username - User Profile</title>
+    <title id="pageTitle">MPL | Username - User Profile</title>
+    <link rel="shortcut icon" href="assets/img/logo.png">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/profile.css">
-    <script src="assets/js/mobile-nav.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/lr.js"></script>
+    <script src="assets/js/profile.js"></script>
 </head>
 
 <body>
-    <!-- Navbar -->
-    <nav class="flex-line flex-spaced" id="navbar">
-        <a href="#" id="opennav"><img src="assets/img/bars.png" alt="Open Navigation Menu"></a>
-        <div class="flex-line navbar-linksdiv">
-            <a class="navbar-img-a" href="/">
-                <picture>
-                    <img class="navbar-img" src="assets/img/logo.png" alt="logo">
-                </picture>
-            </a>
-            <a class="navbar-links" href="/">Home</a>
-            <a class="navbar-links" href="#">Movies</a>
-            <a class="navbar-links" href="#">TV Shows</a>
-            <a class="navbar-links" href="#">Users</a>
-            <a class="navbar-links" href="#">Contact</a>
-        </div>
-        <div class="flex-line navbar-linksdiv">
-            <a class="navbar-links l-link" href="login.html">Login</a>
-            <a class="navbar-links r-link" href="register.html">Register</a>
-        </div>
-    </nav>
+    <nav id="navbar"></nav>
 
     <div class="ccontainer">
-        <div class="flex-line">
-            <div class="flex-col">
-                <img id="profilepicture" src="assets/img/THEK_MAL.jpg" alt="Profile Picture">
-            </div>
-            <div class="flex-col profileuserdetails">
-                <div class="flex-line flex-spaced">
-                    <div class="profileuserdetail" id="profileusername">Username</div>
-                    <div><button id="profilefollowbtn">Follow</button></div>
+        <div class="user-info flex-line">
+            <img class="user-img" src="assets/img/Users/1.jpg" alt="Profile Picture">
+            <div class="flex-col user-details">
+                <div id="username-follow-zone" class="flex-line flex-spaced">
+                    <div id="username" class="username">Username</div>
                 </div>
-                <div class="profileuserdetail" id="profilefollowers">Followers: X</div>
-                <div class="profileuserdetail" id="profilefavseries">Favorites: X Movies / X Shows</div>
-                <div class="profileuserdetail" id="profilewatchingseries">Watching X Movies e X Shows</div>
-                <div class="profileuserdetail"><a href="#" id="profilelistlink"><button>List</button></a></div>
+                <div class="detail">
+                    <b>Followers: </b>
+                    <span id="total_followers">X</span>
+                </div>
+                <div class="detail">
+                    <b>Favorites: </b>
+                    <span id="total_fav_movies">X</span> Movies / 
+                    <span id="total_fav_series">X</span> Shows
+                </div>
+                <div class="detail">
+                    <b>Watching: </b>
+                    <span id="total_watching_series">X</span> Shows
+                </div>
+                <div class="detail">
+                    <b>Planning to watch: </b>
+                    <span id="total_toSee_movies">X</span> Movies / 
+                    <span id="total_toSee_series">X</span> Shows
+                </div>
+                <div class="detail">
+                    <b>Watched: </b>
+                    <span id="total_watched_movies">X</span> Movies / 
+                    <span id="total_watched_series">X</span> Shows
+                </div>
+                <a href="#" id="user-list" class="list-btn">
+                    List
+                </a>
             </div>
         </div>
         <hr>
-        <div class="flex-line flex-spaced field-header">
-            <div class="field-title">Favorites</div>
-            <div class="field-seemore"><a href="">View more</a></div>
+        <div class="list-title flex-line flex-spaced field-header">
+            <div>Favorites</div>
+            <a href="#">View more</a>
         </div>
         <div id="pmlfavs" class="profileminilist">
-            <div class="pml-panel">
-                <picture>
-                    <img class="pml-img" src="assets/img/endgame.jpg">
-                </picture>
-                Endgame
+            <div class="flex-col ms_ss_panel text-center">
+                <img class="ms_ss_img" src="assets/img/endgame.jpg">
+                <div>
+                    Avengers 4: Endgame
+                </div>
+                <div>
+                    2019
+                </div>
             </div>
-            <div class="pml-panel">
-                <picture>
-                    <img class="pml-img" src="assets/img/endgame.jpg">
-                </picture>
-                Endgame
+            <div class="flex-col ms_ss_panel text-center">
+                <img class="ms_ss_img" src="assets/img/endgame.jpg">
+                <div>
+                    Avengers 4: Endgame
+                </div>
+                <div>
+                    2019
+                </div>
             </div>
-            <div class="pml-panel">
-                <picture>
-                    <img class="pml-img" src="assets/img/endgame.jpg">
-                </picture>
-                Endgame
+            <div class="flex-col ms_ss_panel text-center">
+                <img class="ms_ss_img" src="assets/img/endgame.jpg">
+                <div>
+                    Avengers 4: Endgame
+                </div>
+                <div>
+                    2019
+                </div>
             </div>
-            <div class="pml-panel">
-                <picture>
-                    <img class="pml-img" src="assets/img/endgame.jpg">
-                </picture>
-                Endgame
+            <div class="flex-col ms_ss_panel text-center">
+                <img class="ms_ss_img" src="assets/img/endgame.jpg">
+                <div>
+                    Avengers 4: Endgame
+                </div>
+                <div>
+                    2019
+                </div>
+            </div>
+            <div class="flex-col ms_ss_panel text-center">
+                <img class="ms_ss_img" src="assets/img/endgame.jpg">
+                <div>
+                    Avengers 4: Endgame
+                </div>
+                <div>
+                    2019
+                </div>
             </div>
         </div>
-        <div class="flex-line flex-spaced field-header">
-            <div class="field-title">Currently watching</div>
-            <div class="field-seemore"><a href="">View more</a></div>
+        <hr>
+        <div class="list-title flex-line flex-spaced field-header">
+            <div>Currently Watching</div>
+            <a href="#">View more</a>
         </div>
         <div id="pmlfavs" class="profileminilist">
-            <div class="pml-panel">
-                <picture>
-                    <img class="pml-img" src="assets/img/endgame.jpg">
-                </picture>
-                Endgame
+            <div class="flex-col ms_ss_panel text-center">
+                <img class="ms_ss_img" src="assets/img/endgame.jpg">
+                <div>
+                    Avengers 4: Endgame
+                </div>
+                <div>
+                    2019
+                </div>
             </div>
-            <div class="pml-panel">
-                <picture>
-                    <img class="pml-img" src="assets/img/endgame.jpg">
-                </picture>
-                Endgame
+            <div class="flex-col ms_ss_panel text-center">
+                <img class="ms_ss_img" src="assets/img/endgame.jpg">
+                <div>
+                    Avengers 4: Endgame
+                </div>
+                <div>
+                    2019
+                </div>
             </div>
-            <div class="pml-panel">
-                <picture>
-                    <img class="pml-img" src="assets/img/endgame.jpg">
-                </picture>
-                Endgame
+            <div class="flex-col ms_ss_panel text-center">
+                <img class="ms_ss_img" src="assets/img/endgame.jpg">
+                <div>
+                    Avengers 4: Endgame
+                </div>
+                <div>
+                    2019
+                </div>
             </div>
-            <div class="pml-panel">
-                <picture>
-                    <img class="pml-img" src="assets/img/endgame.jpg">
-                </picture>
-                Endgame
+            <div class="flex-col ms_ss_panel text-center">
+                <img class="ms_ss_img" src="assets/img/endgame.jpg">
+                <div>
+                    Avengers 4: Endgame
+                </div>
+                <div>
+                    2019
+                </div>
+            </div>
+            <div class="flex-col ms_ss_panel text-center">
+                <img class="ms_ss_img" src="assets/img/endgame.jpg">
+                <div>
+                    Avengers 4: Endgame
+                </div>
+                <div>
+                    2019
+                </div>
             </div>
         </div>
+        <hr>
+        <div class="list-title flex-line flex-spaced field-header">
+            <div>To watch</div>
+            <a href="#">View more</a>
+        </div>
+        <div id="pmlfavs" class="profileminilist">
+            <div class="flex-col ms_ss_panel text-center">
+                <img class="ms_ss_img" src="assets/img/endgame.jpg">
+                <div>
+                    Avengers 4: Endgame
+                </div>
+                <div>
+                    2019
+                </div>
+            </div>
+            <div class="flex-col ms_ss_panel text-center">
+                <img class="ms_ss_img" src="assets/img/endgame.jpg">
+                <div>
+                    Avengers 4: Endgame
+                </div>
+                <div>
+                    2019
+                </div>
+            </div>
+            <div class="flex-col ms_ss_panel text-center">
+                <img class="ms_ss_img" src="assets/img/endgame.jpg">
+                <div>
+                    Avengers 4: Endgame
+                </div>
+                <div>
+                    2019
+                </div>
+            </div>
+            <div class="flex-col ms_ss_panel text-center">
+                <img class="ms_ss_img" src="assets/img/endgame.jpg">
+                <div>
+                    Avengers 4: Endgame
+                </div>
+                <div>
+                    2019
+                </div>
+            </div>
+            <div class="flex-col ms_ss_panel text-center">
+                <img class="ms_ss_img" src="assets/img/endgame.jpg">
+                <div>
+                    Avengers 4: Endgame
+                </div>
+                <div>
+                    2019
+                </div>
+            </div>
+        </div>
+        <hr>
     </div>
 
-    <footer>
-        <div class="flex-line flex-center">
-            <div class="flex-col footer-content">
-                <h2>
-                    My Popcorn List
-                </h2>
-                <picture>
-                    <img src="assets/img/logo.png" alt="" width="100px">
-                </picture>
-            </div>
-            <div class="flex-col footer-content">
-                <h2>Site links</h2>
-                <ul class="footer-ul">
-                    <li>
-                        <a href="#">Movies</a>
-                    </li>
-                    <li>
-                        <a href="#">Series</a>
-                    </li>
-                    <li>
-                        <a href="#">Users</a>
-                    </li>
-                    <li>
-                        <a href="/login.html">Login</a>
-                    </li>
-                    <li>
-                        <a href="/register.html">Register</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="flex-col footer-content">
-                <h2>Follow us!</h2>
-                <ul class="footer-ul">
-                    <li>
-                        <a href="#">Twitter</a>
-                    </li>
-                    <li>
-                        <a href="#">Reddit</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="flex-col footer-content">
-                <h2>Related websites</h2>
-                <ul class="footer-ul">
-                    <li>
-                        <a href="#">IMBD</a>
-                    </li>
-                    <li>
-                        <a href="#">Posters</a>
-                    </li>
-                    <li>
-                        <a href="#">Icons</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-credits flex-line flex-spaced">
-            <div class="footer-credits-txt">
-                Website created by: Kaentos & Thekings2468
-            </div>
-            <div class="footer-credits-txt">
-                <a href="/">
-                    <picture>
-                        <img src="assets/img/GitHub/GitHub-Mark-32px.png" alt="logo" width="24px">
-                    </picture>
-                </a>
-            </div>
-            <div class="footer-credits-txt">
-                Icons made by
-                <a href="https://www.flaticon.com/authors/freepik" title="Freepik">
-                    Freepik
-                </a>
-                from
-                <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
-            </div>
-
-
-        </div>
-    </footer>
+    <footer id="footer"></footer>
 </body>
 
 </html>

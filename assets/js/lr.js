@@ -7,6 +7,7 @@ const user_obj = {
     toWatch_movies: [],
     seen_movies: [],
     fav_series: [],
+    watching_series: [],
     toWatch_series: [],
     seen_series: [],
     follows: [],
@@ -66,15 +67,57 @@ function getCreationDate(obj) {
     }
     console.log("More than 1 argument or argument non object");
 }
-function getTotalFollowers(obj) {
+function getFollowers(obj) {
     if (arguments.length === 1 && typeof(obj) === "object") {
-        return obj.followers.length;
+        return obj.followers;
     }
     console.log("More than 1 argument or argument non object"); 
 }
 function getFollows(obj){
     if (arguments.length === 1 && typeof(obj) === "object") {
         return obj.follows;
+    }
+    console.log("More than 1 argument or argument non object");
+}
+function getFavMovies(obj) {
+    if (arguments.length === 1 && typeof(obj) === "object") {
+        return obj.fav_movies;
+    }
+    console.log("More than 1 argument or argument non object");
+}
+function getFavSeries(obj) {
+    if (arguments.length === 1 && typeof(obj) === "object") {
+        return obj.fav_series;
+    }
+    console.log("More than 1 argument or argument non object");
+}
+function getWatchingSeries(obj) {
+    if (arguments.length === 1 && typeof(obj) === "object") {
+        return obj.watching_series;
+    }
+    console.log("More than 1 argument or argument non object");
+}
+function getToWatchMovies(obj) {
+    if (arguments.length === 1 && typeof(obj) === "object") {
+        return obj.toWatch_movies;
+    }
+    console.log("More than 1 argument or argument non object");
+}
+function getToWatchSeries(obj) {
+    if (arguments.length === 1 && typeof(obj) === "object") {
+        return obj.toWatch_series;
+    }
+    console.log("More than 1 argument or argument non object");
+}
+function getSeenMovies(obj) {
+    if (arguments.length === 1 && typeof(obj) === "object") {
+        return obj.seen_movies;
+    }
+    console.log("More than 1 argument or argument non object");
+}
+function getSeenSeries(obj) {
+    if (arguments.length === 1 && typeof(obj) === "object") {
+        return obj.seen_series;
     }
     console.log("More than 1 argument or argument non object");
 }

@@ -1,3 +1,14 @@
+.ccontainer {
+    margin: auto;
+    max-width: 1115px;
+    box-sizing: border-box;
+    padding: 5px 5px 50px 5px;
+}
+.ccontainer > hr {
+    border: 3px solid black;
+    border-radius: 5px;
+}
+
 #info-picture {
     max-width: 250px;
 }
@@ -12,12 +23,37 @@
 }
 
 #info-title {
-    font-size: 25px;
+    font-size: 2rem;
     font-weight: bold;
 }
 
 .flex-splithalf > .flex-col {
     width: 50%;
+}
+
+#yt-embeddiv {
+    max-width: 1280px;
+    height: 720px;
+    margin: 15px;
+}
+
+.info-panel {
+    margin: 15px;
+}
+
+.action-btns {
+    border-radius: 5px;
+    border: 1px solid black;
+    margin: 0px 2px;
+}
+
+.action-btns > img {
+    width: 32px;
+    height: 32px;
+}
+
+.action-btns.active {
+    background-color: darkgray;
 }
 
 @media only screen and (max-width: 675px) {

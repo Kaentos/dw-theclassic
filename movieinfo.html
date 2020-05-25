@@ -8,30 +8,16 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" href="assets/css/info.css">
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/render-movie.js"></script>
 </head>
 
 <body>
-    <nav class="flex-line flex-spaced">
-        <div class="flex-line">
-            <a class="navbar-img-a" href="/">
-                <picture>
-                    <img class="navbar-img" src="assets/img/logo.png" alt="logo">
-                </picture>
-            </a>
-            <a class="navbar-links" href="/">Home</a>
-            <a class="navbar-links" href="#">Movies</a>
-            <a class="navbar-links" href="#">TV Shows</a>
-            <a class="navbar-links" href="#">Users</a>
-            <a class="navbar-links" href="#">Contact</a>
-        </div>
-        <div class="flex-line">
-            <a class="navbar-links l-link" href="login.html">Login</a>
-            <a class="navbar-links r-link" href="register.html">Register</a>
-        </div>
-    </nav>
+    <nav id="navbar"></nav>
 
     <div class="ccontainer">
-        <div class="flex-line">
+        <div class="flex-line info-panel">
             <div class="flex-col">
                 <img id="info-picture" src="assets/img/endgame.jpg" alt="Movie Poster">
             </div>
@@ -44,7 +30,7 @@
                         <div class="info-detail" id="info-rating">Score Rating: XX/10</div>
                         <div class="info-detail" id="info-genres">Genres: </div>
                         <div class="info-detail" id="info-premiere">Premiere Date: dd/mm/yyyy</div>
-                        <div class="info-detail" id="info-producers">Producers: </div>
+                        <div class="info-detail" id="info-directors">Directors: </div>
                     </div>
                     <div class="flex-col">
                         <div class="info-detail" id="info-yourrating">Your rating: XX/10</div>
@@ -56,90 +42,13 @@
             </div>
         </div>
         <hr>
+        <div id="yt-embeddiv">
+            <iframe id="yt-embed" width="100%" height="100%" src="https://www.youtube.com/embed/jBfOlQrko0c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
     </div>
+    <script>renderMovie()</script>
 
-    <footer>
-        <div class="flex-line flex-center">
-            <div class="flex-col footer-content">
-                <h2>
-                    My Popcorn List
-                </h2>
-                <picture>
-                    <img src="assets/img/logo.png" alt="" width="100px">
-                </picture>
-            </div>
-            <div class="flex-col footer-content">
-                <h2>Site links</h2>
-                <ul class="footer-ul">
-                    <li>
-                        <a href="#">Movies</a>
-                    </li>
-                    <li>
-                        <a href="#">Series</a>
-                    </li>
-                    <li>
-                        <a href="#">Users</a>
-                    </li>
-                    <li>
-                        <a href="/login.html">Login</a>
-                    </li>
-                    <li>
-                        <a href="/register.html">Register</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="flex-col footer-content">
-                <h2>Follow us!</h2>
-                <ul class="footer-ul">
-                    <li>
-                        <a href="#">Twitter</a>
-                    </li>
-                    <li>
-                        <a href="#">Reddit</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="flex-col footer-content">
-                <h2>Related websites</h2>
-                <ul class="footer-ul">
-                    <li>
-                        <a href="#">IMBD</a>
-                    </li>
-                    <li>
-                        <a href="#">Posters</a>
-                    </li>
-                    <li>
-                        <a href="#">Icons</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-credits flex-line flex-spaced">
-            <div class="footer-credits-txt">
-                Website created by: Kaentos & Thekings2468
-            </div>
-            <div class="footer-credits-txt">
-                <a href="/">
-                    <picture>
-                        <img src="assets/img/GitHub/GitHub-Mark-32px.png" alt="logo" width="24px">
-                    </picture>
-                </a>
-            </div>
-            <div class="footer-credits-txt">
-                Icons made by
-                <a href="https://www.flaticon.com/authors/freepik" title="Freepik">
-                    Freepik
-                </a>
-                from
-                <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
-            </div>
-
-
-        </div>
-    </footer>
+    <footer id="footer"></footer>
 
 </body>
 

@@ -10,7 +10,7 @@ window.onload = function() {
     let url = new URL(window.location.href);
     let user_id = url.searchParams.get("id");
 
-    // Vai buscar o objeto do url se tiver e se não tiver mas o utilzador estiver logado vai buscar o utilizador logado
+    // Vai buscar o utilizador com o id do url se tiver e se não tiver mas o utilizador estiver logado vai buscar o utilizador logado
     if (user_id !== null && user_id.length > 0) {
         user_id = Number(user_id);
         if (user_id !== NaN && user_id > -1 && user_id < users_info.length) {
@@ -24,12 +24,11 @@ window.onload = function() {
         window.location.href = "/";
     }
     
-    let initial_filter = url.searchParams.get("filter")
-    if (initial_filter !== null) {
-        console.log("apply this " + initial_filter);
-    } else {
-        showList();
-    }
+    let initial_filter = url.searchParams.get("filter");
+    if (initial_filter !== null && ["fav", "watching", "toWatch", "watched"].includes(initial_filter))
+        document.getElementById('search-listOf').value = initial_filter;
+
+    showList();
 
     document.getElementById("search-btn").addEventListener("click", showList);
     document.getElementById("search-name").addEventListener("submit", showList);

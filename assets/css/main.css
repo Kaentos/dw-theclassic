@@ -76,7 +76,7 @@ nav {
     transition: 0.5s;
 }
 
-.active {
+.navbar-links.active {
     background: black !important;
     color: white !important;
     border-radius: 5px;
@@ -221,6 +221,7 @@ footer .flex-line:first-child {
     .navbar-linksdiv {
         flex-direction: initial;
     }
+    /* TODO: this causes an issue  where some buttons go 100% width but if removed, logo will move when opening navbar*/
 
     .flex-col {
         text-align: center;

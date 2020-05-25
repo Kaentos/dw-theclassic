@@ -7,7 +7,7 @@ window.onload = function (){
 function renderMovie() {
     let id = new URLSearchParams(window.location.search).get("id");
     let movie = getMovieById(parseInt(id));
-    if (show == undefined) {
+    if (movie == undefined) {
         window.location.href = "/";
         return;
     }

@@ -5,6 +5,7 @@ window.onload = function() {
     setNavbar();
     setMobileNavbar();
     setFooter();
+    setBackBtn();
 
     let url = new URL(window.location.href);
     let user_id = url.searchParams.get("id");

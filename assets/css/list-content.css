@@ -74,6 +74,11 @@
     color: white;
 }
 
+.username-ref {
+    text-decoration: none;
+    color: #ed3124;
+}
+
 .no-content {
     margin-left: 15px;
     font-size: 1.3rem;

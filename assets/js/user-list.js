@@ -39,7 +39,7 @@ window.onload = function() {
 function showList() {
     document.getElementById("pageTitle").innerHTML += getUsername(userToList);
     document.getElementById("username").innerHTML = getUsername(userToList);
-    let name = document.getElementById("search-name").value;
+    let name = document.getElementById("search-name").value.toLowerCase();
     let genre = document.getElementById("search-genre").value;
     let type = document.getElementById("search-type").value;
     let listOf = document.getElementById("search-listOf").value;

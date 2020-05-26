@@ -8,17 +8,9 @@ window.onload = function() {
     setFooter();
 
     let url = new URL(window.location.href);
-    let user = getUserObj();
     let user_id = url.searchParams.get("id");
-
-    if (user_id !== null && user_id.length > 0) {
-        user_id = Number(user_id);
-        if (user_id !== NaN && user_id > -1 && user_id < users_info.length) {
-            let current_user = getUserObj();
-            userToList = getUserObjWithID(user_id);
-        } else {
-            window.location.href = "/";
-        }
+    if (user_id !== null && user_id.length > 0 && user_id > 0 && user_id < users_info.length) {
+        userToList = getUserObjWithID(Number(user_id));
     } else if (user_id === null && getUserObj()) {
         userToList = getUserObj();
     } else {
@@ -27,12 +19,12 @@ window.onload = function() {
     showThisUser(userToList);
 
     let user_list = document.getElementById("user-list"); // meter lista
+    user_list.href="user-list.html?id=" + getID(userToList);
 }
 
 function showThisUser(user) {
     document.getElementById("username").innerHTML = getUsername(user);
     document.getElementById("pageTitle").innerHTML += getUsername(user);
-    document.getElementById("total_followers").innerHTML = getFollowers(user).length;
     document.getElementById("total_fav_movies").innerHTML = getFavMovies(user).length;
     document.getElementById("total_fav_series").innerHTML = getFavSeries(user).length;
     document.getElementById("total_watching_series").innerHTML = getWatchingSeries(user).length;
@@ -46,6 +38,7 @@ function showThisUser(user) {
 }
 
 function showFavourites(user) {
+    document.getElementById("moreFav").href = "user-list.html?id=" + getID(user);
     let content = document.getElementById("fav");
     let count = max;
     let list = getFavMovies(user);
@@ -75,6 +68,7 @@ function showFavourites(user) {
     }
 }
 function showWatching(user) {
+    document.getElementById("moreWatching").href = "user-list.html?id=" + getID(user) + "&filter=watching&type=series";
     let content = document.getElementById("watching");
     let count = max;
     let list = getWatchingSeries(user);
@@ -93,6 +87,7 @@ function showWatching(user) {
     }
 }
 function showToWatch(user) {
+    document.getElementById("moreToWatch").href = "user-list.html?id=" + getID(user) + "&filter=toWatch";
     let content = document.getElementById("toWatch");
     let count = max;
     let list = getToWatchMovies(user);

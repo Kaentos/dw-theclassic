@@ -26,8 +26,10 @@ window.onload = function() {
     
     let initial_filter = url.searchParams.get("filter");
     if (initial_filter !== null && ["fav", "watching", "toWatch", "watched"].includes(initial_filter))
-        document.getElementById('search-listOf').value = initial_filter;
-
+        document.getElementById("search-listOf").value = initial_filter;
+    let initial_type = url.searchParams.get("type");
+    if (initial_type !== null && initial_type === "series")
+        document.getElementById("search-type").value = "shows"
     showList();
 
     document.getElementById("search-btn").addEventListener("click", showList);
@@ -89,7 +91,7 @@ function showList() {
         for (let id of list) {
             console.log(id);
         }
-        showListOf(list, series, ref, name, type, genre);
+        showListOf(list, shows, ref, name, type, genre);
     }
 }
 

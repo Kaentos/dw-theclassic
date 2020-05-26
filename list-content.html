@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="assets/img/logo.png">
     <title>MPL | Movies / Series</title>
-    <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/list-content.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/list-content.js"></script>
 </head>
 
 <body>
@@ -25,7 +28,7 @@
                     <input class="search-bar" type="search" name="txt_pesquisa" id="txt_pesquisa" placeholder="Search Movies/Series...">
                 </div>
                 <div class="search-input">
-                    <input class="search-btn" type="button" value="Search">
+                    <input class="search-btn" type="button" id="searchbtn" value="Search">
                 </div>
                 
             </div>
@@ -34,134 +37,22 @@
                     <b>Genre:</b>
                     <select id="Genre">
                         <option value="all" selected>All</option>
-                        <option value="g1">Genre 1</option>
-                        <option value="g2">Genre 2</option>
                     </select>
                 </div>
                 <div class="search">
-                    <b>Type:</b>
+                    <b>Sort by:</b>
                     <select id="order_type">
                         <option value="all" selected>All</option>
                         <option value="new">Newest</option>
                         <option value="old">Oldest</option>
                         <option value="top_rated">Top rated</option>
                         <option value="top_rated">Lowest rated</option>
-                        <options value="most_viewed">Most viewed</options>
-                        <option value="most_fav">Most favourites</option>
                     </select>
                 </div>
             </div>
         </div>
         <hr>
-        <div class="content-content flex-start">
-            <div class="flex-col ms_ss_panel">
-                <img class="ms_ss_img" src="assets/img/endgame.jpg">
-                <div>
-                    Avengers 4: Endgame
-                </div>
-                <div>
-                    2019
-                </div>
-            </div>
-            <div class="flex-col ms_ss_panel">
-                <img class="ms_ss_img" src="assets/img/endgame.jpg">
-                <div>
-                    Avengers 4: Endgame
-                </div>
-                <div>
-                    2019
-                </div>
-            </div>
-            <div class="flex-col ms_ss_panel">
-                <img class="ms_ss_img" src="assets/img/endgame.jpg">
-                <div>
-                    Avengers 4: Endgame
-                </div>
-                <div>
-                    2019
-                </div>
-            </div>
-            <div class="flex-col ms_ss_panel">
-                <img class="ms_ss_img" src="assets/img/endgame.jpg">
-                <div>
-                    Avengers 4: Endgame
-                </div>
-                <div>
-                    2019
-                </div>
-            </div>
-            <div class="flex-col ms_ss_panel">
-                <img class="ms_ss_img" src="assets/img/endgame.jpg">
-                <div>
-                    Avengers 4: Endgame
-                </div>
-                <div>
-                    2019
-                </div>
-            </div>
-            <div class="flex-col ms_ss_panel">
-                <img class="ms_ss_img" src="assets/img/endgame.jpg">
-                <div>
-                    Avengers 4: Endgame
-                </div>
-                <div>
-                    2019
-                </div>
-            </div>
-            <div class="flex-col ms_ss_panel">
-                <img class="ms_ss_img" src="assets/img/endgame.jpg">
-                <div>
-                    Avengers 4: Endgame
-                </div>
-                <div>
-                    2019
-                </div>
-            </div>
-            <div class="flex-col ms_ss_panel">
-                <img class="ms_ss_img" src="assets/img/endgame.jpg">
-                <div>
-                    Avengers 4: Endgame
-                </div>
-                <div>
-                    2019
-                </div>
-            </div>
-            <div class="flex-col ms_ss_panel">
-                <img class="ms_ss_img" src="assets/img/endgame.jpg">
-                <div>
-                    Avengers 4: Endgame
-                </div>
-                <div>
-                    2019
-                </div>
-            </div>
-            <div class="flex-col ms_ss_panel">
-                <img class="ms_ss_img" src="assets/img/endgame.jpg">
-                <div>
-                    Avengers 4: Endgame
-                </div>
-                <div>
-                    2019
-                </div>
-            </div>
-            <div class="flex-col ms_ss_panel">
-                <img class="ms_ss_img" src="assets/img/endgame.jpg">
-                <div>
-                    Avengers 4: Endgame
-                </div>
-                <div>
-                    2019
-                </div>
-            </div>
-            <div class="flex-col ms_ss_panel">
-                <img class="ms_ss_img" src="assets/img/endgame.jpg">
-                <div>
-                    Avengers 4: Endgame
-                </div>
-                <div>
-                    2019
-                </div>
-            </div>
+        <div class="content-content flex-start" id="listdiv">
         </div>
         <div class="content-buttons flex-line flex-spaced">
             <button class="content-p-btn">

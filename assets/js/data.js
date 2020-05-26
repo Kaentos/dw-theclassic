@@ -8,7 +8,7 @@ const movies = {
         age: "12+",
         duration: "3h 1min",
         lang: "English",
-        trailer: "qLFBcdd6Qw0"
+        trailer: "TcMBFSGVi1c"
     },
     2: {
         name: "Star Wars Episode VIII - The Last Jedi",
@@ -19,7 +19,7 @@ const movies = {
         age: "12+",
         duration: "2h 32min",
         lang: "English",
-        trailer: "qLFBcdd6Qw0"
+        trailer: "Q0CbN8sfihY"
     },
     3: {
         name: "Star Wars Episode IX - The Rise of Skywalker",
@@ -30,7 +30,7 @@ const movies = {
         age: "12+",
         duration: "2h 22min",
         lang: "English",
-        trailer: "qLFBcdd6Qw0"
+        trailer: "8Qn_spdM5Zg"
     },
     4: {
         name: "The Irishman",
@@ -41,7 +41,7 @@ const movies = {
         age: "R (16+)",
         duration: "3h 29min",
         lang: "English",
-        trailer: "qLFBcdd6Qw0"
+        trailer: "WHXxVmeGQUc"
     },
     5: {
         name: "Interstellar",
@@ -52,7 +52,7 @@ const movies = {
         age: "12+",
         duration: "2h 49min",
         lang: "English",
-        trailer: "qLFBcdd6Qw0"
+        trailer: "zSWdZVtXT7E"
     },
     6: {
         name: "1917",
@@ -63,7 +63,7 @@ const movies = {
         age: "14+",
         duration: "1h 59min",
         lang: "English",
-        trailer: "qLFBcdd6Qw0"
+        trailer: "gZjQROMAh_s"
     },
     7: {
         name: "Knives Out",
@@ -74,7 +74,7 @@ const movies = {
         age: "12+",
         duration: "2h 11min",
         lang: "English",
-        trailer: "qLFBcdd6Qw0"
+        trailer: "1NchUqMA"
     },
     8: {
         name: "Joker",
@@ -85,7 +85,7 @@ const movies = {
         age: "14+",
         duration: "2h 2min",
         lang: "English",
-        trailer: "qLFBcdd6Qw0"
+        trailer: "zAGVQLHvwOY"
     },
     9: {
         name: "John Wick 3 - Parabellum",
@@ -96,7 +96,7 @@ const movies = {
         age: "16+",
         duration: "2h 11min",
         lang: "English",
-        trailer: "qLFBcdd6Qw0"
+        trailer: "pU8-7BX9uxs"
     },
     10: {
         name: "I Am Mother",
@@ -107,7 +107,7 @@ const movies = {
         age: "None",
         duration: "1h 53min",
         lang: "English",
-        trailer: "qLFBcdd6Qw0"
+        trailer: "N5BKctcZxrM"
     }
 }
 
@@ -122,7 +122,7 @@ const shows = {
         lang: "English",
         seasons: 8,
         episodes: [10, 10, 10, 10, 10, 10, 7, 6],
-        trailer: "qLFBcdd6Qw0"
+        trailer: "rlR4PJn8b8I"
     },
     2: {
         name: "Rick and Morty",
@@ -134,7 +134,7 @@ const shows = {
         lang: "English",
         seasons: 4,
         episodes: [11, 10, 10, 10],
-        trailer: "qLFBcdd6Qw0"
+        trailer: "qPDqQDTnJKE"
     },
     3: {
         name: "Westworld",
@@ -146,7 +146,7 @@ const shows = {
         lang: "English",
         seasons: 3,
         episodes: [10, 10, 8],
-        trailer: "qLFBcdd6Qw0"
+        trailer: "9BqKiZhEFFw"
     },
     4: {
         name: "The Walking Dead",
@@ -158,7 +158,7 @@ const shows = {
         lang: "English",
         seasons: 10,
         episodes: [6, 13, 16, 16, 16, 16, 16, 16, 16, 16],
-        trailer: "qLFBcdd6Qw0"
+        trailer: "R1v0uFms68U"
     },
     5: {
         name: "Vikings",
@@ -170,7 +170,7 @@ const shows = {
         lang: "English",
         seasons: 6,
         episodes: [9, 10, 10, 20, 20, 20],
-        trailer: "qLFBcdd6Qw0"
+        trailer: "1j2sXLbzm9U"
     },
     6: {
         name: "The Mandalorian",
@@ -182,7 +182,7 @@ const shows = {
         lang: "English",
         seasons: 1,
         episodes: [8],
-        trailer: "qLFBcdd6Qw0"
+        trailer: "XmI7WKrAtqs"
     },
     7: {
         name: "Breaking Bad",
@@ -194,7 +194,7 @@ const shows = {
         lang: "English",
         seasons: 5,
         episodes: [7, 13, 13, 13, 16],
-        trailer: "qLFBcdd6Qw0"
+        trailer: "HhesaQXLuRY"
     },
     8: {
         name: "Chernobyl",
@@ -206,7 +206,7 @@ const shows = {
         lang: "English",
         seasons: 1,
         episodes: [5],
-        trailer: "qLFBcdd6Qw0"
+        trailer: "s9APLXM9Ei8"
     },
     9: {
         name: "Dark",
@@ -218,7 +218,7 @@ const shows = {
         lang: "English",
         seasons: 2,
         episodes: [10, 8],
-        trailer: "qLFBcdd6Qw0"
+        trailer: "rrwycJ08PSA"
     },
     10: {
         name: "Mr. Robot",
@@ -230,7 +230,7 @@ const shows = {
         lang: "English",
         seasons: 4,
         episodes: [10, 12, 10, 13],
-        trailer: "qLFBcdd6Qw0"
+        trailer: "xIBiJ_SzJTA"
     }
 }
 

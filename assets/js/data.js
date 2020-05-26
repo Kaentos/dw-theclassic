@@ -1,6 +1,6 @@
 const movies = {
     1: {
-        name: "Endgame",
+        name: "Avengers 4: Endgame",
         score: 8,
         genres: ["Action", "Adventure", "Drama", "Sci-Fi"],
         premiere: 1556150400,

@@ -10,8 +10,10 @@ window.onload = function() {
     }
     if (mediatype === "m") {
         target = movies;
+        document.getElementById("movies_ref").classList.add("active");
     } else if (mediatype === "s") {
         target = shows;
+        document.getElementById("series_ref").classList.add("active");
     } else {
         window.location.href = "/";
         return;

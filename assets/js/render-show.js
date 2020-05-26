@@ -2,6 +2,7 @@ window.onload = function () {
     setNavbar();
     setMobileNavbar();
     setFooter();
+    renderShow();
 }
 
 function renderShow() {

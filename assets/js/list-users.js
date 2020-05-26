@@ -1,5 +1,6 @@
 window.onload = function() {
     setNavbar();
+    setMobileNavbar();
     document.getElementById("users_ref").classList.add("active");
     setFooter();
     setBackBtn();

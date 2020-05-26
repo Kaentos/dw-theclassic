@@ -10,7 +10,6 @@ window.onload = function() {
     let url = new URL(window.location.href);
     let user_id = url.searchParams.get("id");
 
-    // Vai buscar o utilizador com o id do url se tiver e se não tiver mas o utilizador estiver logado vai buscar o utilizador logado
     if (user_id !== null && user_id.length > 0) {
         user_id = Number(user_id);
         if (user_id !== NaN && user_id > -1 && user_id < users_info.length) {

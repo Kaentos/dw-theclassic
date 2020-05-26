@@ -98,10 +98,10 @@ function setFooter() {
                         <a href="#">Series</a>
                     </li>
                     <li>
-                        <a href="#">Users</a>
+                        <a href="users.html">Users</a>
                     </li>
                     <li>
-                        <a href="#">Contact</a>
+                        <a href="contact.html">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -126,7 +126,7 @@ function setFooter() {
                         <a href="https://www.themoviedb.org/" target="_blank">Posters</a>
                     </li>
                     <li>
-                        <a href="#">Icons</a>
+                        <a href="https://www.flaticon.com">Icons</a>
                     </li>
                 </ul>
             </div>

@@ -1,5 +1,4 @@
 let userToList = false;
-let follow_ID = -1;
 const max = 5;
 
 window.onload = function() {

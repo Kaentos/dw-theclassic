@@ -12,7 +12,7 @@ window.onload = function() {
 
     if (user_id !== null && user_id.length > 0) {
         user_id = Number(user_id);
-        if (user_id !== NaN && user_id > -1 && user_id < users_info.length) {
+        if (user_id !== NaN && user_id >= 0 && user_id < users_info.length) {
             userToList = getUserObjWithID(user_id);
         } else {
             window.location.href = "/";

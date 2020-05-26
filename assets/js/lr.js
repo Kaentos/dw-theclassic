@@ -1,4 +1,5 @@
 const user_obj = {
+    id: null,
     email: null,
     username: null,
     password: null,
@@ -9,9 +10,14 @@ const user_obj = {
     fav_series: [],
     watching_series: [],
     toWatch_series: [],
-    seen_series: [],
-    follows: [],
-    followers: []
+    seen_series: []
+}
+function setUserID(obj, id) {
+    if(arguments.length === 2 && typeof(obj) === "object" && typeof(id) === "number") {
+        obj.id = id;
+    } else {
+        console.log("More than 2 argument or arguments non object or non string");
+    }
 }
 function setEmail(obj, email) {
     if(arguments.length === 2 && typeof(obj) === "object" && typeof(email) === "string") {
@@ -43,6 +49,12 @@ function setCreationDate(obj) {
         console.log("More than 1 argument or argument non object");
     }
 }
+function getID(obj) {
+    if (arguments.length === 1 && typeof(obj) === "object") {
+        return obj.id;
+    }
+    console.log("More than 1 argument or argument non object");
+}
 function getEmail(obj) {
     if (arguments.length === 1 && typeof(obj) === "object") {
         return obj.email;
@@ -64,18 +76,6 @@ function getPassword(obj) {
 function getCreationDate(obj) {
     if (arguments.length === 1 && typeof(obj) === "object") {
         return obj.creationDate;
-    }
-    console.log("More than 1 argument or argument non object");
-}
-function getFollowers(obj) {
-    if (arguments.length === 1 && typeof(obj) === "object") {
-        return obj.followers;
-    }
-    console.log("More than 1 argument or argument non object"); 
-}
-function getFollows(obj){
-    if (arguments.length === 1 && typeof(obj) === "object") {
-        return obj.follows;
     }
     console.log("More than 1 argument or argument non object");
 }
@@ -122,19 +122,38 @@ function getSeenSeries(obj) {
     console.log("More than 1 argument or argument non object");
 }
 
+function getUserObjWithID(id) {
+    for (let i = 0; i < users_info.length; i++) {
+        if (getID(users_info[i]) === id)
+            return users_info[i];
+    }
+}
+
 const email_regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 if (localStorage.getItem("users_info") === null) {
     const user1 = Object.assign({}, user_obj);
+    setUserID(user1, 0);
     setEmail(user1, "admin@mypopcornlist.com");
     setUsername(user1, "Admin");
     setPassword(user1, "admin");
     setCreationDate(user1);
+    user1.fav_movies = [1, 2, 10];
+    user1.seen_movies = [4, 5];
+    user1.toWatch_movies = [3, 9];
+    user1.toWatch_series = [6, 7];
     const user2 = Object.assign({}, user_obj);
+    setUserID(user2 , 1);
     setEmail(user2, "normal_user@hotmail.com");
     setUsername(user2, "Normal_User");
     setPassword(user2, "normal");
     setCreationDate(user2);
+    user2.follows = [1];
+    user2.fav_movies = [3, 2, 10];
+    user2.watching_series = [7, 8];
+    user2.seen_movies = [4, 5];
+    user2.toWatch_movies = [3, 9];
+    user2.toWatch_series = [10, 9];
     var users_info = [user1, user2];
     localStorage.setItem("users_info", JSON.stringify(users_info));
 } else {

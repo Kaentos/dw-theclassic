@@ -10,9 +10,7 @@ const user_obj = {
     fav_series: [],
     watching_series: [],
     toWatch_series: [],
-    seen_series: [],
-    follows: [],
-    followers: []
+    seen_series: []
 }
 function setUserID(obj, id) {
     if(arguments.length === 2 && typeof(obj) === "object" && typeof(id) === "number") {
@@ -72,18 +70,6 @@ function getPassword(obj) {
 function getCreationDate(obj) {
     if (arguments.length === 1 && typeof(obj) === "object") {
         return obj.creationDate;
-    }
-    console.log("More than 1 argument or argument non object");
-}
-function getFollowers(obj) {
-    if (arguments.length === 1 && typeof(obj) === "object") {
-        return obj.followers;
-    }
-    console.log("More than 1 argument or argument non object"); 
-}
-function getFollows(obj){
-    if (arguments.length === 1 && typeof(obj) === "object") {
-        return obj.follows;
     }
     console.log("More than 1 argument or argument non object");
 }

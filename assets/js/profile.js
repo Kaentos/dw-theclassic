@@ -15,11 +15,6 @@ window.onload = function() {
         user_id = Number(user_id);
         if (user_id !== NaN && user_id > -1 && user_id < users_info.length) {
             let current_user = getUserObj();
-            if (current_user && getUsername(users_info[user_id]) !== getUsername(current_user)){
-                document.getElementById("username-follow-zone").innerHTML += '<button class="follow-btn" id="follow-btn">Follow</button>';
-                follow_ID = user_id;
-                document.getElementById("username-follow-zone").addEventListener("click", followUser);
-            }
             userToList = getUserObjWithID(user_id);
         } else {
             window.location.href = "/";
@@ -139,12 +134,6 @@ function getHTMLOf(obj, id, type) {
         </div>
     </a>
     `;
-}
-
-function followUser() {
-    if (follow_ID !== -1) {
-        console.log("follow")
-    }
 }
 
 function showNothing(content, button) {

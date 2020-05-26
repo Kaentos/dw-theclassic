@@ -25,8 +25,12 @@
 .user-details {
     margin-top: 5px;
     margin-left: 5px;
-    font-size: 1.3rem;
     max-width: 200px;
+    font-size: 1.1rem;
+}
+
+.other-details {
+    margin-top: 5px;
 }
 
 .username {
@@ -34,6 +38,7 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     max-width: 190px;
+    font-size: 1.3rem;
 }
 
 .f_by_me {

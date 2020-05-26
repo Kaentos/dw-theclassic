@@ -26,6 +26,8 @@
     margin: 0px 10px 20px 10px;
     border: 1px solid black;
     box-shadow: none;
+    text-decoration: none;
+    color: black;
 }
 
 .ms_ss_img {
@@ -72,7 +74,15 @@
     color: white;
 }
 
+.username-ref {
+    text-decoration: none;
+    color: #ed3124;
+}
 
+.no-content {
+    margin-left: 15px;
+    font-size: 1.3rem;
+}
 
 .search-form {
     background-color: silver;
@@ -81,6 +91,7 @@
 
 .search {
     margin: 10px;
+    font-size: 1.3rem;
 }
 .search > input {
     font-size: 1.2rem;

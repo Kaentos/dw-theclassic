@@ -39,8 +39,8 @@ function setNavbar() {
                 </picture>
             </a>
             <a id="home_ref" class="navbar-links" href="/">Home</a>
-            <a id="movies_ref" class="navbar-links" href="#">Movies</a>
-            <a id="series_ref" class="navbar-links" href="#">TV Shows</a>
+            <a id="movies_ref" class="navbar-links" href="list-content.html?t=m">Movies</a>
+            <a id="series_ref" class="navbar-links" href="list-content.html?t=s">TV Shows</a>
             <a id="users_ref" class="navbar-links" href="users.html">Users</a>
             <a id="contact_ref" class="navbar-links" href="contact.html">Contact</a>
         </div>
@@ -92,16 +92,16 @@ function setFooter() {
                 <h2>Site links</h2>
                 <ul id="footer-links" class="footer-ul">
                     <li>
-                        <a href="#">Movies</a>
+                        <a href="list-content.html?t=m">Movies</a>
                     </li>
                     <li>
-                        <a href="#">Series</a>
+                        <a href="list-content.html?t=s">TV Shows</a>
                     </li>
                     <li>
-                        <a href="#">Users</a>
+                        <a href="users.html">Users</a>
                     </li>
                     <li>
-                        <a href="#">Contact</a>
+                        <a href="contact.html">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -126,7 +126,7 @@ function setFooter() {
                         <a href="https://www.themoviedb.org/" target="_blank">Posters</a>
                     </li>
                     <li>
-                        <a href="#">Icons</a>
+                        <a href="https://www.flaticon.com">Icons</a>
                     </li>
                 </ul>
             </div>

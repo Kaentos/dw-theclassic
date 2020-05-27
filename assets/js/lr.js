@@ -178,7 +178,27 @@ function getUserObjWithID(id) {
             return users_info[i];
     }
 }
-
+function removeFavMovie(obj, id) {
+    if(arguments.length === 2 && typeof(obj) === "object" && typeof(id) === "number") {
+        obj.fav_movies.splice(obj.fav_movies.indexOf(id), 1);
+    } else {
+        console.log("More than 2 argument or argument non object or number");
+    }
+}
+function removeToWatchMovie(obj, id) {
+    if(arguments.length === 2 && typeof(obj) === "object" && typeof(id) === "number") {
+        obj.toWatch_movies.splice(obj.toWatch_movies.indexOf(id), 1);
+    } else {
+        console.log("More than 2 argument or argument non object or number");
+    }
+}
+function removeWatchedMovie(obj, id) {
+    if(arguments.length === 2 && typeof(obj) === "object" && typeof(id) === "number") {
+        obj.watched_movies.splice(obj.watched_movies.indexOf(id), 1);
+    } else {
+        console.log("More than 2 argument or argument non object or number");
+    }
+}
 function removeFavShow(obj, id) {
     if(arguments.length === 2 && typeof(obj) === "object" && typeof(id) === "number") {
         obj.fav_shows.splice(obj.fav_shows.indexOf(id), 1);
@@ -262,19 +282,6 @@ if (localStorage.getItem("users_info") === null) {
     localStorage.setItem("users_info", JSON.stringify(users_info));
 } else {
     var users_info = JSON.parse(localStorage.getItem("users_info"));
-}
-
-function isLogged() {
-    if (localStorage.getItem("login_info") !== null || sessionStorage.getItem("login_info") !== null) {
-        return true;
-    }
-    return false;
-}
-
-function ifLoggedGoIndex() {
-    if (isLogged()) {
-        location.href="/";
-    }
 }
 
 console.log("Current users: ");

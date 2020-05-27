@@ -21,7 +21,7 @@ function showActionsBtns() {
     let watchingBtn = document.getElementById("watchingBtn");
     let watchedBtn = document.getElementById("watchedBtn");
     let favBtn = document.getElementById("favBtn");
-    if (getToWatchShows(user).includes(Number(show_id))) {
+    if (getToWatchShows(user).includes(show_id)) {
         activateThisBtn(toWatchBtn , "toWatch");
         toWatchBtn.addEventListener("click", function() { 
             removeShowIDFrom(user, "toWatch", show_id); 
@@ -31,7 +31,7 @@ function showActionsBtns() {
             addShowIDTo(user, "toWatch", show_id);
         });
     }
-    if (getWatchingShows(user).includes(Number(show_id))) {
+    if (getWatchingShows(user).includes(show_id)) {
         activateThisBtn(watchingBtn , "watching");
         watchingBtn.addEventListener("click", function() { 
             removeShowIDFrom(user, "watching", show_id); 
@@ -41,8 +41,7 @@ function showActionsBtns() {
             addShowIDTo(user, "watching", show_id);
         });
     }
-
-    if (getWatchedShows(user).includes(Number(show_id))) {
+    if (getWatchedShows(user).includes(show_id)) {
         activateThisBtn(watchedBtn, "watched");
         watchedBtn.addEventListener("click", function() { 
             removeShowIDFrom(user, "watched", show_id); 
@@ -52,8 +51,7 @@ function showActionsBtns() {
             addShowIDTo(user, "watched", show_id);
         });
     }
-
-    if (getFavShows(user).includes(Number(show_id))) {
+    if (getFavShows(user).includes(show_id)) {
         activateThisBtn(favBtn , "fav");
         favBtn.addEventListener("click", function() { 
             removeShowIDFrom(user, "fav", show_id); 
@@ -63,11 +61,6 @@ function showActionsBtns() {
             addShowIDTo(user, "fav", show_id);
         });
     }
-        
-
-
-    
-    
 }
 
 function activateThisBtn(btn, type) {
@@ -122,7 +115,7 @@ function renderShow() {
         window.location.href = "/";
     }
     show_id = Number(id);
-    let show = getShowById(Number(id));
+    let show = getShowById(show_id);
     document.getElementById("pageTitle").innerHTML += show.name;
     document.getElementById("info-picture").src = `assets/img/shows/${id}.jpg`;
     document.getElementById("info-title").innerHTML = show.name;

@@ -58,10 +58,22 @@
     cursor: pointer;
 }
 
-.content-back-btn {
+.back-btn {
+    cursor: pointer;
+    border: 1px solid black;
+    font-size: 1.3rem;
+    padding: 5px 10px;
+    border-radius: 2px;
+    font-weight: bold;
+    background-color: white;
     color: black;
-    background-color: whitesmoke;
-    font-size: 1.5rem !important;
+    transition: 0.5s;
+}
+
+.back-btn:hover {
+    background-color: black;
+    color: white;
+    
 }
 
 .content-p-btn {

@@ -50,10 +50,10 @@ function setNavbar() {
         </div>
         <div id="navbar-content" class="flex-line navbar-linksdiv"></div>
     </nav>`;
-    if (localStorage.getItem("login_info") !== null || sessionStorage.getItem("login_info") !== null) {
+    if (isLogged()) {
         document.getElementById("navbar-content").innerHTML = `
             <a class="navbar-img-a" href="#">
-                <img class="navbar-img navbar-userLogo" src="assets/img/Users/2.jpg" alt="logo">
+                <img class="navbar-img navbar-userLogo" src="assets/img/Users/1.jpg" alt="logo">
             </a>
             <a id="list_ref" class="navbar-links" href="profile.html">Profile</a>
             <a id="list_ref" class="navbar-links" href="user-list.html">My List</a>
@@ -178,4 +178,17 @@ function setFooter() {
             <a href="/register.html">Register</a>
         </li>
     `;
+}
+
+function isLogged() {
+    if (localStorage.getItem("login_info") !== null || sessionStorage.getItem("login_info") !== null) {
+        return true;
+    }
+    return false;
+}
+
+function ifLoggedGoIndex() {
+    if (isLogged()) {
+        location.href="/";
+    }
 }

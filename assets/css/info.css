@@ -11,6 +11,8 @@
 
 #info-picture {
     max-width: 250px;
+    border: 1px solid silver;
+    border-radius: 2px;
 }
 
 .info-details {
@@ -19,16 +21,16 @@
 }
 
 .info-detail {
-    padding: 5px;
+    margin-left: 5px;
+    font-size: 1.3rem;
+    text-align: left !important;
+    margin-top: 10px;
 }
 
 #info-title {
+    margin-left: 5px;
     font-size: 2rem;
     font-weight: bold;
-}
-
-.flex-splithalf > .flex-col {
-    width: 50%;
 }
 
 #yt-embeddiv {
@@ -44,12 +46,17 @@
 .action-btns {
     border-radius: 5px;
     border: 1px solid black;
-    margin: 0px 2px;
+    margin: 10px 2px;
 }
 
 .action-btns > img {
     width: 32px;
     height: 32px;
+}
+
+.season-select {
+    min-width: 75px;
+    font-size: 1.3rem;
 }
 
 .action-btns.active {

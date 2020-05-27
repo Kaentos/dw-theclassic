@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MPL | XXX - Show Information</title>
+    <title id="pageTitle">MPL | </title>
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" href="assets/css/info.css">
@@ -18,39 +18,58 @@
 
     <div class="ccontainer">
         <div class="flex-line info-panel">
-            <div class="flex-col">
-                <img id="info-picture" src="" alt="Show Poster">
-            </div>
+            <img id="info-picture" src="" alt="Show Poster">
             <div class="flex-col info-details">
+                <div id="info-title">
+                    Show Name
+                </div>
+                <div class="flex-line info-detail">
+                    <div class="flex-col">
+                        <div id="info-rating">
+                            <b>Score Rating:</b>
+                        </div>
+                        <div id="info-directors">
+                            <b>Directors:</b>
+                        </div>
+                        <div id="info-premiere">
+                            <b>Premiere Date:</b>
+                        </div>
+                        <div id="info-genres">
+                            <b>Genres:</b>
+                        </div>
+                    </div>
+                    <div class="flex-col">
+                        <div id="info-agerating">
+                            <b>Age rating:</b>
+                        </div>
+                        <div id="info-language">
+                            <b>Language:</b>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-col info-detail">
+                    <div id="info-seasons">
+                        <b>Total seasons:</b>
+                    </div>
+                    <div>
+                        <select class="season-select" id="info-episodes-select"></select>
+                        Number of Episodes:
+                        <span id="info-episodes"></span>
+                    </div>
+                </div>
                 <div class="flex-line">
-                    <div class="info-detail" id="info-title">Show Name</div>
-                </div>
-                <div class="flex-line flex-splithalf">
-                    <div class="flex-col">
-                        <div class="info-detail" id="info-rating">Score Rating: XX/10</div>
-                        <div class="info-detail" id="info-genres">Genres: </div>
-                        <div class="info-detail" id="info-premiere">Premiere Date: dd/mm/yyyy</div>
-                        <div class="info-detail" id="info-directors">Directors: </div>
-                    </div>
-                    <div class="flex-col">
-                        <div class="info-detail" id="info-yourrating">Your rating: XX/10</div>
-                        <div class="info-detail" id="info-agerating">Age rating: XX(+)</div>
-                        <div class="info-detail" id="info-language">Language: English</div>
-                    </div>
-                </div>
-                <div class="flex-line flex-splithalf">
-                    <div class="flex-col">
-                        <div class="info-detail" id="info-seasons">Seasons: XXX</div>
-                    </div>
-                    <div class="flex-col">
-                        <div class="info-detail"><select id="info-episodes-select"></select> <span id="info-episodes">Episodes: S1: X S2: X S3: X</span></div>
-                    </div>
-                </div>
-                <div class="flex-line">
-                    <button class="action-btns" title="Planning to watch"><img src="assets/img/towatch.png" alt="To Watch"></button>
-                    <button class="action-btns" title="Watching"><img src="assets/img/watching.png" alt="Watching"></button>
-                    <button class="action-btns" title="Watched"><img src="assets/img/watched.png" alt="Watched"></button>
-                    <button class="action-btns" title="Mark as Favorite"><img src="assets/img/favorite.png" alt="Favorite"></button>
+                    <button class="action-btns" title="Planning to watch">
+                        <img src="assets/img/towatch.png" alt="To Watch">
+                    </button>
+                    <button class="action-btns" title="Watching">
+                        <img src="assets/img/watching.png" alt="Watching">
+                    </button>
+                    <button class="action-btns" title="Watched">
+                        <img src="assets/img/watched.png" alt="Watched">
+                    </button>
+                    <button class="action-btns" title="Mark as Favorite">
+                        <img src="assets/img/favorite.png" alt="Favorite">
+                    </button>
                 </div>
             </div>
         </div>

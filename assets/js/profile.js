@@ -18,7 +18,7 @@ window.onload = function() {
     }
     showThisUser(userToList);
 
-    let user_list = document.getElementById("user-list"); // meter lista
+    let user_list = document.getElementById("user-list");
     user_list.href="user-list.html?id=" + getID(userToList);
 }
 

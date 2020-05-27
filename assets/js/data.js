@@ -12,7 +12,7 @@ const movies = {
     },
     2: {
         name: "Star Wars Episode VIII - The Last Jedi",
-        score: 4,
+        score: 7,
         genres: ["Action", "Adventure", "Fantasy", "Sci-Fi"],
         premiere: 1513123200,
         directors: ["Rian Johnson"],
@@ -23,7 +23,7 @@ const movies = {
     },
     3: {
         name: "Star Wars Episode IX - The Rise of Skywalker",
-        score: 6,
+        score: 7,
         genres: ["Action", "Adventure", "Fantasy", "Sci-Fi"],
         premiere: 1576713600,
         directors: ["J.J. Abrams"],
@@ -56,7 +56,7 @@ const movies = {
     },
     6: {
         name: "1917",
-        score: 8.3,
+        score: 8,
         genres: ["Drama", "War"],
         premiere: 1579737600,
         directors: ["Sam Mendes"],
@@ -67,7 +67,7 @@ const movies = {
     },
     7: {
         name: "Knives Out",
-        score: 7.9,
+        score: 8,
         genres: ["Comedy", "Crime", "Drama"],
         premiere: 1574899200,
         directors: ["Rian Johnson"],
@@ -78,7 +78,7 @@ const movies = {
     },
     8: {
         name: "Joker",
-        score: 8.5,
+        score: 9,
         genres: ["Thriller", "Crime", "Drama"],
         premiere: 1570060800,
         directors: ["Todd Phillips"],
@@ -89,7 +89,7 @@ const movies = {
     },
     9: {
         name: "John Wick 3 - Parabellum",
-        score: 7.5,
+        score: 8,
         genres: ["Action", "Crime", "Thriller"],
         premiere: 1557964800,
         directors: ["Chad Stahelski"],
@@ -100,7 +100,7 @@ const movies = {
     },
     10: {
         name: "I Am Mother",
-        score: 6.7,
+        score: 7,
         genres: ["Drama", "Mystery", "Sci-Fi"],
         premiere: 1563408000,
         directors: ["Grant Sputore"],
@@ -114,9 +114,9 @@ const movies = {
 const shows = {
     1: {
         name: "Game of Thrones",
-        score: 9.3,
+        score: 9,
         genres: ["Action", "Adventure", "Drama", "Fantasy", "Romance"],
-        premiere: 1318809600,
+        premiere: 1555286400,
         directors: ["David Nutter", "Alan Taylor"],
         age: "16+",
         lang: "English",
@@ -126,9 +126,9 @@ const shows = {
     },
     2: {
         name: "Rick and Morty",
-        score: 9.2,
+        score: 9,
         genres: ["Animation", "Adventure", "Comedy"],
-        premiere: 1386028800,
+        premiere: 1573344000,
         directors: ["Dan Harmon", "Justin Roiland"],
         age: "None",
         lang: "English",
@@ -138,9 +138,9 @@ const shows = {
     },
     3: {
         name: "Westworld",
-        score: 8.7,
+        score: 9,
         genres: ["Drama", "Mystery", "Sci-Fi"],
-        premiere: 1475366400,
+        premiere: 1584230400,
         directors: ["Lisa Joy", "Jonathan Nolan"],
         age: "None",
         lang: "English",
@@ -150,9 +150,9 @@ const shows = {
     },
     4: {
         name: "The Walking Dead",
-        score: 8.2,
+        score: 8,
         genres: ["Drama", "Horror", "Thriller"],
-        premiere: 1288656000,
+        premiere: 1582416000,
         directors: ["Frank Darabont", "Angela Kang"],
         age: "16+",
         lang: "English",
@@ -162,9 +162,9 @@ const shows = {
     },
     5: {
         name: "Vikings",
-        score: 8.5,
+        score: 9,
         genres: ["Drama", "Action", "Adventure"],
-        premiere: 1362268800,
+        premiere: 1575417600,
         directors: ["Michael Hirst"],
         age: "None",
         lang: "English",
@@ -174,7 +174,7 @@ const shows = {
     },
     6: {
         name: "The Mandalorian",
-        score: 8.7,
+        score: 9,
         genres: ["Adventure", "Action", "Sci-Fi"],
         premiere: 1573516800,
         directors: ["Jon Favreau"],
@@ -186,9 +186,9 @@ const shows = {
     },
     7: {
         name: "Breaking Bad",
-        score: 9.5,
+        score: 10,
         genres: ["Crime", "Drama", "Thriller"],
-        premiere: 1200787200,
+        premiere: 1342310400,
         directors: ["Vince Gilligan"],
         age: "16+",
         lang: "English",
@@ -198,7 +198,7 @@ const shows = {
     },
     8: {
         name: "Chernobyl",
-        score: 9.4,
+        score: 9,
         genres: ["Drama", "History", "Thriller"],
         premiere: 1557100800,
         directors: ["Craig Mazin"],
@@ -210,9 +210,9 @@ const shows = {
     },
     9: {
         name: "Dark",
-        score: 8.7,
+        score: 9,
         genres: ["Crime", "Drama", "Mystery"],
-        premiere: 1512086400,
+        premiere: 1561075200,
         directors: ["Baran bo Odar", "Jantje Friese"],
         age: "None",
         lang: "English",
@@ -222,9 +222,9 @@ const shows = {
     },
     10: {
         name: "Mr. Robot",
-        score: 8.5,
+        score: 9,
         genres: ["Crime", "Drama", "Triller"],
-        premiere: 1435104000,
+        premiere: 1570320000,
         directors: ["Sam Esmail"],
         age: "None",
         lang: "English",
@@ -244,4 +244,44 @@ function getShowById(id) {
 
 function getPremiereDate(unixtimestamp) {
     return new Date(unixtimestamp * 1000).toLocaleDateString();
+}
+
+function getYear(unixtimestamp) {
+    return new Date(unixtimestamp * 1000).getFullYear()
+}
+
+function getIDMostRecentDateObj(obj) {
+    let max = 0;
+    for (let i in obj) {
+        if (obj[i].premiere > max) {
+            max = obj[i].premiere;
+        }
+    }
+    return max;
+}
+
+function getIDsByRecentDateOf(obj) {
+    let id_dateArray = [];
+    for (let i in obj) {
+        id_dateArray.push({id: i, date: obj[i].premiere});
+    }
+    id_dateArray.sort((a,b) => b.date - a.date);
+    let idArray = [];
+    for (i of id_dateArray) {
+        idArray.push(Number(i.id))
+    }
+    return idArray;
+}
+
+function getIDsByRateOf(obj) {
+    let id_rateArray = [];
+    for (let i in obj) {
+        id_rateArray.push({id: i, rate: obj[i].score});
+    }
+    id_rateArray.sort((a,b) => b.rate - a.rate);
+    let idArray = [];
+    for (i of id_rateArray) {
+        idArray.push(Number(i.id))
+    }
+    return idArray;
 }

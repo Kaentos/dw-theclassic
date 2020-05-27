@@ -151,6 +151,6 @@
     text-decoration: none;
 }
 
-.carousel > div:last-child {
+.carousel > div {
     padding-right: 15px;
 }

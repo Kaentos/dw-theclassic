@@ -18,12 +18,12 @@
 .info-details {
     margin-left: 10px;
     width: 100%;
+    position: relative;
 }
 
 .info-detail {
     margin-left: 5px;
     font-size: 1.3rem;
-    text-align: left !important;
     margin-top: 10px;
 }
 
@@ -63,7 +63,34 @@
     background-color: darkgray;
 }
 
+.bottom-btn-div {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.back-btn {
+    cursor: pointer;
+    border: 1px solid black;
+    font-size: 1.3rem;
+    padding: 5px 10px;
+    border-radius: 2px;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    transition: 0.5s;
+}
+
+.back-btn:hover {
+    background-color: white;
+    color: black;
+    
+}
+
 @media only screen and (max-width: 675px) {
+    .bottom-btn-div {
+        position: unset;
+        margin-top: 25px;
+    }
     .info-details {
         margin: 0;
     }

@@ -3,6 +3,7 @@ window.onload = function (){
     setMobileNavbar();
     setFooter();
     renderMovie();
+    setBackBtn();
 }
 
 function renderMovie() {

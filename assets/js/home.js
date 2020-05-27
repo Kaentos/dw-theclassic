@@ -3,7 +3,8 @@ const isLogged = false;
 
 window.onload = function () {
     setNavbar();
-    document.getElementById("home_ref").classList.add("active");
+    setLogoutBtn();
+    setActive("home_ref");
     setMobileNavbar();
     setFooter();
 
@@ -26,7 +27,6 @@ function showLast(type) {
     let lastMoviesIDS = getIDsByRecentDateOf(data);
     let content = document.getElementById("last_"+type);
     for (let i = 0; i < max; i++) {
-        console.log(i);
         let id = lastMoviesIDS[i]
         showThisObj(content, id, data[id], type);
     }
@@ -38,7 +38,6 @@ function showTopRated(type) {
     let lastMoviesIDS = getIDsByRateOf(data);
     let content = document.getElementById("top_"+type);
     for (let i = 0; i < max; i++) {
-        console.log(i);
         let id = lastMoviesIDS[i]
         showThisObj(content, id, data[id], type);
     }

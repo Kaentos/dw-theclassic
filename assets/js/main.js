@@ -8,6 +8,22 @@ function getUserObj() {
     }
 }
 
+function setLogoutBtn() {
+    if (sessionStorage.getItem("login_info") !== null || localStorage.getItem("login_info") !== null) {
+        let btn = document.getElementById("logout_btn")
+        if (sessionStorage.getItem("login_info") !== null) {
+            btn.addEventListener("click", function() {sessionStorage.removeItem("login_info"); location.reload()})
+        } else if (localStorage.getItem("login_info") !== null) {
+            btn.addEventListener("click", function() {sessionStorage.removeItem("login_info"); location.reload();})
+        } else {
+            return;
+        }
+    }
+}
+
+function setActive(id_name) {
+    document.getElementById(id_name).classList.add("active");
+}
 
 function setBackBtn() {
     let back_btn = document.getElementById('back_btn');
@@ -54,7 +70,7 @@ function setNavbar() {
             <a id="list_ref" class="navbar-links" href="profile.html">Profile</a>
             <a id="list_ref" class="navbar-links" href="#">My List</a>
             <a id="settings_ref" class="navbar-links" href="#">Settings</a>
-            <a id="logout-btn" class="navbar-links logout-link" href="#">Logout</a>
+            <a id="logout_btn" class="navbar-links logout-link" href="#">Logout</a>
         `;
         return;
     }

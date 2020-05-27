@@ -38,13 +38,13 @@ function renderList() {
         option = document.createElement("option");
         option.value = genre;
         option.innerHTML = genre;
-        document.getElementById("Genre").add(option);
+        document.getElementById("search_genre").add(option);
     }
 }
 
 function renderFilteredList() {
     let namefilter = document.getElementById("search_name").value.toLowerCase();
-    let genrefilter = document.getElementById("Genre").value;
+    let genrefilter = document.getElementById("search_genre").value;
     let excluded = [];
     if (namefilter !== "") {
         for (const [i, v] of Object.entries(target)) {
@@ -97,5 +97,5 @@ window.onload = function() {
     }
     renderList();
     document.getElementById("search_name").addEventListener("keyup", renderFilteredList);
-    document.getElementById("order_type").addEventListener("change", renderFilteredList);
+    document.getElementById("search_genre").addEventListener("change", renderFilteredList);
 }

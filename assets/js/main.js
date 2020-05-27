@@ -14,7 +14,7 @@ function setLogoutBtn() {
         if (sessionStorage.getItem("login_info") !== null) {
             btn.addEventListener("click", function() {sessionStorage.removeItem("login_info"); location.reload()})
         } else if (localStorage.getItem("login_info") !== null) {
-            btn.addEventListener("click", function() {sessionStorage.removeItem("login_info"); location.reload();})
+            btn.addEventListener("click", function() {localStorage.removeItem("login_info"); location.reload();})
         } else {
             return;
         }
@@ -50,9 +50,7 @@ function setNavbar() {
         <div class="flex-line navbar-linksdiv">
             <a href="#" id="opennav"><img src="assets/img/bars.png" alt="Open Navigation Menu"></a>
             <a class="navbar-img-a" href="/">
-                <picture>
-                    <img class="navbar-img" src="assets/img/logo.png" alt="logo">
-                </picture>
+                <img class="navbar-img" src="assets/img/logo.png" alt="logo">
             </a>
             <a id="home_ref" class="navbar-links" href="/">Home</a>
             <a id="movies_ref" class="navbar-links" href="list-content.html?t=m">Movies</a>
@@ -68,8 +66,8 @@ function setNavbar() {
                 <img class="navbar-img navbar-userLogo" src="assets/img/Users/2.jpg" alt="logo">
             </a>
             <a id="list_ref" class="navbar-links" href="profile.html">Profile</a>
-            <a id="list_ref" class="navbar-links" href="#">My List</a>
-            <a id="settings_ref" class="navbar-links" href="#">Settings</a>
+            <a id="list_ref" class="navbar-links" href="user-list.html">My List</a>
+            <a id="settings_ref" class="navbar-links" href="settings.html">Settings</a>
             <a id="logout_btn" class="navbar-links logout-link" href="#">Logout</a>
         `;
         return;

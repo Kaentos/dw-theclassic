@@ -7,8 +7,7 @@ window.onload = function() {
     setFooter();
     setBackBtn();
 
-    let url = new URL(window.location.href);
-    let user_id = url.searchParams.get("id");
+    let user_id = new URLSearchParams(window.location.search).get("id");
     if (user_id !== null && user_id.length > 0 && user_id >= 0 && user_id < users_info.length) {
         userToList = getUserObjWithID(Number(user_id));
     } else if (user_id === null && getUserObj()) {

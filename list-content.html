@@ -18,19 +18,15 @@
 
     <div class="content">
         <div class="content-title">
-            <h1>
-                Movies/Series
+            <h1 id="type_title">
+                #
             </h1>
         </div>
         <div class="search-form flex-line flex-spaced">
             <div class="search flex-line">
                 <div class="search-input">
-                    <input class="search-bar" type="search" name="txt_pesquisa" id="txt_pesquisa" placeholder="Search Movies/Series...">
+                    <input id="search_name" class="search-bar" type="search" name="txt_pesquisa" placeholder="Search Movies/Series...">
                 </div>
-                <div class="search-input">
-                    <input class="search-btn" type="button" id="searchbtn" value="Search">
-                </div>
-                
             </div>
             <div class="flex-line search-selects">
                 <div class="search">
@@ -58,11 +54,9 @@
             <button class="content-p-btn">
                 &lt;&lt;
             </button>
-            <a href="/">
-                <button class="content-back-btn">
-                    Go back
-                </button>
-            </a>
+            <button id="back_btn" class="content-back-btn">
+                Go back
+            </button>
             <button class="content-n-btn">
                 &gt;&gt;
             </button>

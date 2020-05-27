@@ -1,21 +1,4 @@
 const max = 7;
-const isLogged = false;
-
-window.onload = function () {
-    setNavbar();
-    setLogoutBtn();
-    setActive("home_ref");
-    setMobileNavbar();
-    setFooter();
-
-    if (localStorage.getItem("login_info") !== null || sessionStorage.getItem("login_info") !== null) {
-        removeWelcome();
-    }
-    setupCarouselBtns();
-
-    showThisType("movies");
-    showThisType("shows");
-}
 
 function showThisType(type) {
     showLast(type);
@@ -58,6 +41,10 @@ function showThisObj(target, id, obj, type) {
     `;
 }
 
+function removeWelcome() {
+    document.getElementById("welcome-zone").remove()
+}
+
 function setupCarouselBtns() {
     document.getElementById("featured-next").addEventListener("click", function() {
         carousel_next(document.getElementById("featured"));
@@ -92,13 +79,24 @@ function setupCarouselBtns() {
 }
 
 function carousel_next(carousel) {
-    console.log(carousel);
     carousel.scrollLeft += 217;
 }
 function carousel_prev(carousel) {
     carousel.scrollLeft -= 217;
 }
 
-function removeWelcome() {
-    document.getElementById("welcome-zone").remove()
+window.onload = function () {
+    setNavbar();
+    setLogoutBtn();
+    setActive("home_ref");
+    setMobileNavbar();
+    setFooter();
+
+    if (localStorage.getItem("login_info") !== null || sessionStorage.getItem("login_info") !== null) {
+        removeWelcome();
+    }
+    setupCarouselBtns();
+
+    showThisType("movies");
+    showThisType("shows");
 }

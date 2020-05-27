@@ -126,7 +126,7 @@ function getHTMLOf(obj, id, ref, type) {
             ${obj.name}
         </div>
         <div>
-            ${new Date(obj.premiere * 1000).getFullYear()}
+            ${getYear(obj.premiere)}
         </div>
     </a>
     `;

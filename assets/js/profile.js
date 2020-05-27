@@ -6,6 +6,7 @@ window.onload = function() {
     setMobileNavbar();
     setFooter();
     setBackBtn();
+    setLogoutBtn();
 
     let user_id = new URLSearchParams(window.location.search).get("id");
     if (user_id !== null && user_id.length > 0 && user_id >= 0 && user_id < users_info.length) {
@@ -25,12 +26,12 @@ function showThisUser(user) {
     document.getElementById("username").innerHTML = getUsername(user);
     document.getElementById("pageTitle").innerHTML += getUsername(user);
     document.getElementById("total_fav_movies").innerHTML = getFavMovies(user).length;
-    document.getElementById("total_fav_series").innerHTML = getFavSeries(user).length;
-    document.getElementById("total_watching_series").innerHTML = getWatchingSeries(user).length;
+    document.getElementById("total_fav_shows").innerHTML = getFavShows(user).length;
+    document.getElementById("total_watching_shows").innerHTML = getWatchingShows(user).length;
     document.getElementById("total_toSee_movies").innerHTML = getToWatchMovies(user).length;
-    document.getElementById("total_toSee_series").innerHTML = getToWatchSeries(user).length;
-    document.getElementById("total_watched_movies").innerHTML = getSeenMovies(user).length;
-    document.getElementById("total_watched_series").innerHTML = getSeenMovies(user).length;
+    document.getElementById("total_toSee_shows").innerHTML = getToWatchShows(user).length;
+    document.getElementById("total_watched_movies").innerHTML = getWatchedMovies(user).length;
+    document.getElementById("total_watched_shows").innerHTML = getWatchedShows(user).length;
     showFavourites(user);
     showWatching(user);
     showToWatch(user);
@@ -48,7 +49,7 @@ function showFavourites(user) {
         content.innerHTML += getHTMLOf(movies[id], id, "movies");
         count--;
     }
-    list = getFavSeries(user);
+    list = getFavShows(user);
     if (list.length === 0) {
         if (count === 5) {
             showNothing(content, document.getElementById("moreFav"));
@@ -67,10 +68,10 @@ function showFavourites(user) {
     }
 }
 function showWatching(user) {
-    document.getElementById("moreWatching").href = "user-list.html?id=" + getID(user) + "&filter=watching&type=series";
+    document.getElementById("moreWatching").href = "user-list.html?id=" + getID(user) + "&filter=watching&type=shows";
     let content = document.getElementById("watching");
     let count = max;
-    let list = getWatchingSeries(user);
+    let list = getWatchingShows(user);
     if (list.length === 0) {
         if (count === 5) {
             showNothing(content, document.getElementById("moreWatching"));
@@ -97,7 +98,7 @@ function showToWatch(user) {
         content.innerHTML += getHTMLOf(movies[id], id, "movies");
         count--;
     }
-    list = getToWatchSeries(user);
+    list = getToWatchShows(user);
     console.log(count)
     if (list.length === 0) {
         if (count === 5) {

@@ -6,11 +6,11 @@ const user_obj = {
     creationDate: null,
     fav_movies: [],
     toWatch_movies: [],
-    seen_movies: [],
-    fav_series: [],
-    watching_series: [],
-    toWatch_series: [],
-    seen_series: []
+    watched_movies: [],
+    fav_shows: [],
+    watching_shows: [],
+    toWatch_shows: [],
+    watched_shows: []
 }
 function setUserID(obj, id) {
     if(arguments.length === 2 && typeof(obj) === "object" && typeof(id) === "number") {
@@ -49,6 +49,56 @@ function setCreationDate(obj) {
         console.log("More than 1 argument or argument non object");
     }
 }
+function addFavMovie(obj, id) {
+    if(arguments.length === 2 && typeof(obj) === "object" && typeof(id) === "number") {
+        obj.fav_movies.push(id);
+    } else {
+        console.log("More than 2 argument or argument non object or number");
+    }
+}
+function addToWatchMovie(obj, id) {
+    if(arguments.length === 2 && typeof(obj) === "object" && typeof(id) === "number") {
+        obj.toWatch_movies.push(id);
+    } else {
+        console.log("More than 2 argument or argument non object or number");
+    }
+}
+function addWatchedMovie(obj, id) {
+    if(arguments.length === 2 && typeof(obj) === "object" && typeof(id) === "number") {
+        obj.watched_movies.push(id);
+    } else {
+        console.log("More than 2 argument or argument non object or number");
+    }
+}
+function addFavShow(obj, id) {
+    if(arguments.length === 2 && typeof(obj) === "object" && typeof(id) === "number") {
+        obj.fav_shows.push(id);
+    } else {
+        console.log("More than 2 argument or argument non object or number");
+    }
+}
+function addWatchingShow(obj, id) {
+    if(arguments.length === 2 && typeof(obj) === "object" && typeof(id) === "number") {
+        obj.watching_shows.push(id);
+    } else {
+        console.log("More than 2 argument or argument non object or number");
+    }
+}
+function addToWatchShow(obj, id) {
+    if(arguments.length === 2 && typeof(obj) === "object" && typeof(id) === "number") {
+        obj.toWatch_shows.push(id);
+    } else {
+        console.log("More than 2 argument or argument non object or number");
+    }
+}
+function addWatchedShow(obj, id) {
+    if(arguments.length === 2 && typeof(obj) === "object" && typeof(id) === "number") {
+        obj.watched_shows.push(id);
+    } else {
+        console.log("More than 2 argument or argument non object or number");
+    }
+}
+
 function getID(obj) {
     if (arguments.length === 1 && typeof(obj) === "object") {
         return obj.id;
@@ -85,15 +135,15 @@ function getFavMovies(obj) {
     }
     console.log("More than 1 argument or argument non object");
 }
-function getFavSeries(obj) {
+function getFavShows(obj) {
     if (arguments.length === 1 && typeof(obj) === "object") {
-        return obj.fav_series;
+        return obj.fav_shows;
     }
     console.log("More than 1 argument or argument non object");
 }
-function getWatchingSeries(obj) {
+function getWatchingShows(obj) {
     if (arguments.length === 1 && typeof(obj) === "object") {
-        return obj.watching_series;
+        return obj.watching_shows;
     }
     console.log("More than 1 argument or argument non object");
 }
@@ -103,21 +153,21 @@ function getToWatchMovies(obj) {
     }
     console.log("More than 1 argument or argument non object");
 }
-function getToWatchSeries(obj) {
+function getToWatchShows(obj) {
     if (arguments.length === 1 && typeof(obj) === "object") {
-        return obj.toWatch_series;
+        return obj.toWatch_shows;
     }
     console.log("More than 1 argument or argument non object");
 }
-function getSeenMovies(obj) {
+function getWatchedMovies(obj) {
     if (arguments.length === 1 && typeof(obj) === "object") {
-        return obj.seen_movies;
+        return obj.watched_movies;
     }
     console.log("More than 1 argument or argument non object");
 }
-function getSeenSeries(obj) {
+function getWatchedShows(obj) {
     if (arguments.length === 1 && typeof(obj) === "object") {
-        return obj.seen_series;
+        return obj.watched_shows;
     }
     console.log("More than 1 argument or argument non object");
 }
@@ -129,6 +179,61 @@ function getUserObjWithID(id) {
     }
 }
 
+function removeFavShow(obj, id) {
+    if(arguments.length === 2 && typeof(obj) === "object" && typeof(id) === "number") {
+        obj.fav_shows.splice(obj.fav_shows.indexOf(id), 1);
+    } else {
+        console.log("More than 2 argument or argument non object or number");
+    }
+}
+function removeToWatchShow(obj, id) {
+    if(arguments.length === 2 && typeof(obj) === "object" && typeof(id) === "number") {
+        obj.toWatch_shows.splice(obj.toWatch_shows.indexOf(id), 1);
+    } else {
+        console.log("More than 2 argument or argument non object or number");
+    }
+}
+function removeWatchingShow(obj, id) {
+    if(arguments.length === 2 && typeof(obj) === "object" && typeof(id) === "number") {
+        obj.watching_shows.splice(obj.watching_shows.indexOf(id), 1);
+    } else {
+        console.log("More than 2 argument or argument non object or number");
+    }
+}
+function removeWatchedShow(obj, id) {
+    if(arguments.length === 2 && typeof(obj) === "object" && typeof(id) === "number") {
+        obj.watched_shows.splice(obj.watched_shows.indexOf(id), 1);
+    } else {
+        console.log("More than 2 argument or argument non object or number");
+    }
+}
+
+function getUserObj() {
+    if (localStorage.getItem("login_info") !== null) {
+        return JSON.parse(localStorage.getItem("login_info"));
+    } else if(sessionStorage.getItem("login_info") !== null) {
+        return JSON.parse(sessionStorage.getItem("login_info"));
+    } else {
+        return false;
+    }
+}
+
+function updateUserObj(new_user_info) {
+    if (localStorage.getItem("login_info") !== null) {
+        localStorage.setItem("login_info", JSON.stringify(new_user_info));
+    } else if(sessionStorage.getItem("login_info") !== null) {
+        sessionStorage.setItem("login_info", JSON.stringify(new_user_info));
+    }
+    for (let i in users_info) {
+        if (getID(users_info[i]) === getID(new_user_info)) {
+            users_info[i] = new_user_info;
+            break;
+        }
+    }
+    localStorage.setItem("users_info", JSON.stringify(users_info));
+    location.reload();
+}
+
 const email_regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 if (localStorage.getItem("users_info") === null) {
@@ -138,30 +243,36 @@ if (localStorage.getItem("users_info") === null) {
     setUsername(user1, "Admin");
     setPassword(user1, "admin");
     setCreationDate(user1);
-    user1.fav_movies = [1, 2, 10];
-    user1.seen_movies = [4, 5];
+    user1.fav_movies = [1, 2];
+    user1.watched_movies = [4, 5];
     user1.toWatch_movies = [3, 9];
-    user1.toWatch_series = [6, 7];
+    user1.toWatch_shows = [6, 7];
     const user2 = Object.assign({}, user_obj);
     setUserID(user2 , 1);
     setEmail(user2, "normal_user@hotmail.com");
     setUsername(user2, "Normal_User");
     setPassword(user2, "normal");
     setCreationDate(user2);
-    user2.follows = [1];
     user2.fav_movies = [3, 2, 10];
-    user2.watching_series = [7, 8];
-    user2.seen_movies = [4, 5];
+    user2.watching_shows = [7, 8];
+    user2.watched_movies = [4, 5];
     user2.toWatch_movies = [3, 9];
-    user2.toWatch_series = [10, 9];
+    user2.toWatch_shows = [10, 9];
     var users_info = [user1, user2];
     localStorage.setItem("users_info", JSON.stringify(users_info));
 } else {
     var users_info = JSON.parse(localStorage.getItem("users_info"));
 }
 
-function ifLoggedGoIndex() {
+function isLogged() {
     if (localStorage.getItem("login_info") !== null || sessionStorage.getItem("login_info") !== null) {
+        return true;
+    }
+    return false;
+}
+
+function ifLoggedGoIndex() {
+    if (isLogged()) {
         location.href="/";
     }
 }

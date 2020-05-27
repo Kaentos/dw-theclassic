@@ -1,13 +1,3 @@
-function getUserObj() {
-    if (localStorage.getItem("login_info") !== null) {
-        return JSON.parse(localStorage.getItem("login_info")).user;
-    } else if(sessionStorage.getItem("login_info") !== null) {
-        return JSON.parse(sessionStorage.getItem("login_info")).user;
-    } else {
-        return false;
-    }
-}
-
 function setLogoutBtn() {
     if (sessionStorage.getItem("login_info") !== null || localStorage.getItem("login_info") !== null) {
         let btn = document.getElementById("logout_btn")
@@ -140,7 +130,7 @@ function setFooter() {
                         <a href="https://www.themoviedb.org/" target="_blank">Posters</a>
                     </li>
                     <li>
-                        <a href="https://www.flaticon.com">Icons</a>
+                        <a href="https://www.flaticon.com" target="_blank">Icons</a>
                     </li>
                 </ul>
             </div>
@@ -151,9 +141,7 @@ function setFooter() {
             </div>
             <div class="footer-credits-txt">
                 <a href="/">
-                    <picture>
-                        <img src="assets/img/GitHub/GitHub-Mark-32px.png" alt="logo" width="24px">
-                    </picture>
+                    <img src="assets/img/GitHub/GitHub-Mark-32px.png" alt="logo" width="24px">
                 </a>
             </div>
             <div class="footer-credits-txt">
@@ -162,7 +150,7 @@ function setFooter() {
                     Freepik
                 </a>
                 from
-                <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+                <a href="https://www.flaticon.com/" target="_blank" title="Flaticon">www.flaticon.com</a>
             </div>
         </div>
     `;

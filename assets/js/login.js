@@ -16,14 +16,10 @@ function login() {
 }
 
 function set_login(user_obj, keepLogin) {
-    let login_info = {
-        user: user_obj,
-        loginDate: new Date().getTime()
-    };
     if (keepLogin) {
-        localStorage.setItem("login_info", JSON.stringify(login_info));
+        localStorage.setItem("login_info", JSON.stringify(user_obj));
     } else {
-        sessionStorage.setItem("login_info", JSON.stringify(login_info));
+        sessionStorage.setItem("login_info", JSON.stringify(user_obj));
     }
     location.reload()
 }

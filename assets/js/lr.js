@@ -260,8 +260,14 @@ function borderRed(input) {
 
 const email_regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
+// Reset localStorage
+function rs() {
+    localStorage.removeItem("users_info");
+    location.reload();
+}
+
 if (localStorage.getItem("users_info") === null) {
-    const user1 = Object.assign({}, user_obj);
+    const user1 = JSON.parse(JSON.stringify(user_obj));
     setUserID(user1, 0);
     setEmail(user1, "admin@mypopcornlist.com");
     setUsername(user1, "Admin");
@@ -276,7 +282,7 @@ if (localStorage.getItem("users_info") === null) {
     addToWatchShow(user1, 6);
     addToWatchShow(user1, 7);
 
-    const user2 = Object.assign({}, user_obj);
+    const user2 = JSON.parse(JSON.stringify(user_obj));
     setUserID(user2 , 1);
     setEmail(user2, "normal_user@hotmail.com");
     setUsername(user2, "Normal_User");
@@ -290,6 +296,7 @@ if (localStorage.getItem("users_info") === null) {
     addWatchedMovie(user2, 5);
     addToWatchMovie(user2, 1);
     addToWatchMovie(user2, 10);
+    addWatchedShow(user2, 4);
     addToWatchShow(user2, 6);
     addToWatchShow(user2, 7);
     addToWatchShow(user2, 10);

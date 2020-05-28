@@ -7,6 +7,7 @@ function register () {
     let password = document.getElementById("nu_password").value;
     
     const new_user = Object.assign({}, user_obj);
+    setUserID(new_user, users_info.length);
     setEmail(new_user, email);
     setUsername(new_user, username);
     setPassword(new_user, password);

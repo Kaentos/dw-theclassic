@@ -79,7 +79,6 @@ function showToWatch(user) {
         count--;
     }
     list = getToWatchShows(user);
-    console.log(count)
     if (list.length === 0) {
         if (count === 5) {
             showNothing(content, document.getElementById("moreToWatch"));

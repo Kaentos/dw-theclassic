@@ -71,23 +71,6 @@
     right: 0;
 }
 
-.back-btn {
-    background-color: white;
-    border: 1px solid black;
-    border-radius: 2px;
-    color: black;
-    cursor: pointer;
-    font-size: 1.3rem;
-    font-weight: bold;
-    padding: 5px 10px;
-    transition: 0.5s;
-}
-
-.back-btn:hover {
-    background-color: black;
-    color: white;
-}
-
 @media only screen and (max-width: 675px) {
     .bottom-btn-div {
         margin-top: 25px;

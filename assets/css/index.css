@@ -80,6 +80,10 @@
     width: 201px;
 }
 
+.ms_ss_img {
+    height: 300px;
+}
+
 .ms_ss_panel > div {
     font-size: 1.1rem;
     font-weight: bold;
@@ -88,10 +92,6 @@
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
-}
-
-.ms_ss_img {
-    height: 300px;
 }
 
 .go-left, .go-right {

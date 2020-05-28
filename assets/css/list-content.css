@@ -48,6 +48,7 @@
 
 .ms_ss_panel {
     border: 1px solid black;
+    border-radius: 2px;
     box-shadow: none;
     color: black;
     margin: 0px 10px 20px 10px;
@@ -66,24 +67,8 @@
     overflow: hidden;
     text-align: center;
     text-overflow: ellipsis;
+    overflow: hidden;
     white-space: nowrap;
-}
-
-.back-btn {
-    background-color: white;
-    border: 1px solid black;
-    border-radius: 2px;
-    color: black;
-    cursor: pointer;
-    font-size: 1.3rem;
-    font-weight: bold;
-    padding: 5px 10px;
-    transition: 0.5s;
-}
-
-.back-btn:hover {
-    color: white;
-    background-color: black;
 }
 
 .username-ref {

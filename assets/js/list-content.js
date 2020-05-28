@@ -15,11 +15,13 @@ function generateCard(id) {
     list_element.innerHTML += `
         <a class="flex-col ms_ss_panel" id="li${id}" href="${href}">
             <img class="ms_ss_img" src="${src}">
-            <div>
-                ${target[id].name}
-            </div>
-            <div>
-                ${getYear(target[id].premiere)}
+            <div class="ms_ss_desc">
+                <div>
+                    ${target[id].name}
+                </div>
+                <div>
+                    ${getYear(target[id].premiere)}
+                </div>
             </div>
         </a>
     `;

@@ -32,11 +32,13 @@ function showThisObj(target, id, obj, type) {
     target.innerHTML += `
         <a class="flex-col ms_ss_panel text-center" href="${src_page}info.html?id=${id}">
             <img class="ms_ss_img" src="assets/img/${type}/${id}.jpg">
-            <div>
-                ${obj.name}
-            </div>
-            <div>
-                ${getYear(obj.premiere)}
+            <div class="ms_ss_desc">
+                <div>
+                    ${obj.name}
+                </div>
+                <div>
+                    ${getYear(obj.premiere)}
+                </div>
             </div>
         </a>
     `;

@@ -71,7 +71,6 @@
 }
 
 .ms_ss_panel {
-    border: 1px solid black;
     border-radius: 2px;
     box-shadow: none;
     color: black;
@@ -84,7 +83,13 @@
     height: 300px;
 }
 
-.ms_ss_panel > div {
+.ms_ss_desc {
+    background-color: #dedede;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.ms_ss_desc > div {
     font-size: 1.1rem;
     font-weight: bold;
     margin: 1px 5px;

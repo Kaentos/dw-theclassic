@@ -2,11 +2,7 @@ let userToList = false;
 const max = 5;
 
 window.onload = function() {
-    setNavbar();
-    setMobileNavbar();
-    setFooter();
-    setBackBtn();
-    setLogoutBtn();
+    basicSetup();
 
     let user_id = new URLSearchParams(window.location.search).get("id");
     if (user_id !== null && user_id.length > 0 && user_id >= 0 && user_id < users_info.length) {

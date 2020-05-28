@@ -84,13 +84,9 @@ function checkEmail() {
 
 window.onload = function() {
     ifLoggedGoIndex();
-    
-    setNavbar();
-    setMobileNavbar();
-    document.getElementById("register_ref").classList.add("active");
-    setFooter();
+    basicSetup();
+    setActive("register_ref");
 
-    setBackBtn();
     document.getElementById("register_btn").addEventListener("click", register);
     document.getElementById("nu_username").addEventListener("keyup", this.checkUsername);
     document.getElementById("nu_email").addEventListener("keyup", this.checkEmail);

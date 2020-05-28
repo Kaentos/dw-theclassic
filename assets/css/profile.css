@@ -3,6 +3,7 @@
     max-width: 1115px;
     box-sizing: border-box;
     padding: 5px 5px 50px 5px;
+    min-height: 500px;
 }
 .ccontainer > hr {
     border: 3px solid black;
@@ -57,15 +58,10 @@
     color: white;
     text-decoration: none;
     transition: 0.5s;
-    padding: 5px;
+    padding: 5px 10px;
     border-radius: 5px;
-    background-color: red;
+    background-color: #ed3124;
     font-size: 1.4rem;
-    
-}
-.list-title > a:hover {
-    background-color: silver;
-    color: black;
 }
 
 .user-info {
@@ -82,41 +78,9 @@
     margin-left: 10px;
 }
 
-.follow-btn {
-    font-size: 1.5rem;
-    font-weight: bold;
-    border-radius: 2px;
-    border: 1px solid black;
-    background-color: red;
-    color: white;
-}
-
-.back-btn, .list-btn {
-    cursor: pointer;
-    margin-top: 10px;
-    border: 1px solid black;
-    margin-left: 10px;
-    font-weight: bold;
-    padding: 7px;
-    text-decoration: none;
-    font-size: 1.3rem;
-    border-radius: 2px;
-    min-width: 100px;
-}
-
-.back-btn {
-    color: black;
-    background-color: silver;
-}
-
-.list-btn {
-    color: white;
-    background-color: red;
-    min-width: 100px;
-}
-
 .user-details {
     width: 100%;
+    position: relative;
 }
 
 .detail {
@@ -142,6 +106,43 @@
     font-size: 1.3rem;
 }
 
+.bottom-div {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.list-btn {
+    cursor: pointer;
+    border: 1px solid black;
+    text-decoration: none;
+    color:white;
+    background-color: #ed3124;
+    margin-left: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.3rem;
+    border-radius: 2px;
+    padding: 7px 10px;
+    transition: 0.5s;
+}
+
+.back-btn {
+    cursor: pointer;
+    border: 1px solid black;
+    font-size: 1.3rem;
+    padding: 5px 10px;
+    border-radius: 2px;
+    font-weight: bold;
+    background-color: white;
+    color: black;
+    transition: 0.5s;
+}
+
+.list-btn:hover, .back-btn:hover, .list-title > a:hover {
+    background-color: black;
+    color: white;
+}
 
 @media only screen and (max-width: 675px) {
 
@@ -149,5 +150,8 @@
         justify-content: center;
         text-align: center;
         align-items: center;
+    }
+    .bottom-div {
+        position: unset;
     }
 }

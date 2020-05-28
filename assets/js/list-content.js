@@ -75,11 +75,7 @@ function renderFilteredList() {
 }
 
 window.onload = function() {
-    setNavbar();
-    setLogoutBtn();
-    setMobileNavbar();
-    setFooter();
-    setBackBtn();
+    basicSetup();
     list_element = document.getElementById("listdiv");
     mediatype = new URLSearchParams(window.location.search).get("t");
     if (mediatype === null) {

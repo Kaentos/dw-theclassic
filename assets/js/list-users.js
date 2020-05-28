@@ -1,12 +1,8 @@
 window.onload = function() {
-    setNavbar();
-    setMobileNavbar();
-    document.getElementById("users_ref").classList.add("active");
-    setFooter();
-    setBackBtn();
-    
+    basicSetup();
+    setActive("users_ref");
     showAllUsers();
-    document.getElementById("search-btn").addEventListener("click", showAllUsers);
+    document.getElementById("search-name").addEventListener("keyup", showAllUsers);
 }
 
 function showAllUsers() {

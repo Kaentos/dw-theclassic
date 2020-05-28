@@ -144,7 +144,6 @@ function renderShow() {
 window.onload = function () {
     basicSetup();
     renderShow();
-
     
     if (isLogged()) {
         showActionsBtns();

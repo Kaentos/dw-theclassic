@@ -92,7 +92,7 @@ window.onload = function () {
     setMobileNavbar();
     setFooter();
 
-    if (localStorage.getItem("login_info") !== null || sessionStorage.getItem("login_info") !== null) {
+    if (isLogged()) {
         removeWelcome();
     }
     setupCarouselBtns();

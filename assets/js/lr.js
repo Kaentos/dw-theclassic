@@ -98,7 +98,6 @@ function addWatchedShow(obj, id) {
         console.log("More than 2 argument or argument non object or number");
     }
 }
-
 function getID(obj) {
     if (arguments.length === 1 && typeof(obj) === "object") {
         return obj.id;
@@ -171,13 +170,6 @@ function getWatchedShows(obj) {
     }
     console.log("More than 1 argument or argument non object");
 }
-
-function getUserObjWithID(id) {
-    for (let i = 0; i < users_info.length; i++) {
-        if (getID(users_info[i]) === id)
-            return users_info[i];
-    }
-}
 function removeFavMovie(obj, id) {
     if(arguments.length === 2 && typeof(obj) === "object" && typeof(id) === "number") {
         obj.fav_movies.splice(obj.fav_movies.indexOf(id), 1);
@@ -228,6 +220,14 @@ function removeWatchedShow(obj, id) {
     }
 }
 
+
+function getUserObjWithID(id) {
+    for (let i = 0; i < users_info.length; i++) {
+        if (getID(users_info[i]) === id)
+            return users_info[i];
+    }
+}
+
 function getUserObj() {
     if (localStorage.getItem("login_info") !== null) {
         return JSON.parse(localStorage.getItem("login_info"));
@@ -254,6 +254,10 @@ function updateUserObj(new_user_info) {
     location.reload();
 }
 
+function borderRed(input) {
+    input.style.borderColor = "red";
+}
+
 const email_regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 if (localStorage.getItem("users_info") === null) {
@@ -263,36 +267,40 @@ if (localStorage.getItem("users_info") === null) {
     setUsername(user1, "Admin");
     setPassword(user1, "admin");
     setCreationDate(user1);
-    user1.fav_movies = [1, 2];
-    user1.watched_movies = [4, 5];
-    user1.toWatch_movies = [3, 9];
-    user1.toWatch_shows = [6, 7];
+    addFavMovie(user1, 1);
+    addFavMovie(user1, 2);
+    addWatchedMovie(user1, 4);
+    addWatchedMovie(user1, 5);
+    addToWatchMovie(user1, 3);
+    addToWatchMovie(user1, 9);
+    addToWatchShow(user1, 6);
+    addToWatchShow(user1, 7);
+
     const user2 = Object.assign({}, user_obj);
     setUserID(user2 , 1);
     setEmail(user2, "normal_user@hotmail.com");
     setUsername(user2, "Normal_User");
     setPassword(user2, "normal");
     setCreationDate(user2);
-    user2.fav_movies = [3, 2, 10];
-    user2.watching_shows = [7, 8];
-    user2.watched_movies = [4, 5];
-    user2.toWatch_movies = [3, 9];
-    user2.toWatch_shows = [10, 9];
+    addFavMovie(user2, 3);
+    addFavMovie(user2, 2);
+    addWatchingShow(user2, 7);
+    addWatchingShow(user2, 8);
+    addWatchedMovie(user2, 4);
+    addWatchedMovie(user2, 5);
+    addToWatchMovie(user2, 1);
+    addToWatchMovie(user2, 10);
+    addToWatchShow(user2, 6);
+    addToWatchShow(user2, 7);
+    addToWatchShow(user2, 10);
     var users_info = [user1, user2];
     localStorage.setItem("users_info", JSON.stringify(users_info));
 } else {
     var users_info = JSON.parse(localStorage.getItem("users_info"));
 }
 
-console.log("Current users: ");
-console.log(users_info);
-
-console.log(JSON.parse(localStorage.getItem("login_info")));
-console.log(JSON.parse(sessionStorage.getItem("login_info")));
-//localStorage.removeItem("login_info");
-//sessionStorage.removeItem("login_info");
-
-// Functions
-function borderRed(input) {
-    input.style.borderColor = "red";
-}
+// To debug
+// console.log("Current users: ");
+// console.log(users_info);
+// console.log(JSON.parse(localStorage.getItem("login_info")));
+// console.log(JSON.parse(sessionStorage.getItem("login_info")));

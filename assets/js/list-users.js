@@ -1,10 +1,3 @@
-window.onload = function() {
-    basicSetup();
-    setActive("users_ref");
-    showAllUsers();
-    document.getElementById("search-name").addEventListener("keyup", showAllUsers);
-}
-
 function showAllUsers() {
     let name = document.getElementById("search-name").value.toLowerCase();
     let user_list = document.getElementById("user_list");
@@ -38,4 +31,11 @@ function showThisUser(list, user, id) {
 
 function showNothing(div) {
     div.innerHTML = "<div class='needToFollow'>You don't follow anyone... maybe follow some users?</div>";
+}
+
+window.onload = function() {
+    basicSetup();
+    setActive("users_ref");
+    showAllUsers();
+    document.getElementById("search-name").addEventListener("keyup", showAllUsers);
 }

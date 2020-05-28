@@ -1,24 +1,6 @@
 let userToList = false;
 const max = 5;
 
-window.onload = function() {
-    basicSetup();
-
-    let user_id = new URLSearchParams(window.location.search).get("id");
-    if (user_id !== null && user_id.length > 0 && user_id >= 0 && user_id < users_info.length) {
-        userToList = getUserObjWithID(Number(user_id));
-    } else if (user_id === null && getUserObj()) {
-        userToList = getUserObj();
-        setActive("profile_ref");
-    } else {
-        window.location.href = "/";
-    }
-    showThisUser(userToList);
-
-    let user_list = document.getElementById("user-list");
-    user_list.href="user-list.html?id=" + getID(userToList);
-}
-
 function showThisUser(user) {
     document.getElementById("username").innerHTML = getUsername(user);
     document.getElementById("pageTitle").innerHTML += getUsername(user);
@@ -135,4 +117,22 @@ function showNothing(content, button) {
             This user doesn't have any movies or TV Shows in this category.
         </div>
     `;
+}
+
+window.onload = function() {
+    basicSetup();
+
+    let user_id = new URLSearchParams(window.location.search).get("id");
+    if (user_id !== null && user_id.length > 0 && user_id >= 0 && user_id < users_info.length) {
+        userToList = getUserObjWithID(Number(user_id));
+    } else if (user_id === null && getUserObj()) {
+        userToList = getUserObj();
+        setActive("profile_ref");
+    } else {
+        window.location.href = "/";
+    }
+    showThisUser(userToList);
+
+    let user_list = document.getElementById("user-list");
+    user_list.href="user-list.html?id=" + getID(userToList);
 }

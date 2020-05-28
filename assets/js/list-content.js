@@ -2,6 +2,7 @@ let target;
 let mediatype;
 let list_element;
 let allgenres = [];
+let idarray = [];
 
 function generateCard(id) {
     if (mediatype === "m") {
@@ -25,21 +26,22 @@ function generateCard(id) {
 }
 
 function renderList() {
-    for (const [i, v] of Object.entries(target)) {
-        for (genre of v.genres) {
-            if (!(allgenres.includes(genre))) {
-                allgenres.push(genre);
-            }
+    let sorttype = document.getElementById("order_type").value
+    idarray = [];
+    if (sorttype === "all") {
+        for (i in target) {
+            idarray.push(i)
         }
+    } else if (sorttype === "new") {
+        idarray = getIDsByRecentDateOf(target);
+    } else {
+        idarray = getIDsByRateOf(target);
+    }
+    list_element.innerHTML = "";
+    for (i of idarray) {
         generateCard(i);
     }
-    allgenres = allgenres.sort();
-    for (genre of allgenres) {
-        option = document.createElement("option");
-        option.value = genre;
-        option.innerHTML = genre;
-        document.getElementById("search_genre").add(option);
-    }
+    renderFilteredList();
 }
 
 function renderFilteredList() {
@@ -47,14 +49,14 @@ function renderFilteredList() {
     let genrefilter = document.getElementById("search_genre").value;
     let excluded = [];
     if (namefilter !== "") {
-        for (const [i, v] of Object.entries(target)) {
-            if (!(v.name.toLowerCase().includes(namefilter))) {
+        for (i of idarray) {
+            if (!(target[i].name.toLowerCase().includes(namefilter))) {
                 excluded.push(i);
             }
         }
     }
     if (genrefilter !== "all") {
-        for (const [i, v] of Object.entries(target)) {
+        for (i of idarray) {
             if (excluded.includes(i)) {
                 continue;
             }
@@ -63,7 +65,7 @@ function renderFilteredList() {
             }
         }
     }
-    for (const [i, v] of Object.entries(target)) {
+    for (i of idarray) {
        if (excluded.includes(i)) {
            document.getElementById(`li${i}`).style.display = "none";
        } else {
@@ -95,7 +97,22 @@ window.onload = function() {
         window.location.href = "/";
         return;
     }
+    for (let [i, v] of Object.entries(target)) {
+        for (genre of v.genres) {
+            if (!(allgenres.includes(genre))) {
+                allgenres.push(genre);
+            }
+        }
+    }
+    allgenres = allgenres.sort();
+    for (genre of allgenres) {
+        option = document.createElement("option");
+        option.value = genre;
+        option.innerHTML = genre;
+        document.getElementById("search_genre").add(option);
+    }
     renderList();
     document.getElementById("search_name").addEventListener("keyup", renderFilteredList);
     document.getElementById("search_genre").addEventListener("change", renderFilteredList);
+    document.getElementById("order_type").addEventListener("change", renderList);
 }

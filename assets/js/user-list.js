@@ -89,11 +89,7 @@ function getHTMLOf(obj, id, ref, type) {
 }
 
 window.onload = function() {
-    setNavbar();
-    setMobileNavbar();
-    setFooter();
-    setLogoutBtn();
-    setBackBtn();
+    basicSetup();
 
     let url = new URL(window.location.href);
     let user_id = url.searchParams.get("id");

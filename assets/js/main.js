@@ -137,10 +137,10 @@ function setFooter() {
         </div>
         <div class="footer-credits flex-line flex-spaced">
             <div class="footer-credits-txt">
-                Website created by: Kaentos & Thekings2468
+                Website created by: André Salvado & Miguel Magueijo
             </div>
             <div class="footer-credits-txt">
-                <a href="/">
+                <a href="https://github.com/Kaentos/dw-theclassic" target="_blank">
                     <img src="assets/img/GitHub/GitHub-Mark-32px.png" alt="logo" width="24px">
                 </a>
             </div>

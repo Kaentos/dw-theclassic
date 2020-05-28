@@ -1,3 +1,4 @@
 window.onload = function() {
-    basicSetup();     
+    basicSetup();
+    setActive("contact_ref");
 }

@@ -1,9 +1,9 @@
 .ccontainer {
+    box-sizing: border-box;
     margin: auto;
     max-width: 1115px;
-    box-sizing: border-box;
+    min-height: 600px;
     padding: 5px 5px 50px 5px;
-    min-height: 500px;
 }
 .ccontainer > hr {
     border: 3px solid black;
@@ -11,23 +11,23 @@
 }
 
 .ms_ss_panel {
-    width: 201px;
-    margin: 0px 0px 20px 15px;
     border: 1px solid black;
     border-radius: 2px;
     box-shadow: none;
     color: black;
+    margin: 0px 0px 20px 15px;
     text-decoration: none;
+    width: 201px;
 }
 
 .ms_ss_panel > div {
     font-size: 1.1rem;
-    text-align: center;
     font-weight: bold;
+    margin: 1px 5px;
     overflow: hidden;
+    text-align: center;
     text-overflow: ellipsis;
     white-space: nowrap;
-    margin: 1px 5px;
 }
 
 .ms_ss_img {
@@ -36,8 +36,8 @@
 
 
 .field-header {
-    margin: 0px 15px;
     color: black;
+    margin: 0px 15px;
 }
 
 .field-title {
@@ -48,20 +48,22 @@
     font-weight: bold;
     margin-bottom: 5px;
 }
+
 .list-title > div {
-    padding: 5px 0px;
     font-size: 1.6rem;
+    padding: 5px 0px;
 }
+
 .list-title > a {
+    background-color: #ed3124;
     border: 1px solid black;
+    border-radius: 5px;
     box-shadow: none;
     color: white;
+    font-size: 1.4rem;
+    padding: 5px 10px;
     text-decoration: none;
     transition: 0.5s;
-    padding: 5px 10px;
-    border-radius: 5px;
-    background-color: #ed3124;
-    font-size: 1.4rem;
 }
 
 .user-info {
@@ -71,71 +73,72 @@
 .username {
     font-size: 2rem;
     font-weight: bold;
+    margin-left: 10px;
     max-width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    margin-left: 10px;
 }
 
 .user-details {
-    width: 100%;
     position: relative;
+    width: 100%;
 }
 
 .detail {
+    font-size: 1.3rem;
     margin-left: 10px;
     margin-top: 5px;
-    font-size: 1.3rem;
+    
 }
 
 .profileminilist {
     display: flex;
+    flex-wrap: wrap;
     position: relative;
     width: 100%;
-    flex-wrap: wrap;
 }
 
 .user-img {
-    max-width: 250px;
     max-height: 250px;
+    max-width: 250px;
 }
 
 .no-content {
-    margin-left: 15px;
     font-size: 1.3rem;
+    margin-left: 15px;
 }
 
 .bottom-div {
-    position: absolute;
     bottom: 0;
+    position: absolute;
     width: 100%;
 }
 
 .list-btn {
-    cursor: pointer;
-    border: 1px solid black;
-    text-decoration: none;
-    color:white;
     background-color: #ed3124;
-    margin-left: 10px;
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 1.3rem;
+    border: 1px solid black;
     border-radius: 2px;
+    color:white;
+    cursor: pointer;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-left: 10px;
     padding: 7px 10px;
+    text-decoration: none;
+    text-decoration: none;
     transition: 0.5s;
 }
 
 .back-btn {
-    cursor: pointer;
-    border: 1px solid black;
-    font-size: 1.3rem;
-    padding: 5px 10px;
-    border-radius: 2px;
-    font-weight: bold;
     background-color: white;
+    border: 1px solid black;
+    border-radius: 2px;
     color: black;
+    cursor: pointer;
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 5px 10px;
     transition: 0.5s;
 }
 
@@ -147,9 +150,10 @@
 @media only screen and (max-width: 675px) {
 
     .profileminilist {
+        align-items: center;
         justify-content: center;
         text-align: center;
-        align-items: center;
+        
     }
     .bottom-div {
         position: unset;

@@ -117,13 +117,8 @@ function renderMovie() {
 }
 
 window.onload = function (){
-    setNavbar();
-    setMobileNavbar();
-    setFooter();
+    basicSetup();
     renderMovie();
-    setLogoutBtn();
-    setBackBtn();
-
     
     if (isLogged()) {
         showActionsBtns();

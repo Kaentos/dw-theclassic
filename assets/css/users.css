@@ -1,32 +1,32 @@
 .content {
-    max-width: 1290px;
     margin: auto;
     margin-bottom: 50px;
+    max-width: 1290px;
 }
 
 .content-title {
-    text-align: center;
     margin: auto;
+    text-align: center;
 }
 .content hr {
     border: 3px solid black
 }
 
 .content-content {
-    padding-top: 20px;
+    align-content: flex-start;
     border: 1px solid black;
     display: flex;
     flex-wrap: wrap;
     margin: auto;
     min-height: 490px;
-    align-content: flex-start;
+    padding-top: 20px;
 }
 
 .user-details {
-    margin-top: 5px;
-    margin-left: 5px;
-    max-width: 200px;
     font-size: 1.1rem;
+    margin-left: 5px;
+    margin-top: 5px;
+    max-width: 200px;
 }
 
 .other-details {
@@ -34,11 +34,11 @@
 }
 
 .username {
+    max-width: 190px;
+    font-size: 1.3rem;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    max-width: 190px;
-    font-size: 1.3rem;
 }
 
 .f_by_me {
@@ -47,49 +47,60 @@
 
 .f_by_me > span {
     background-color: #128ca0;
-    color: white;
-    padding: 7px;
     border-radius: 5px;
+    color: white;
     font-size: 1rem !important;
+    padding: 7px;
 }
 
 .ms_ss_panel {
-    color: black;
-    text-decoration: none;
-    width: 300px;
-    max-height: 100px;
-    margin: 0px 10px 20px 10px;
     border: 1px solid black;
     box-shadow: none;
+    color: black;
+    margin: 0px 10px 20px 10px;
+    max-height: 100px;
+    text-decoration: none;
+    width: 300px;
 }
 
 .ms_ss_img {
-    min-width: 100px;
-    min-height: 100px;
     height: 100px;
-    width: 100px;
     max-height: 100px;
     max-width: 100px;
+    min-height: 100px;
+    min-width: 100px;
+    width: 100px;
 }
 
 .content-buttons {
-    padding: 10px 25px;
     border: 1px solid black;
+    padding: 10px 25px;
 }
 
 .content-buttons button {
-    font-size: 1rem;
-    padding: 5px;
     border: 1px solid black;
     border-radius: 5px;
-    font-weight: bold;
     cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 5px 40px;
 }
 
-.content-back-btn {
+.back-btn {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 2px;
     color: black;
-    background-color: whitesmoke;
-    font-size: 1.1rem !important;
+    cursor: pointer;
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: 0.5s;
+}
+
+.back-btn:hover {
+    background-color: black;
+    color: white;
 }
 
 .content-p-btn {
@@ -107,9 +118,6 @@
     border-radius: 5px;
 }
 
-.search-input {
-    font-size: 1.3rem;
-}
 .search-input > input {
     font-size: 1.2rem;
 }
@@ -121,32 +129,14 @@
     margin: 10px;
 }
 
-.search-btn {
-    cursor: pointer;
-    border-radius: 5px;
-    border: 1px solid black;
-    margin: 10px 0px;
-    padding: 5px;
-}
-
 .search-followers {
+    font-size: 1.3rem;
     margin: 13px 10px;
-    font-size: 1.3rem;
-}
-
-.follow_check {
-    height: 20px;
-    width: 20px;
-    vertical-align: middle;
-}
-.needToFollow {
-    margin: 0px 10px;
-    font-size: 1.3rem;
 }
 
 @media only screen and (max-width: 1292px){
     .content-content {
-        justify-content: center;
         align-content: flex-start;
+        justify-content: center;
     }
 }

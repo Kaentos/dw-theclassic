@@ -29,8 +29,8 @@ function renderList() {
     let sorttype = document.getElementById("order_type").value
     idarray = [];
     if (sorttype === "all") {
-        for (i in target) {
-            idarray.push(i)
+        for (let i in target) {
+            idarray.push(i);
         }
     } else if (sorttype === "new") {
         idarray = getIDsByRecentDateOf(target);
@@ -38,7 +38,7 @@ function renderList() {
         idarray = getIDsByRateOf(target);
     }
     list_element.innerHTML = "";
-    for (i of idarray) {
+    for (let i of idarray) {
         generateCard(i);
     }
     renderFilteredList();
@@ -49,23 +49,23 @@ function renderFilteredList() {
     let genrefilter = document.getElementById("search_genre").value;
     let excluded = [];
     if (namefilter !== "") {
-        for (i of idarray) {
+        for (let i of idarray) {
             if (!(target[i].name.toLowerCase().includes(namefilter))) {
                 excluded.push(i);
             }
         }
     }
     if (genrefilter !== "all") {
-        for (i of idarray) {
+        for (let i of idarray) {
             if (excluded.includes(i)) {
                 continue;
             }
             if (!(target[i].genres.includes(genrefilter))) {
-                excluded.push(i)
+                excluded.push(i);
             }
         }
     }
-    for (i of idarray) {
+    for (let i of idarray) {
        if (excluded.includes(i)) {
            document.getElementById(`li${i}`).style.display = "none";
        } else {
@@ -98,14 +98,14 @@ window.onload = function() {
         return;
     }
     for (let [i, v] of Object.entries(target)) {
-        for (genre of v.genres) {
+        for (let genre of v.genres) {
             if (!(allgenres.includes(genre))) {
                 allgenres.push(genre);
             }
         }
     }
     allgenres = allgenres.sort();
-    for (genre of allgenres) {
+    for (let genre of allgenres) {
         option = document.createElement("option");
         option.value = genre;
         option.innerHTML = genre;

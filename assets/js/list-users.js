@@ -13,7 +13,7 @@ function showAllUsers() {
 function showThisUser(list, user, id) {
     list.innerHTML += `
         <a href="profile.html?id=${id}" class="flex-line ms_ss_panel">
-            <img class="ms_ss_img" src="assets/img/Users/1.jpg">
+            <img class="ms_ss_img" src="assets/img/Users/${getID(user)}.jpg">
             <div class="user-details flex-col">
                 <div class='username'>
                     ${getUsername(user)}
@@ -27,10 +27,6 @@ function showThisUser(list, user, id) {
             </div>
         </a>
     `;
-}
-
-function showNothing(div) {
-    div.innerHTML = "<div class='needToFollow'>You don't follow anyone... maybe follow some users?</div>";
 }
 
 window.onload = function() {

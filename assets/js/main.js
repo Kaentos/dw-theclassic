@@ -53,7 +53,7 @@ function setNavbar() {
     if (isLogged()) {
         document.getElementById("navbar-content").innerHTML = `
             <a class="navbar-img-a" href="#">
-                <img class="navbar-img navbar-userLogo" src="assets/img/Users/1.jpg" alt="logo">
+                <img class="navbar-img navbar-userLogo" src="assets/img/Users/${getID(getUserObj())}.jpg" alt="logo">
             </a>
             <a id="profile_ref" class="navbar-links" href="profile.html">Profile</a>
             <a id="list_ref" class="navbar-links" href="user-list.html">My List</a>

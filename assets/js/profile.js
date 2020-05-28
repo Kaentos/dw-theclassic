@@ -2,6 +2,7 @@ let userToList = false;
 const max = 5;
 
 function showThisUser(user) {
+    document.getElementById("userIMG").src="assets/img/Users/" + getID(user) + ".jpg ";
     document.getElementById("username").innerHTML = getUsername(user);
     document.getElementById("pageTitle").innerHTML += getUsername(user);
     document.getElementById("total_fav_movies").innerHTML = getFavMovies(user).length;

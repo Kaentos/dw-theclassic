@@ -11,6 +11,26 @@ body {
     margin: 0px;
 }
 
+/* IDs */
+#opennav {
+    border: 1px solid grey;
+    border-radius: 5px;
+    display: none;
+    height: 50px;
+    left: 0;
+    margin-top: 5px;
+    margin-left: 10px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 50px;
+}
+#opennav > img {
+    height: 32px;
+    padding: 9px 0px;
+    width: 32px;
+}
+ 
 /* Classes */
 .margin-auto {
     margin: auto;
@@ -37,14 +57,13 @@ body {
 .vis-hidden {
     visibility: hidden;
 }
-
 .display-none {
     display: none;
 }
-
 .text-center {
     text-align: center;
 }
+
 .navbar {
     background-color: red;
     height: 4rem;
@@ -186,26 +205,6 @@ footer .flex-line:first-child {
     color: black;
     font-weight: bolder;
     text-decoration: none;
-}
-
-#opennav {
-    border: 1px solid grey;
-    border-radius: 5px;
-    display: none;
-    height: 50px;
-    left: 0;
-    margin-top: 5px;
-    margin-left: 10px;
-    position: absolute;
-    text-align: center;
-    top: 0;
-    width: 50px;
-}
-
-#opennav > img {
-    height: 32px;
-    padding: 9px 0px;
-    width: 32px;
 }
 
 @media only screen and (max-width: 810px) {

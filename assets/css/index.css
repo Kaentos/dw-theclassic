@@ -66,6 +66,10 @@
     overflow: hidden;
 }
 
+.carousel > div {
+    padding-right: 15px;
+}
+
 .ms_ss_panel {
     border: 1px solid black;
     border-radius: 2px;
@@ -144,8 +148,4 @@
     transition: 0.5s;
     text-align: center;
     text-decoration: none;
-}
-
-.carousel > div {
-    padding-right: 15px;
 }

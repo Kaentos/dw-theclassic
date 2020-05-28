@@ -1,3 +1,22 @@
+/* Por ID */
+#info-picture {
+    border: 1px solid silver;
+    border-radius: 2px;
+    max-width: 250px;
+}
+#info-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-left: 5px;
+}
+#yt-embeddiv {
+    height: 720px;
+    margin: 15px;
+    max-width: 1280px;
+}
+
+
+/* Classes */
 .ccontainer {
     box-sizing: border-box;
     margin: auto;
@@ -7,12 +26,6 @@
 .ccontainer > hr {
     border: 3px solid black;
     border-radius: 5px;
-}
-
-#info-picture {
-    border: 1px solid silver;
-    border-radius: 2px;
-    max-width: 250px;
 }
 
 .info-details {
@@ -25,18 +38,6 @@
     font-size: 1.3rem;
     margin-left: 5px;
     margin-top: 10px;
-}
-
-#info-title {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-left: 5px;
-}
-
-#yt-embeddiv {
-    height: 720px;
-    margin: 15px;
-    max-width: 1280px;
 }
 
 .info-panel {
@@ -69,6 +70,7 @@
     position: absolute;
     right: 0;
 }
+
 .back-btn {
     background-color: white;
     border: 1px solid black;

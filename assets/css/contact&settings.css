@@ -22,9 +22,11 @@
 .c-content > h2 {
     margin: 20px 0px 0px 0px;
 }
+
 .submit-btn-div, .info-div, .input-group {
     padding-left: 50px;
 }
+
 .info-div {
     font-size: 1.4rem;
 }

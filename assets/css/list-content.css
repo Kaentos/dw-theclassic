@@ -21,6 +21,31 @@
     padding-top: 20px;
 }
 
+.content-buttons {
+    border: 1px solid black;
+    padding: 10px 25px;
+}
+
+.content-buttons button {
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 5px 40px;
+}
+
+.content-p-btn {
+    color: white;
+    background-color: #128ca0;
+}
+
+.content-n-btn {
+    color: white;
+    background-color: #ed3124;
+    
+}
+
 .ms_ss_panel {
     border: 1px solid black;
     box-shadow: none;
@@ -44,20 +69,6 @@
     white-space: nowrap;
 }
 
-.content-buttons {
-    border: 1px solid black;
-    padding: 10px 25px;
-}
-
-.content-buttons button {
-    border: 1px solid black;
-    border-radius: 5px;
-    font-size: 1.5rem;
-    font-weight: bold;
-    cursor: pointer;
-    padding: 5px 40px;
-}
-
 .back-btn {
     background-color: white;
     border: 1px solid black;
@@ -73,17 +84,6 @@
 .back-btn:hover {
     color: white;
     background-color: black;
-}
-
-.content-p-btn {
-    color: white;
-    background-color: #128ca0;
-}
-
-.content-n-btn {
-    color: white;
-    background-color: #ed3124;
-    
 }
 
 .username-ref {

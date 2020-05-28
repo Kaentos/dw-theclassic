@@ -107,6 +107,7 @@ window.onload = function() {
         }
     } else if (user_id === null && getUserObj()) {
         userToList = getUserObj();
+        setActive("list_ref");
     } else {
         window.location.href = "/";
     }

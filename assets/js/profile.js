@@ -13,6 +13,7 @@ window.onload = function() {
         userToList = getUserObjWithID(Number(user_id));
     } else if (user_id === null && getUserObj()) {
         userToList = getUserObj();
+        setActive("profile_ref");
     } else {
         window.location.href = "/";
     }

@@ -1,10 +1,24 @@
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto/Roboto-Regular.ttf);
+}
+
+body, input, select, option, textarea {
+    font-family: Roboto, sans-serif;
+}
+
 /* Marcas */
 body {
     margin: 0px;
-    font-family: 'Roboto', sans-serif;
 }
 
 /* Classes */
+.margin-auto {
+    margin: auto;
+}
+.half-width {
+    width: 50%;
+}
 
 .flex-line {
     display: flex;
@@ -207,8 +221,7 @@ footer .flex-line:first-child {
     .navbar-linksdiv {
         flex-direction: initial;
     }
-    /* TODO: this causes an issue  where some buttons go 100% width but if removed, logo will move when opening navbar*/
-
+    
     .flex-col {
         text-align: center;
     }

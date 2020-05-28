@@ -1,5 +1,5 @@
 function setLogoutBtn() {
-    if (sessionStorage.getItem("login_info") !== null || localStorage.getItem("login_info") !== null) {
+    if (isLogged()) {
         let btn = document.getElementById("logout_btn")
         if (sessionStorage.getItem("login_info") !== null) {
             btn.addEventListener("click", function() {sessionStorage.removeItem("login_info"); location.reload()})
@@ -55,7 +55,7 @@ function setNavbar() {
             <a class="navbar-img-a" href="#">
                 <img class="navbar-img navbar-userLogo" src="assets/img/Users/1.jpg" alt="logo">
             </a>
-            <a id="list_ref" class="navbar-links" href="profile.html">Profile</a>
+            <a id="profile_ref" class="navbar-links" href="profile.html">Profile</a>
             <a id="list_ref" class="navbar-links" href="user-list.html">My List</a>
             <a id="settings_ref" class="navbar-links" href="settings.html">Settings</a>
             <a id="logout_btn" class="navbar-links logout-link" href="#">Logout</a>
@@ -155,7 +155,7 @@ function setFooter() {
         </div>
     `;
 
-    if (localStorage.getItem("login_info") !== null || sessionStorage.getItem("login_info") !== null) {
+    if (isLogged()) {
         document.getElementById("footer-links").innerHTML += `
             <li>
                 <a href="#">Profile</a>
@@ -191,4 +191,18 @@ function ifLoggedGoIndex() {
     if (isLogged()) {
         location.href="/";
     }
+}
+
+function ifNotLoggedGoIndex() {
+    if (!isLogged()) {
+        location.href="/";
+    }
+}
+
+function basicSetup() {
+    setNavbar();
+    setMobileNavbar();
+    setFooter();
+    setLogoutBtn();
+    setBackBtn();
 }

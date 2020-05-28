@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MPL | XXX - Movie Information</title>
+    <title id="pageTitle">MPL | </title>
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" href="assets/css/info.css">
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/lr.js"></script>
     <script src="assets/js/data.js"></script>
     <script src="assets/js/render-movie.js"></script>
 </head>
@@ -18,32 +19,44 @@
 
     <div class="ccontainer">
         <div class="flex-line info-panel">
-            <div class="flex-col">
-                <img id="info-picture" src="" alt="Movie Poster">
-            </div>
+            <img id="info-picture" src="#" alt="Movie Poster">
             <div class="flex-col info-details">
-                <div class="flex-line">
-                    <div class="info-detail" id="info-title">Movie Name</div>
+                <div id="info-title">
+                    Movie Name
                 </div>
-                <div class="flex-line flex-splithalf">
+                <div class="flex-line info-detail">
                     <div class="flex-col">
-                        <div class="info-detail" id="info-rating">Score Rating: XX/10</div>
-                        <div class="info-detail" id="info-genres">Genres: </div>
-                        <div class="info-detail" id="info-premiere">Premiere Date: dd/mm/yyyy</div>
-                        <div class="info-detail" id="info-directors">Directors: </div>
+                        <div id="info-rating">
+                            <b>Score Rating:</b>
+                        </div>
+                        <div id="info-premiere">
+                            <b>Premiere Date:</b>
+                        </div>
+                        <div id="info-directors">
+                            <b>Directors:</b>
+                        </div>
+                        <div id="info-genres">
+                            <b>Genres:</b>
+                        </div>
                     </div>
                     <div class="flex-col">
-                        <div class="info-detail" id="info-yourrating">Your rating: XX/10</div>
-                        <div class="info-detail" id="info-agerating">Age rating: XX(+)</div>
-                        <div class="info-detail" id="info-duration">Duration: XXX minutes</div>
-                        <div class="info-detail" id="info-language">Language: English</div>
+                        <div id="info-agerating">
+                            <b>Age rating:</b>
+                        </div>
+                        <div id="info-duration">
+                            <b>Duration:</b>
+                        </div>
+                        <div id="info-language">
+                            <b>Language:</b>
+                        </div>
                     </div>
                 </div>
-                <div class="flex-line">
-                    <button class="action-btns" title="Planning to watch"><img src="assets/img/towatch.png" alt="To Watch"></button>
-                    <button class="action-btns" title="Watching"><img src="assets/img/watching.png" alt="Watching"></button>
-                    <button class="action-btns" title="Watched"><img src="assets/img/watched.png" alt="Watched"></button>
-                    <button class="action-btns" title="Mark as Favorite"><img src="assets/img/favorite.png" alt="Favorite"></button>
+                <div id="action-btn-div">
+                </div>
+                <div class="bottom-btn-div">
+                    <button id="back_btn" class="back-btn">
+                        Go back
+                    </button>
                 </div>
             </div>
         </div>

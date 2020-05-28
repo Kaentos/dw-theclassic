@@ -1,13 +1,19 @@
-function getUserObj() {
-    if (localStorage.getItem("login_info") !== null) {
-        return JSON.parse(localStorage.getItem("login_info")).user;
-    } else if(sessionStorage.getItem("login_info") !== null) {
-        return JSON.parse(sessionStorage.getItem("login_info")).user;
-    } else {
-        return false;
+function setLogoutBtn() {
+    if (sessionStorage.getItem("login_info") !== null || localStorage.getItem("login_info") !== null) {
+        let btn = document.getElementById("logout_btn")
+        if (sessionStorage.getItem("login_info") !== null) {
+            btn.addEventListener("click", function() {sessionStorage.removeItem("login_info"); location.reload()})
+        } else if (localStorage.getItem("login_info") !== null) {
+            btn.addEventListener("click", function() {localStorage.removeItem("login_info"); location.reload();})
+        } else {
+            return;
+        }
     }
 }
 
+function setActive(id_name) {
+    document.getElementById(id_name).classList.add("active");
+}
 
 function setBackBtn() {
     let back_btn = document.getElementById('back_btn');
@@ -34,9 +40,7 @@ function setNavbar() {
         <div class="flex-line navbar-linksdiv">
             <a href="#" id="opennav"><img src="assets/img/bars.png" alt="Open Navigation Menu"></a>
             <a class="navbar-img-a" href="/">
-                <picture>
-                    <img class="navbar-img" src="assets/img/logo.png" alt="logo">
-                </picture>
+                <img class="navbar-img" src="assets/img/logo.png" alt="logo">
             </a>
             <a id="home_ref" class="navbar-links" href="/">Home</a>
             <a id="movies_ref" class="navbar-links" href="list-content.html?t=m">Movies</a>
@@ -46,15 +50,15 @@ function setNavbar() {
         </div>
         <div id="navbar-content" class="flex-line navbar-linksdiv"></div>
     </nav>`;
-    if (localStorage.getItem("login_info") !== null || sessionStorage.getItem("login_info") !== null) {
+    if (isLogged()) {
         document.getElementById("navbar-content").innerHTML = `
             <a class="navbar-img-a" href="#">
-                <img class="navbar-img navbar-userLogo" src="assets/img/Users/2.jpg" alt="logo">
+                <img class="navbar-img navbar-userLogo" src="assets/img/Users/1.jpg" alt="logo">
             </a>
             <a id="list_ref" class="navbar-links" href="profile.html">Profile</a>
-            <a id="list_ref" class="navbar-links" href="#">My List</a>
-            <a id="settings_ref" class="navbar-links" href="#">Settings</a>
-            <a id="logout-btn" class="navbar-links logout-link" href="#">Logout</a>
+            <a id="list_ref" class="navbar-links" href="user-list.html">My List</a>
+            <a id="settings_ref" class="navbar-links" href="settings.html">Settings</a>
+            <a id="logout_btn" class="navbar-links logout-link" href="#">Logout</a>
         `;
         return;
     }
@@ -126,7 +130,7 @@ function setFooter() {
                         <a href="https://www.themoviedb.org/" target="_blank">Posters</a>
                     </li>
                     <li>
-                        <a href="https://www.flaticon.com">Icons</a>
+                        <a href="https://www.flaticon.com" target="_blank">Icons</a>
                     </li>
                 </ul>
             </div>
@@ -137,9 +141,7 @@ function setFooter() {
             </div>
             <div class="footer-credits-txt">
                 <a href="/">
-                    <picture>
-                        <img src="assets/img/GitHub/GitHub-Mark-32px.png" alt="logo" width="24px">
-                    </picture>
+                    <img src="assets/img/GitHub/GitHub-Mark-32px.png" alt="logo" width="24px">
                 </a>
             </div>
             <div class="footer-credits-txt">
@@ -148,7 +150,7 @@ function setFooter() {
                     Freepik
                 </a>
                 from
-                <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+                <a href="https://www.flaticon.com/" target="_blank" title="Flaticon">www.flaticon.com</a>
             </div>
         </div>
     `;
@@ -176,4 +178,17 @@ function setFooter() {
             <a href="/register.html">Register</a>
         </li>
     `;
+}
+
+function isLogged() {
+    if (localStorage.getItem("login_info") !== null || sessionStorage.getItem("login_info") !== null) {
+        return true;
+    }
+    return false;
+}
+
+function ifLoggedGoIndex() {
+    if (isLogged()) {
+        location.href="/";
+    }
 }

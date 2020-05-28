@@ -11,24 +11,26 @@
 
 #info-picture {
     max-width: 250px;
+    border: 1px solid silver;
+    border-radius: 2px;
 }
 
 .info-details {
     margin-left: 10px;
     width: 100%;
+    position: relative;
 }
 
 .info-detail {
-    padding: 5px;
+    margin-left: 5px;
+    font-size: 1.3rem;
+    margin-top: 10px;
 }
 
 #info-title {
+    margin-left: 5px;
     font-size: 2rem;
     font-weight: bold;
-}
-
-.flex-splithalf > .flex-col {
-    width: 50%;
 }
 
 #yt-embeddiv {
@@ -42,9 +44,10 @@
 }
 
 .action-btns {
+    cursor: pointer;
     border-radius: 5px;
     border: 1px solid black;
-    margin: 0px 2px;
+    margin: 10px 2px;
 }
 
 .action-btns > img {
@@ -52,11 +55,43 @@
     height: 32px;
 }
 
+.season-select {
+    min-width: 75px;
+    font-size: 1.3rem;
+}
+
 .action-btns.active {
-    background-color: darkgray;
+    background-color: #ed3124;
+}
+
+.bottom-btn-div {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.back-btn {
+    cursor: pointer;
+    border: 1px solid black;
+    font-size: 1.3rem;
+    padding: 5px 10px;
+    border-radius: 2px;
+    font-weight: bold;
+    background-color: white;
+    color: black;
+    transition: 0.5s;
+}
+
+.back-btn:hover {
+    background-color: black;
+    color: white;
+    
 }
 
 @media only screen and (max-width: 675px) {
+    .bottom-btn-div {
+        position: unset;
+        margin-top: 25px;
+    }
     .info-details {
         margin: 0;
     }

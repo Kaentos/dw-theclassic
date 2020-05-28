@@ -13,11 +13,7 @@ function register () {
     setCreationDate(new_user);
     users_info.push(new_user);
     localStorage.setItem("users_info", JSON.stringify(users_info));
-    let login_info = {
-        user: new_user,
-        loginDate: new Date().getTime()
-    };
-    sessionStorage.setItem("login_info", JSON.stringify(login_info));
+    sessionStorage.setItem("login_info", JSON.stringify(new_user));
     location.reload();
 }
 

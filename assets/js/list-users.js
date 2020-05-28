@@ -30,10 +30,10 @@ function showThisUser(list, user, id) {
                     ${getUsername(user)}
                 </div>
                 <div class="other-details">
-                    Total Favourites: ${getFavMovies(user).length + getFavSeries(user).length}
+                    Total Favorites: ${getFavMovies(user).length + getFavShows(user).length}
                 </div>
                 <div>
-                    Total Watched: ${getSeenMovies(user).length + getSeenSeries(user).length}
+                    Total Watched: ${getWatchedMovies(user).length + getWatchedShows(user).length}
                 </div>
             </div>
         </a>

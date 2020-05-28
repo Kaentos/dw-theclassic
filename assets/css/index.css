@@ -46,7 +46,7 @@
 }
 
 .carousel-panel {
-    max-width: 1107px;
+    max-width: 1104px;
     margin: auto;
 }
 
@@ -151,6 +151,6 @@
     text-decoration: none;
 }
 
-.carousel > div:last-child {
+.carousel > div {
     padding-right: 15px;
 }

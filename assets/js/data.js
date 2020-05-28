@@ -223,7 +223,7 @@ const shows = {
     10: {
         name: "Mr. Robot",
         score: 9,
-        genres: ["Crime", "Drama", "Triller"],
+        genres: ["Crime", "Drama", "Thriller"],
         premiere: 1570320000,
         directors: ["Sam Esmail"],
         age: "None",

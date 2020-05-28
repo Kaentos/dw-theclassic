@@ -1,12 +1,7 @@
 window.onload = function() {
     ifNotLoggedGoIndex();
-    
-    setNavbar();
-    setMobileNavbar();
-    setFooter();
-    setLogoutBtn();
-    setActive("settings_ref")
-    setBackBtn();
+    basicSetup();
+    setActive("settings_ref");
 
     let user = getUserObj();
     document.getElementById("current_email").innerHTML += getEmail(user);

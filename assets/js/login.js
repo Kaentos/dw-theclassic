@@ -32,17 +32,12 @@ function getUserByEmail(email) {
             }
         }
     }
-
     return false;
 }
 
 window.onload = function() {
     ifLoggedGoIndex();
-    
-    setNavbar();
-    setMobileNavbar();
+    basicSetup();
     document.getElementById("login_ref").classList.add("active");
-    setFooter();
-    setBackBtn();
     document.getElementById("login_btn").addEventListener("click", login);
 }

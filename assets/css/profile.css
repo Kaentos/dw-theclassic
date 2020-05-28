@@ -1,7 +1,8 @@
 .ccontainer {
+    box-sizing: border-box;
     margin: auto;
     max-width: 1115px;
-    box-sizing: border-box;
+    min-height: 600px;
     padding: 5px 5px 50px 5px;
 }
 .ccontainer > hr {
@@ -10,33 +11,37 @@
 }
 
 .ms_ss_panel {
-    width: 201px;
-    margin: 0px 0px 20px 15px;
-    border: 1px solid black;
     border-radius: 2px;
     box-shadow: none;
     color: black;
+    margin: 0px 0px 20px 15px;
     text-decoration: none;
+    width: 201px;
 }
 
-.ms_ss_panel > div {
+.ms_ss_desc {
+    background-color: #dedede;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.ms_ss_desc > div {
     font-size: 1.1rem;
-    text-align: center;
     font-weight: bold;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
     margin: 1px 5px;
+    text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .ms_ss_img {
     height: 300px;
 }
 
-
 .field-header {
-    margin: 0px 15px;
     color: black;
+    margin: 0px 15px;
 }
 
 .field-title {
@@ -47,25 +52,22 @@
     font-weight: bold;
     margin-bottom: 5px;
 }
+
 .list-title > div {
-    padding: 5px 0px;
     font-size: 1.6rem;
+    padding: 5px 0px;
 }
+
 .list-title > a {
+    background-color: #ed3124;
     border: 1px solid black;
+    border-radius: 5px;
     box-shadow: none;
     color: white;
+    font-size: 1.4rem;
+    padding: 5px 10px;
     text-decoration: none;
     transition: 0.5s;
-    padding: 5px;
-    border-radius: 5px;
-    background-color: red;
-    font-size: 1.4rem;
-    
-}
-.list-title > a:hover {
-    background-color: silver;
-    color: black;
 }
 
 .user-info {
@@ -75,79 +77,79 @@
 .username {
     font-size: 2rem;
     font-weight: bold;
+    margin-left: 10px;
     max-width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    margin-left: 10px;
-}
-
-.follow-btn {
-    font-size: 1.5rem;
-    font-weight: bold;
-    border-radius: 2px;
-    border: 1px solid black;
-    background-color: red;
-    color: white;
-}
-
-.back-btn, .list-btn {
-    cursor: pointer;
-    margin-top: 10px;
-    border: 1px solid black;
-    margin-left: 10px;
-    font-weight: bold;
-    padding: 7px;
-    text-decoration: none;
-    font-size: 1.3rem;
-    border-radius: 2px;
-    min-width: 100px;
-}
-
-.back-btn {
-    color: black;
-    background-color: silver;
-}
-
-.list-btn {
-    color: white;
-    background-color: red;
-    min-width: 100px;
 }
 
 .user-details {
+    position: relative;
     width: 100%;
 }
 
 .detail {
+    font-size: 1.3rem;
     margin-left: 10px;
     margin-top: 5px;
-    font-size: 1.3rem;
+    
 }
 
 .profileminilist {
     display: flex;
+    flex-wrap: wrap;
     position: relative;
     width: 100%;
-    flex-wrap: wrap;
 }
 
 .user-img {
-    max-width: 250px;
+    border: 1px solid silver;
+    border-radius: 2px;
     max-height: 250px;
+    max-width: 250px;
 }
 
 .no-content {
-    margin-left: 15px;
     font-size: 1.3rem;
+    margin-left: 15px;
 }
 
+.bottom-div {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.list-btn {
+    background-color: #ed3124;
+    border: 1px solid black;
+    border-radius: 2px;
+    color:white;
+    cursor: pointer;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-left: 10px;
+    padding: 7px 10px;
+    text-decoration: none;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.list-btn:hover, .list-title > a:hover {
+    background-color: black;
+    color: white;
+}
 
 @media only screen and (max-width: 675px) {
 
     .profileminilist {
+        align-items: center;
         justify-content: center;
         text-align: center;
-        align-items: center;
+        
+    }
+    .bottom-div {
+        position: unset;
     }
 }

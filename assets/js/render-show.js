@@ -142,13 +142,8 @@ function renderShow() {
 }
 
 window.onload = function () {
-    setNavbar();
-    setMobileNavbar();
-    setFooter();
+    basicSetup();
     renderShow();
-    setLogoutBtn();
-    setBackBtn();
-
     
     if (isLogged()) {
         showActionsBtns();

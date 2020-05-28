@@ -53,7 +53,7 @@ function setNavbar() {
     if (isLogged()) {
         document.getElementById("navbar-content").innerHTML = `
             <a class="navbar-img-a" href="#">
-                <img class="navbar-img navbar-userLogo" src="assets/img/Users/1.jpg" alt="logo">
+                <img class="navbar-img navbar-userLogo" src="assets/img/Users/${getID(getUserObj())}.jpg" alt="logo">
             </a>
             <a id="profile_ref" class="navbar-links" href="profile.html">Profile</a>
             <a id="list_ref" class="navbar-links" href="user-list.html">My List</a>
@@ -137,10 +137,10 @@ function setFooter() {
         </div>
         <div class="footer-credits flex-line flex-spaced">
             <div class="footer-credits-txt">
-                Website created by: Kaentos & Thekings2468
+                Website created by: André Salvado & Miguel Magueijo
             </div>
             <div class="footer-credits-txt">
-                <a href="/">
+                <a href="https://github.com/Kaentos/dw-theclassic" target="_blank">
                     <img src="assets/img/GitHub/GitHub-Mark-32px.png" alt="logo" width="24px">
                 </a>
             </div>

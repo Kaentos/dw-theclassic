@@ -1,29 +1,8 @@
 let userToList = false;
 const max = 5;
 
-window.onload = function() {
-    setNavbar();
-    setMobileNavbar();
-    setFooter();
-    setBackBtn();
-    setLogoutBtn();
-
-    let user_id = new URLSearchParams(window.location.search).get("id");
-    if (user_id !== null && user_id.length > 0 && user_id >= 0 && user_id < users_info.length) {
-        userToList = getUserObjWithID(Number(user_id));
-    } else if (user_id === null && getUserObj()) {
-        userToList = getUserObj();
-        setActive("profile_ref");
-    } else {
-        window.location.href = "/";
-    }
-    showThisUser(userToList);
-
-    let user_list = document.getElementById("user-list");
-    user_list.href="user-list.html?id=" + getID(userToList);
-}
-
 function showThisUser(user) {
+    document.getElementById("userIMG").src="assets/img/Users/" + getID(user) + ".jpg ";
     document.getElementById("username").innerHTML = getUsername(user);
     document.getElementById("pageTitle").innerHTML += getUsername(user);
     document.getElementById("total_fav_movies").innerHTML = getFavMovies(user).length;
@@ -100,7 +79,6 @@ function showToWatch(user) {
         count--;
     }
     list = getToWatchShows(user);
-    console.log(count)
     if (list.length === 0) {
         if (count === 5) {
             showNothing(content, document.getElementById("moreToWatch"));
@@ -122,11 +100,13 @@ function getHTMLOf(obj, id, type) {
     return `
     <a href="${ref}" class="flex-col ms_ss_panel">
         <img class="ms_ss_img" src="assets/img/${type}/${id}.jpg">
-        <div>
-            ${obj.name}
-        </div>
-        <div>
-            ${new Date(obj.premiere * 1000).getFullYear()}
+        <div class="ms_ss_desc">
+            <div>
+                ${obj.name}
+            </div>
+            <div>
+                ${getYear(obj.premiere)}
+            </div>
         </div>
     </a>
     `;
@@ -139,4 +119,22 @@ function showNothing(content, button) {
             This user doesn't have any movies or TV Shows in this category.
         </div>
     `;
+}
+
+window.onload = function() {
+    basicSetup();
+
+    let user_id = new URLSearchParams(window.location.search).get("id");
+    if (user_id !== null && user_id.length > 0 && user_id >= 0 && user_id < users_info.length) {
+        userToList = getUserObjWithID(Number(user_id));
+    } else if (user_id === null && getUserObj()) {
+        userToList = getUserObj();
+        setActive("profile_ref");
+    } else {
+        window.location.href = "/";
+    }
+    showThisUser(userToList);
+
+    let user_list = document.getElementById("user-list");
+    user_list.href="user-list.html?id=" + getID(userToList);
 }

@@ -78,22 +78,20 @@ function getHTMLOf(obj, id, ref, type) {
     return `
     <a href="${ref}${id}" class="flex-col ms_ss_panel">
         <img class="ms_ss_img" src="assets/img/${type}/${id}.jpg">
-        <div>
-            ${obj.name}
-        </div>
-        <div>
-            ${getYear(obj.premiere)}
+        <div class="ms_ss_desc">
+            <div>
+                ${obj.name}
+            </div>
+            <div>
+                ${getYear(obj.premiere)}
+            </div>
         </div>
     </a>
     `;
 }
 
 window.onload = function() {
-    setNavbar();
-    setMobileNavbar();
-    setFooter();
-    setLogoutBtn();
-    setBackBtn();
+    basicSetup();
 
     let url = new URL(window.location.href);
     let user_id = url.searchParams.get("id");

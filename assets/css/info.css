@@ -1,7 +1,26 @@
+/* Por ID */
+#info-picture {
+    border: 1px solid silver;
+    border-radius: 2px;
+    max-width: 250px;
+}
+#info-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-left: 5px;
+}
+#yt-embeddiv {
+    height: 720px;
+    margin: 15px;
+    max-width: 1280px;
+}
+
+
+/* Classes */
 .ccontainer {
+    box-sizing: border-box;
     margin: auto;
     max-width: 1115px;
-    box-sizing: border-box;
     padding: 5px 5px 50px 5px;
 }
 .ccontainer > hr {
@@ -9,34 +28,16 @@
     border-radius: 5px;
 }
 
-#info-picture {
-    max-width: 250px;
-    border: 1px solid silver;
-    border-radius: 2px;
-}
-
 .info-details {
     margin-left: 10px;
-    width: 100%;
     position: relative;
+    width: 100%;
 }
 
 .info-detail {
-    margin-left: 5px;
     font-size: 1.3rem;
-    margin-top: 10px;
-}
-
-#info-title {
     margin-left: 5px;
-    font-size: 2rem;
-    font-weight: bold;
-}
-
-#yt-embeddiv {
-    max-width: 1280px;
-    height: 720px;
-    margin: 15px;
+    margin-top: 10px;
 }
 
 .info-panel {
@@ -45,14 +46,14 @@
 
 .action-btns {
     cursor: pointer;
-    border-radius: 5px;
     border: 1px solid black;
+    border-radius: 5px;
     margin: 10px 2px;
 }
 
 .action-btns > img {
-    width: 32px;
     height: 32px;
+    width: 32px;
 }
 
 .season-select {
@@ -65,32 +66,15 @@
 }
 
 .bottom-btn-div {
-    position: absolute;
     bottom: 0;
+    position: absolute;
     right: 0;
-}
-.back-btn {
-    cursor: pointer;
-    border: 1px solid black;
-    font-size: 1.3rem;
-    padding: 5px 10px;
-    border-radius: 2px;
-    font-weight: bold;
-    background-color: white;
-    color: black;
-    transition: 0.5s;
-}
-
-.back-btn:hover {
-    background-color: black;
-    color: white;
-    
 }
 
 @media only screen and (max-width: 675px) {
     .bottom-btn-div {
-        position: unset;
         margin-top: 25px;
+        position: unset;
     }
     .info-details {
         margin: 0;

@@ -28,14 +28,17 @@ function showTopRated(type) {
 }
 
 function showThisObj(target, id, obj, type) {
+    let src_page = type === "movies" ? "movie" : "show"
     target.innerHTML += `
-        <a class="flex-col ms_ss_panel text-center" href="movieinfo.html?id=${id}">
+        <a class="flex-col ms_ss_panel text-center" href="${src_page}info.html?id=${id}">
             <img class="ms_ss_img" src="assets/img/${type}/${id}.jpg">
-            <div>
-                ${obj.name}
-            </div>
-            <div>
-                ${getYear(obj.premiere)}
+            <div class="ms_ss_desc">
+                <div>
+                    ${obj.name}
+                </div>
+                <div>
+                    ${getYear(obj.premiere)}
+                </div>
             </div>
         </a>
     `;
@@ -92,7 +95,7 @@ window.onload = function () {
     setMobileNavbar();
     setFooter();
 
-    if (localStorage.getItem("login_info") !== null || sessionStorage.getItem("login_info") !== null) {
+    if (isLogged()) {
         removeWelcome();
     }
     setupCarouselBtns();

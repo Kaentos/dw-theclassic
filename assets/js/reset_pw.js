@@ -1,4 +1,4 @@
 window.onload = function() {
+    ifLoggedGoIndex();
     basicSetup();
-    setActive("contact_ref");
 }

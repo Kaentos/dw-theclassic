@@ -1,6 +1,6 @@
 .container {
-    min-height: 600px;
     margin-bottom: 50px;
+    min-height: 600px;
 }
 
 .c-title {
@@ -8,22 +8,25 @@
 }
 
 .c-content {
-    max-width: 1000px;
     margin: auto;
+    max-width: 1000px;
 }
 
 .c-content > hr {
-    max-width: 600px;
     border: 2px solid black;
     border-radius: 5px;
     margin: 0px 0px 20px 0px;
+    max-width: 600px;
 }
+
 .c-content > h2 {
     margin: 20px 0px 0px 0px;
 }
+
 .submit-btn-div, .info-div, .input-group {
     padding-left: 50px;
 }
+
 .info-div {
     font-size: 1.4rem;
 }
@@ -33,50 +36,34 @@
 }
 
 .input-group > input, label {
+    font-size: 1.4rem;
     min-width: 50%;
     padding-left: 5px;
-    font-size: 1.4rem;
 }
+
 .input-group textarea {
-    min-width: 50%;
+    font-size: 1.4rem;
+    max-height: 400px;
     max-width: 70%;
     min-height: 100px;
-    max-height: 400px;
-    font-size: 1.4rem;
+    min-width: 50%;
     padding-left: 5px;
 }
 
 .submit-btn {
-    cursor: pointer;
-    padding: 5px 20px;
-    font-size: 1.3rem;
-    font-weight: bold;
+    background-color: #128ca0;
     border: 1px solid black;
     border-radius: 5px;
-    background-color: #128ca0;
     color: white;
+    cursor: pointer;
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 5px 20px;
     transition: 0.5s;
 }
 
 .submit-btn:hover {
     background-color: #1267a0;
-}
-
-.back-btn {
-    cursor: pointer;
-    border: 1px solid black;
-    font-size: 1.3rem;
-    padding: 5px 10px;
-    border-radius: 2px;
-    font-weight: bold;
-    background-color: white;
-    color: black;
-    transition: 0.5s;
-}
-
-.back-btn:hover {
-    background-color: black;
-    color: white;
 }
 
 .go-back-zone {

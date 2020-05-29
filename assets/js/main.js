@@ -158,13 +158,13 @@ function setFooter() {
     if (isLogged()) {
         document.getElementById("footer-links").innerHTML += `
             <li>
-                <a href="#">Profile</a>
+                <a href="profile.html">Profile</a>
             </li>
             <li>
-                <a href="#">My List</a>
+                <a href="user-list.html">My List</a>
             </li>
             <li>
-                <a href="#">Settings</a>
+                <a href="settings.html">Settings</a>
             </li>
         `;
         return;

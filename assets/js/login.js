@@ -5,8 +5,6 @@ function login() {
 
     let user = getUserByEmail(email_input.value);
     if (user && getPassword(user) === password_input.value) {
-        document.getElementById("login-info").classList.add("display-none");
-        console.log("Can login");
         set_login(user, keepLogin_input.checked);
         return;
     }
@@ -25,11 +23,9 @@ function set_login(user_obj, keepLogin) {
 }
 
 function getUserByEmail(email) {
-    if (email_regex.test(email)) {
-        for (let obj of users_info){
-            if (email === getEmail(obj)) {
-                return obj;
-            }
+    for (let obj of users_info){
+        if (email === getEmail(obj)) {
+            return obj;
         }
     }
     return false;
